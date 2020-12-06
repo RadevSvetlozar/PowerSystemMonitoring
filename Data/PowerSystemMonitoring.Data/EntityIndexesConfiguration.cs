@@ -2,9 +2,8 @@
 {
     using System.Linq;
 
-    using PowerSystemMonitoring.Data.Common.Models;
-
     using Microsoft.EntityFrameworkCore;
+    using PowerSystemMonitoring.Data.Common.Models;
 
     internal static class EntityIndexesConfiguration
     {
