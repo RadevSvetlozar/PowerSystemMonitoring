@@ -1,0 +1,16 @@
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.deps.json
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.dll
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.pdb
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.dll
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.dll
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.dll
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.pdb
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.pdb
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.pdb
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.csprojAssemblyReference.cache
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.csproj.CoreCompileInputs.cache
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.AssemblyInfoInputs.cache
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.AssemblyInfo.cs
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.csproj.CopyComplete
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.dll
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.pdb

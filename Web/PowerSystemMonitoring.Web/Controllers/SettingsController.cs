@@ -3,12 +3,11 @@
     using System;
     using System.Threading.Tasks;
 
+    using Microsoft.AspNetCore.Mvc;
     using PowerSystemMonitoring.Data.Common.Repositories;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.ViewModels.Settings;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class SettingsController : BaseController
     {

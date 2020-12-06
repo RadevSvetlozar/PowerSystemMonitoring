@@ -1,0 +1,9 @@
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.deps.json
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.dll
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.pdb
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.csprojAssemblyReference.cache
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.csproj.CoreCompileInputs.cache
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.AssemblyInfoInputs.cache
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.AssemblyInfo.cs
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.dll
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Messaging\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.pdb

@@ -4,15 +4,12 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using Microsoft.EntityFrameworkCore;
+    using Moq;
     using PowerSystemMonitoring.Data;
     using PowerSystemMonitoring.Data.Common.Repositories;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Data.Repositories;
-
-    using Microsoft.EntityFrameworkCore;
-
-    using Moq;
-
     using Xunit;
 
     public class SettingsServiceTests

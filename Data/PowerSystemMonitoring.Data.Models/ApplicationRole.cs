@@ -3,9 +3,8 @@ namespace PowerSystemMonitoring.Data.Models
 {
     using System;
 
-    using PowerSystemMonitoring.Data.Common.Models;
-
     using Microsoft.AspNetCore.Identity;
+    using PowerSystemMonitoring.Data.Common.Models;
 
     public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity
     {

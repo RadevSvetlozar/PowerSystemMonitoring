@@ -1,9 +1,8 @@
 ﻿namespace PowerSystemMonitoring.Web.ViewModels.Settings
 {
+    using AutoMapper;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Mapping;
-
-    using AutoMapper;
 
     public class SettingViewModel : IMapFrom<Setting>, IHaveCustomMappings
     {

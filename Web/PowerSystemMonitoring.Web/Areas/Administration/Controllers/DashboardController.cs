@@ -1,9 +1,8 @@
 ﻿namespace PowerSystemMonitoring.Web.Areas.Administration.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.ViewModels.Administration.Dashboard;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class DashboardController : AdministrationController
     {

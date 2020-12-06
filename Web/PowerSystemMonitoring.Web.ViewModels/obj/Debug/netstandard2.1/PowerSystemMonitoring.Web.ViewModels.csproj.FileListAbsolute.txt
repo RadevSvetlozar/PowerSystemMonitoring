@@ -1,0 +1,16 @@
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.deps.json
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.pdb
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.pdb
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.pdb
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.pdb
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\obj\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.csprojAssemblyReference.cache
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\obj\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.csproj.CoreCompileInputs.cache
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\obj\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.AssemblyInfoInputs.cache
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\obj\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.AssemblyInfo.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\obj\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.csproj.CopyComplete
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\obj\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web.ViewModels\obj\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.pdb

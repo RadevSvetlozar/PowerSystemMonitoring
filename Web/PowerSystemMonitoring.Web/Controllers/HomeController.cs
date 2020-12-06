@@ -2,9 +2,8 @@
 {
     using System.Diagnostics;
 
-    using PowerSystemMonitoring.Web.ViewModels;
-
     using Microsoft.AspNetCore.Mvc;
+    using PowerSystemMonitoring.Web.ViewModels;
 
     public class HomeController : BaseController
     {
