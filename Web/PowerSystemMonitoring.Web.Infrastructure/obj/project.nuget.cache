@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MS1sjZ4H3+sM9BvY/J6XuQ4SWbE2uaR2tX90KJKx6wEKQWMB/q2FsDvnGLQ576mfsX8hxC3uzjfY7rfw34YV4A==",
+  "success": true,
+  "projectFilePath": "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.Infrastructure\\PowerSystemMonitoring.Web.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\radev\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\radev\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+  ],
+  "logs": []
+}
