@@ -23,11 +23,7 @@
         {
         }
 
-        public DbSet<Setting> Settings { get; set; }
-
         public DbSet<Area> Areas { get; set; }
-
-        public DbSet<Category> Categories { get; set; }
 
         public DbSet<Conductor> Conductors { get; set; }
 

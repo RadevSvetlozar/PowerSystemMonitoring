@@ -1,0 +1,68 @@
+﻿@model PowerSystemMonitoring.Web.ViewModels.Condutor.ConductorInputModel
+
+<h1>Create Conductor</h1>
+<form method="post" class="col-md-6 offset-md-3"
+      enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="OuterDiameter"></label>
+        <input asp-for="OuterDiameter" class="form-control" />
+        <span asp-validation-for="OuterDiameter" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="InnerDiameter"></label>
+        <input asp-for="InnerDiameter" class="form-control" />
+        <span asp-validation-for="InnerDiameter" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Weight"></label>
+        <input asp-for="Weight" class="form-control" />
+        <span asp-validation-for="Weight" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RTCoefficient"></label>
+        <input asp-for="RTCoefficient" class="form-control" />
+        <span asp-validation-for="RTCoefficient" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CoefficientOfThermalExpansion"></label>
+        <input asp-for="CoefficientOfThermalExpansion" class="form-control" />
+        <span asp-validation-for="CoefficientOfThermalExpansion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxTemperature"></label>
+        <input asp-for="MaxTemperature" class="form-control" />
+        <span asp-validation-for="MaxTemperature" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Elasticity"></label>
+        <input asp-for="Elasticity" class="form-control" />
+        <span asp-validation-for="Elasticity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Section"></label>
+        <input asp-for="Section" class="form-control" />
+        <span asp-validation-for="Section" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxCurrent"></label>
+        <input asp-for="MaxCurrent" class="form-control" />
+        <span asp-validation-for="MaxCurrent" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConductorPerPhase"></label>
+        <input asp-for="ConductorPerPhase" class="form-control" />
+        <span asp-validation-for="ConductorPerPhase" class="text-danger"></span>
+    </div>
+    <div class="form-check">
+        <label asp-for="IsActive"></label>
+        <input asp-for="IsActive" class="form-control">
+    </div>
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+      

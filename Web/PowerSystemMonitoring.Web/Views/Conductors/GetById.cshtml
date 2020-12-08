@@ -1,0 +1,144 @@
+﻿@model PowerSystemMonitoring.Web.ViewModels.Condutor.ConductorViewModel
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<h2>@Model.Id</h2>
+<div class="container">
+    <div class="row flex-lg-nowrap">
+
+
+        <div class="col">
+            <div class="row">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="e-profile">
+                                <div class="row">
+                                    <div class="col-12 col-sm-auto mb-3">
+                                        <div class="mx-auto" style="width: 140px;">
+                                            <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                                <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                        <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                            <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">@Model.Name</h4>
+                                            <p class="mb-0"></p>
+                                            <div class="mt-2">
+                                                <button class="btn btn-primary" type="button">
+                                                    <i class="fa fa-fw fa-camera"></i>
+                                                    <span>Change Photo</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="text-center text-sm-right">
+                                            <span class="badge badge-secondary">@this.User.Identity.IsAuthenticated</span>
+                                            <div class="text-muted"><small>@Model.CreatedOn</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item"><a href="" class="active nav-link">Details</a></li>
+                                </ul>
+                                <form method="post" id="editForm">
+                                    <div class="form-group">
+                                        <label asp-for="Name"></label>
+                                        <input asp-for="Name" class="form-control" />
+                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="OuterDiameter"></label>
+                                        <textarea asp-for="OuterDiameter" class="form-control"></textarea>
+                                        <span asp-validation-for="OuterDiameter" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="InnerDiameter"></label>
+                                        <input asp-for="InnerDiameter" class="form-control" />
+                                        <span asp-validation-for="InnerDiameter" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Weight"></label>
+                                        <input asp-for="Weight" class="form-control" />
+                                        <span asp-validation-for="Weight" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="RTCoefficient"></label>
+                                        <input asp-for="RTCoefficient" class="form-control" />
+                                        <span asp-validation-for="RTCoefficient" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Elasticity"></label>
+                                        <input asp-for="Elasticity" class="form-control" />
+                                        <span asp-validation-for="Elasticity" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Section"></label>
+                                        <input asp-for="Section" class="form-control" />
+                                        <span asp-validation-for="Section" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="MaxTemperature"></label>
+                                        <input asp-for="MaxTemperature" class="form-control" />
+                                        <span asp-validation-for="MaxTemperature" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="RTCoefficient"></label>
+                                        <input asp-for="RTCoefficient" class="form-control" />
+                                        <span asp-validation-for="RTCoefficient" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Current"></label>
+                                        <input asp-for="Current" class="form-control" />
+                                        <span asp-validation-for="Current" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="MaxCurrent"></label>
+                                        <input asp-for="MaxCurrent" class="form-control" />
+                                        <span asp-validation-for="MaxCurrent" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="ConductorPerPhase"></label>
+                                        <input asp-for="ConductorPerPhase" class="form-control" />
+                                        <span asp-validation-for="ConductorPerPhase" class="text-danger"></span>
+                                    </div>
+                                    <hr />
+                                    <input type="hidden" asp-for="Id" />
+                                </form>
+
+                                <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Save changes</button>
+
+
+
+                                <!-- Modal -->
+                                <div class="modal" id="modalEdit" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Confirm edit</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    Do you confirm this changes?
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" onclick="editForm.submit()">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

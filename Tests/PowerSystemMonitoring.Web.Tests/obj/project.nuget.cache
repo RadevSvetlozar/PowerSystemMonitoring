@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GJKWVvh5OWE32FNEL9LsVb6eYelyJUSTgE+W4QNXUkGpX/avz9un1uFXrd5DuTD8cikHoFRC8KM+3eTWq5XM1Q==",
+  "dgSpecHash": "dzZJwK7+LkoYwifJH1gq3XgKqOT0vTrx+ppa26oI3kDO8epWO3tnwAwpgJtdzLg5Heq/B/cAkF62Sn9wIJXX8w==",
   "success": true,
   "projectFilePath": "C:\\PowerSystemMonitoring\\Tests\\PowerSystemMonitoring.Web.Tests\\PowerSystemMonitoring.Web.Tests.csproj",
   "expectedPackageFiles": [

@@ -12,8 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("PowerSystemMonitoring.Data", "C:\\PowerSystemMonitoring\\Data\\PowerSystemMonitoring.Data", "PowerSystemMonitoring.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("PowerSystemMonitoring.Web", "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web", "PowerSystemMonitoring.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("PowerSystemMonitoring.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" +
+    "", "C:\\PowerSystemMonitoring\\Data\\PowerSystemMonitoring.Data", "PowerSystemMonitoring.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("PowerSystemMonitoring.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web", "PowerSystemMonitoring.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PowerSystemMonitoring.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

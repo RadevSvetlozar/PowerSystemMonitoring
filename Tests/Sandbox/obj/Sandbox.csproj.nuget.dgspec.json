@@ -325,6 +325,9 @@
               },
               "C:\\PowerSystemMonitoring\\Services\\PowerSystemMonitoring.Services.Mapping\\PowerSystemMonitoring.Services.Mapping.csproj": {
                 "projectPath": "C:\\PowerSystemMonitoring\\Services\\PowerSystemMonitoring.Services.Mapping\\PowerSystemMonitoring.Services.Mapping.csproj"
+              },
+              "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj": {
+                "projectPath": "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj"
               }
             }
           }
@@ -657,6 +660,73 @@
               "privateAssets": "none"
             },
             "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj",
+        "projectName": "PowerSystemMonitoring.Web.ViewModels",
+        "projectPath": "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\radev\\.nuget\\packages\\",
+        "outputPath": "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\radev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\PowerSystemMonitoring\\Data\\PowerSystemMonitoring.Data.Models\\PowerSystemMonitoring.Data.Models.csproj": {
+                "projectPath": "C:\\PowerSystemMonitoring\\Data\\PowerSystemMonitoring.Data.Models\\PowerSystemMonitoring.Data.Models.csproj"
+              },
+              "C:\\PowerSystemMonitoring\\Services\\PowerSystemMonitoring.Services.Mapping\\PowerSystemMonitoring.Services.Mapping.csproj": {
+                "projectPath": "C:\\PowerSystemMonitoring\\Services\\PowerSystemMonitoring.Services.Mapping\\PowerSystemMonitoring.Services.Mapping.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },

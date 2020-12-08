@@ -45,15 +45,7 @@
 
         public virtual ApplicationUser AddedByUser { get; set; }
 
-        public int CategoryId { get; set; }
-
-        public virtual Category Category { get; set; }
-
         public int CurrentSensorId { get; set; }
-
-        public int AreaId { get; set; }
-
-        public virtual Area Area { get; set; }
 
         public bool IsActive { get; set; }
 

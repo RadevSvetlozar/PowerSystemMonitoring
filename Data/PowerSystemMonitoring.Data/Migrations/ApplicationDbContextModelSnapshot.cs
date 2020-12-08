@@ -277,43 +277,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.ToTable("Areas");
                 });
 
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("AddedByUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AddedByUserId");
-
-                    b.HasIndex("IsDeleted");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Conductor", b =>
                 {
                     b.Property<int>("Id")
@@ -323,12 +286,6 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.Property<string>("AddedByUserId")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AreaId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
 
                     b.Property<double>("CoefficientOfThermalExpansion")
                         .HasColumnType("float");
@@ -391,10 +348,6 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.HasIndex("AddedByUserId");
 
-                    b.HasIndex("AreaId");
-
-                    b.HasIndex("CategoryId");
-
                     b.HasIndex("IsDeleted");
 
                     b.ToTable("Conductors");
@@ -429,9 +382,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AreaId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<int>("ConductorId")
@@ -490,8 +440,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.HasIndex("AddedByUserId");
 
                     b.HasIndex("AreaId");
-
-                    b.HasIndex("CategoryId");
 
                     b.HasIndex("ConductorId");
 
@@ -728,38 +676,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.ToTable("PowerLinesEvents");
                 });
 
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Setting", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IsDeleted");
-
-                    b.ToTable("Settings");
-                });
-
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.WeatherStation", b =>
                 {
                     b.Property<int>("Id")
@@ -894,30 +810,11 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .HasForeignKey("AddedByUserId");
                 });
 
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Category", b =>
-                {
-                    b.HasOne("PowerSystemMonitoring.Data.Models.ApplicationUser", "AddedByUser")
-                        .WithMany()
-                        .HasForeignKey("AddedByUserId");
-                });
-
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Conductor", b =>
                 {
                     b.HasOne("PowerSystemMonitoring.Data.Models.ApplicationUser", "AddedByUser")
                         .WithMany()
                         .HasForeignKey("AddedByUserId");
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Area", "Area")
-                        .WithMany()
-                        .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.ConductorsImages", b =>
@@ -942,12 +839,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.HasOne("PowerSystemMonitoring.Data.Models.Area", "Area")
                         .WithMany("CurrentSensors")
                         .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

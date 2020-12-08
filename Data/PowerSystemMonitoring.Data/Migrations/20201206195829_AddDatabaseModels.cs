@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace PowerSystemMonitoring.Data.Migrations
+﻿namespace PowerSystemMonitoring.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class AddDatabaseModels : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +19,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
-                    AddedByUserId = table.Column<string>(nullable: true)
+                    AddedByUserId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -43,7 +44,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    AddedByUserId = table.Column<string>(nullable: true)
+                    AddedByUserId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -68,7 +69,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    IsActive = table.Column<bool>(nullable: false)
+                    IsActive = table.Column<bool>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -87,7 +88,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Latitude = table.Column<string>(nullable: true),
                     Longitude = table.Column<string>(nullable: true),
-                    AreaId = table.Column<int>(nullable: false)
+                    AreaId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -127,7 +128,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     CategoryId = table.Column<int>(nullable: false),
                     CurrentSensorId = table.Column<int>(nullable: false),
                     AreaId = table.Column<int>(nullable: false),
-                    IsActive = table.Column<bool>(nullable: false)
+                    IsActive = table.Column<bool>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -165,7 +166,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     Name = table.Column<string>(nullable: true),
                     Length = table.Column<double>(nullable: false),
                     Voltage = table.Column<double>(nullable: false),
-                    ConductorId = table.Column<int>(nullable: false)
+                    ConductorId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -183,7 +184,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                 columns: table => new
                 {
                     PowerLineId = table.Column<int>(nullable: false),
-                    AreaId = table.Column<int>(nullable: false)
+                    AreaId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -207,7 +208,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                 columns: table => new
                 {
                     PowerLineId = table.Column<int>(nullable: false),
-                    EventId = table.Column<int>(nullable: false)
+                    EventId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -251,7 +252,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     GeographicalCoordinatesId = table.Column<int>(nullable: false),
                     AddedByUserId = table.Column<string>(nullable: true),
                     CategoryId = table.Column<int>(nullable: false),
-                    WeatherStationId = table.Column<int>(nullable: false)
+                    WeatherStationId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -299,7 +300,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                 columns: table => new
                 {
                     CurrentSensorId = table.Column<int>(nullable: false),
-                    EventId = table.Column<int>(nullable: false)
+                    EventId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -331,7 +332,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     AreaId = table.Column<int>(nullable: true),
                     ConductorId = table.Column<int>(nullable: true),
                     CurrentSensorId = table.Column<int>(nullable: true),
-                    WeatherStationId = table.Column<int>(nullable: true)
+                    WeatherStationId = table.Column<int>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -368,7 +369,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                 {
                     ConductorId = table.Column<int>(nullable: false),
                     ImageId = table.Column<int>(nullable: false),
-                    ImageId1 = table.Column<string>(nullable: true)
+                    ImageId1 = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -393,7 +394,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                 {
                     CurrentSensorId = table.Column<int>(nullable: false),
                     ImageId = table.Column<int>(nullable: false),
-                    ImageId1 = table.Column<string>(nullable: true)
+                    ImageId1 = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -429,7 +430,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     IsActive = table.Column<bool>(nullable: false),
                     InstalationDescription = table.Column<string>(nullable: true),
                     InstallationImageId = table.Column<string>(nullable: true),
-                    DescriptionImageId = table.Column<string>(nullable: true)
+                    DescriptionImageId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -466,7 +467,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                 {
                     ImageId = table.Column<int>(nullable: false),
                     WeatherStationId = table.Column<int>(nullable: false),
-                    ImageId1 = table.Column<string>(nullable: true)
+                    ImageId1 = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {

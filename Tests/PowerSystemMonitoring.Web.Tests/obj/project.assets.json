@@ -3519,7 +3519,8 @@
         "dependencies": {
           "PowerSystemMonitoring.Data.Common": "1.0.0",
           "PowerSystemMonitoring.Data.Models": "1.0.0",
-          "PowerSystemMonitoring.Services.Mapping": "1.0.0"
+          "PowerSystemMonitoring.Services.Mapping": "1.0.0",
+          "PowerSystemMonitoring.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PowerSystemMonitoring.Services.Data.dll": {}

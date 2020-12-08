@@ -14,3 +14,5 @@ C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.csproj.CopyComplete
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.dll
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.Data.pdb
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.dll
+C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services.Data\bin\Debug\netstandard2.1\PowerSystemMonitoring.Web.ViewModels.pdb

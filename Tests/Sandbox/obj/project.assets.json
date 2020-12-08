@@ -1734,7 +1734,8 @@
         "dependencies": {
           "PowerSystemMonitoring.Data.Common": "1.0.0",
           "PowerSystemMonitoring.Data.Models": "1.0.0",
-          "PowerSystemMonitoring.Services.Mapping": "1.0.0"
+          "PowerSystemMonitoring.Services.Mapping": "1.0.0",
+          "PowerSystemMonitoring.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PowerSystemMonitoring.Services.Data.dll": {}
@@ -1767,6 +1768,20 @@
         },
         "runtime": {
           "bin/placeholder/PowerSystemMonitoring.Services.Messaging.dll": {}
+        }
+      },
+      "PowerSystemMonitoring.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PowerSystemMonitoring.Data.Models": "1.0.0",
+          "PowerSystemMonitoring.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PowerSystemMonitoring.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PowerSystemMonitoring.Web.ViewModels.dll": {}
         }
       }
     }
@@ -6248,6 +6263,11 @@
       "type": "project",
       "path": "../../Services/PowerSystemMonitoring.Services.Messaging/PowerSystemMonitoring.Services.Messaging.csproj",
       "msbuildProject": "../../Services/PowerSystemMonitoring.Services.Messaging/PowerSystemMonitoring.Services.Messaging.csproj"
+    },
+    "PowerSystemMonitoring.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/PowerSystemMonitoring.Web.ViewModels/PowerSystemMonitoring.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/PowerSystemMonitoring.Web.ViewModels/PowerSystemMonitoring.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {

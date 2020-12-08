@@ -325,6 +325,9 @@
               },
               "C:\\PowerSystemMonitoring\\Services\\PowerSystemMonitoring.Services.Mapping\\PowerSystemMonitoring.Services.Mapping.csproj": {
                 "projectPath": "C:\\PowerSystemMonitoring\\Services\\PowerSystemMonitoring.Services.Mapping\\PowerSystemMonitoring.Services.Mapping.csproj"
+              },
+              "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj": {
+                "projectPath": "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj"
               }
             }
           }

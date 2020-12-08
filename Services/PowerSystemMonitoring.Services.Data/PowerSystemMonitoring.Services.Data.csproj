@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\PowerSystemMonitoring.Data.Common\PowerSystemMonitoring.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\PowerSystemMonitoring.Data.Models\PowerSystemMonitoring.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Web\PowerSystemMonitoring.Web.ViewModels\PowerSystemMonitoring.Web.ViewModels.csproj" />
     <ProjectReference Include="..\PowerSystemMonitoring.Services.Mapping\PowerSystemMonitoring.Services.Mapping.csproj" />
   </ItemGroup>
 

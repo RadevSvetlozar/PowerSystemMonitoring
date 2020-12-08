@@ -465,6 +465,20 @@
         "runtime": {
           "bin/placeholder/PowerSystemMonitoring.Services.Mapping.dll": {}
         }
+      },
+      "PowerSystemMonitoring.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "PowerSystemMonitoring.Data.Models": "1.0.0",
+          "PowerSystemMonitoring.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PowerSystemMonitoring.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PowerSystemMonitoring.Web.ViewModels.dll": {}
+        }
       }
     }
   },
@@ -1390,6 +1404,11 @@
       "type": "project",
       "path": "../PowerSystemMonitoring.Services.Mapping/PowerSystemMonitoring.Services.Mapping.csproj",
       "msbuildProject": "../PowerSystemMonitoring.Services.Mapping/PowerSystemMonitoring.Services.Mapping.csproj"
+    },
+    "PowerSystemMonitoring.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/PowerSystemMonitoring.Web.ViewModels/PowerSystemMonitoring.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/PowerSystemMonitoring.Web.ViewModels/PowerSystemMonitoring.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1397,6 +1416,7 @@
       "PowerSystemMonitoring.Data.Common >= 1.0.0",
       "PowerSystemMonitoring.Data.Models >= 1.0.0",
       "PowerSystemMonitoring.Services.Mapping >= 1.0.0",
+      "PowerSystemMonitoring.Web.ViewModels >= 1.0.0",
       "StyleCop.Analyzers >= 1.2.0-beta.205"
     ]
   },
@@ -1434,6 +1454,9 @@
             },
             "C:\\PowerSystemMonitoring\\Services\\PowerSystemMonitoring.Services.Mapping\\PowerSystemMonitoring.Services.Mapping.csproj": {
               "projectPath": "C:\\PowerSystemMonitoring\\Services\\PowerSystemMonitoring.Services.Mapping\\PowerSystemMonitoring.Services.Mapping.csproj"
+            },
+            "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj": {
+              "projectPath": "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web.ViewModels\\PowerSystemMonitoring.Web.ViewModels.csproj"
             }
           }
         }

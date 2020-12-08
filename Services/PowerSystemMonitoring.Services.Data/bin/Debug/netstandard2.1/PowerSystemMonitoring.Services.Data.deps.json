@@ -12,6 +12,7 @@
           "PowerSystemMonitoring.Data.Common": "1.0.0",
           "PowerSystemMonitoring.Data.Models": "1.0.0",
           "PowerSystemMonitoring.Services.Mapping": "1.0.0",
+          "PowerSystemMonitoring.Web.ViewModels": "1.0.0",
           "StyleCop.Analyzers": "1.2.0-beta.205"
         },
         "runtime": {
@@ -414,6 +415,15 @@
         "runtime": {
           "PowerSystemMonitoring.Services.Mapping.dll": {}
         }
+      },
+      "PowerSystemMonitoring.Web.ViewModels/1.0.0": {
+        "dependencies": {
+          "PowerSystemMonitoring.Data.Models": "1.0.0",
+          "PowerSystemMonitoring.Services.Mapping": "1.0.0"
+        },
+        "runtime": {
+          "PowerSystemMonitoring.Web.ViewModels.dll": {}
+        }
       }
     }
   },
@@ -693,6 +703,11 @@
       "sha512": ""
     },
     "PowerSystemMonitoring.Services.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PowerSystemMonitoring.Web.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
