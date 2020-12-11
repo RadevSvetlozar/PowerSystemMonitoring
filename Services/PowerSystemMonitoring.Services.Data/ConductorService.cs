@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
@@ -13,6 +14,7 @@
 
     public class ConductorService : IConductorService
     {
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif" };
         private readonly IDeletableEntityRepository<Conductor> conductorsRepository;
 
         public ConductorService(IDeletableEntityRepository<Conductor> conductorsRepository)
@@ -39,15 +41,41 @@
                 Weight = input.Weight,
             };
 
+            Directory.CreateDirectory($"{imagePath}/conductors/");
+
+            foreach (var image in input.Images)
+            {
+                var extencion = Path.GetExtension(image.FileName).TrimStart('.');
+
+                if (!this.allowedExtensions.Any(x => extencion.EndsWith(x)))
+                {
+                    throw new Exception($"Invalid image extension {extencion}");
+                }
+
+                var dbImage = new Image
+                {
+                    AddedByUserId = userId,
+                    Extension = extencion,
+                };
+
+                conductor.Images.Add(dbImage);
+
+                var physicalPath = $"{imagePath}/conductors/{dbImage.Id}.{extencion}";
+
+                using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
+
+                await image.CopyToAsync(fileStream);
+            }
+
             await this.conductorsRepository.AddAsync(conductor);
             await this.conductorsRepository.SaveChangesAsync();
         }
 
         public IEnumerable<T> GetAll<T>()
         {
-           return this.conductorsRepository.AllAsNoTracking()
-                .OrderByDescending(x => x.Id).To<T>()
-                .ToList();
+            return this.conductorsRepository.All()
+                 .OrderByDescending(x => x.Id).To<T>()
+                 .ToList();
         }
 
         public T GetById<T>(int id)

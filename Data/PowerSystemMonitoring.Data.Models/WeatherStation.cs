@@ -21,7 +21,7 @@
 
         public virtual ApplicationUser AddedByUser { get; set; }
 
-        public int GeographicalCoordinatesId { get; set; }
+        public int? GeographicalCoordinatesId { get; set; }
 
         public virtual GeographicalCoordinates GeographicalCoordinates { get; set; }
 
@@ -30,10 +30,6 @@
         public bool IsActive { get; set; }
 
         public string InstalationDescription { get; set; }
-
-        public Image InstallationImage { get; set; }
-
-        public Image DescriptionImage { get; set; }
 
         public virtual ICollection<Image> Images { get; set; }
 

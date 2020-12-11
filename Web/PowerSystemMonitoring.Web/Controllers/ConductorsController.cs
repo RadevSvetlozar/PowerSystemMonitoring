@@ -6,6 +6,7 @@
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -17,13 +18,16 @@
     {
         private readonly IConductorService conductorService;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
         public ConductorsController(
             IConductorService conductorService,
-            UserManager<ApplicationUser> userManager)
+            UserManager<ApplicationUser> userManager,
+            IWebHostEnvironment webHostEnvironment)
         {
             this.conductorService = conductorService;
             this.userManager = userManager;
+            this.webHostEnvironment = webHostEnvironment;
         }
 
         [Authorize]
@@ -43,7 +47,7 @@
 
             var user = await this.userManager.GetUserAsync(this.User);
 
-            await this.conductorService.CreateAsync(input, user.Id);
+            await this.conductorService.CreateAsync(input, user.Id, $"{this.webHostEnvironment.WebRootPath}/images");
 
             this.TempData["Message"] = "Conductor added successfully.";
 

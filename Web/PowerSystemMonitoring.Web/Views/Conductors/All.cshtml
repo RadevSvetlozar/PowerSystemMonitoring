@@ -17,7 +17,7 @@
                 <td>@conductor.Name</td>
                 <td>@conductor.AddedByUserUsername</td>
                 <td>@conductor.IsActive</td>
-                <td>  <input type  asp-action="GetById" asp-route-id="@conductor.Id" />Details</td>
+                <td>  <input  asp-action="GetById" asp-route-id="@conductor.Id" />Details</td>
                 <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@conductor.Id">Details</a></td>
             </tr>
         }

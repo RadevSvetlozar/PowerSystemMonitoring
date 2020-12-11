@@ -1,6 +1,7 @@
 ﻿namespace PowerSystemMonitoring.Data
 {
     using System;
+    using System.IO;
     using System.Linq;
     using System.Reflection;
     using System.Threading;
@@ -29,8 +30,6 @@
 
         public DbSet<CurrentSensor> CurrentSensors { get; set; }
 
-        public DbSet<CurrentSensorsEvents> CurrentSensorsEvents { get; set; }
-
         public DbSet<Event> Events { get; set; }
 
         public DbSet<GeographicalCoordinates> GeographicalCoordinates { get; set; }
@@ -39,17 +38,9 @@
 
         public DbSet<PowerLine> PowerLines { get; set; }
 
-        public DbSet<PowerLinesAreas> PowerLinesAreas { get; set; }
-
-        public DbSet<PowerLinesEvents> PowerLinesEvents { get; set; }
-
         public DbSet<WeatherStation> WeatherStations { get; set; }
 
-        public DbSet<WeatherStationsImages> WeatherStationsImages { get; set; }
-
-        public DbSet<ConductorsImages> ConductorsImages { get; set; }
-
-        public DbSet<CurrentSensorsImages> CurrentSensorsImages { get; set; }
+        public DbSet<PowerLinesAreas> PowerLinesAreas { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 
@@ -75,18 +66,13 @@
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
 
+            builder.Entity<PowerLinesAreas>().HasKey(x => new { x.PowerLineId, x.AreaId });
+
             this.ConfigureUserIdentityRelations(builder);
 
             EntityIndexesConfiguration.Configure(builder);
 
             var entityTypes = builder.Model.GetEntityTypes().ToList();
-
-            builder.Entity<CurrentSensorsEvents>().HasKey(x => new { x.CurrentSensorId, x.EventId });
-            builder.Entity<PowerLinesAreas>().HasKey(x => new { x.PowerLineId, x.AreaId });
-            builder.Entity<PowerLinesEvents>().HasKey(x => new { x.PowerLineId, x.EventId });
-            builder.Entity<ConductorsImages>().HasKey(x => new { x.ConductorId, x.ImageId });
-            builder.Entity<WeatherStationsImages>().HasKey(x => new { x.WeatherStationId, x.ImageId });
-            builder.Entity<CurrentSensorsImages>().HasKey(x => new { x.CurrentSensorId, x.ImageId });
 
             // Set global query filter for not deleted entities only
             var deletableEntityTypes = entityTypes

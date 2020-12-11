@@ -268,11 +268,16 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("PowerLineId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AddedByUserId");
 
                     b.HasIndex("IsDeleted");
+
+                    b.HasIndex("PowerLineId");
 
                     b.ToTable("Areas");
                 });
@@ -298,9 +303,6 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.Property<double>("Current")
                         .HasColumnType("float");
-
-                    b.Property<int>("CurrentSensorId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
@@ -353,24 +355,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.ToTable("Conductors");
                 });
 
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.ConductorsImages", b =>
-                {
-                    b.Property<int>("ConductorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ImageId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImageId1")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("ConductorId", "ImageId");
-
-                    b.HasIndex("ImageId1");
-
-                    b.ToTable("ConductorsImages");
-                });
-
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.CurrentSensor", b =>
                 {
                     b.Property<int>("Id")
@@ -381,10 +365,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.Property<string>("AddedByUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("AreaId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ConductorId")
+                    b.Property<int?>("AreaId")
                         .HasColumnType("int");
 
                     b.Property<string>("ConnectionPassword")
@@ -399,7 +380,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.Property<double>("DistancePole")
                         .HasColumnType("float");
 
-                    b.Property<int>("GeographicalCoordinatesId")
+                    b.Property<int?>("GeographicalCoordinatesId")
                         .HasColumnType("int");
 
                     b.Property<string>("IPAddress")
@@ -429,10 +410,10 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PowerLineId")
+                    b.Property<int?>("PowerLineId")
                         .HasColumnType("int");
 
-                    b.Property<int>("WeatherStationId")
+                    b.Property<int?>("WeatherStationId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -440,8 +421,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.HasIndex("AddedByUserId");
 
                     b.HasIndex("AreaId");
-
-                    b.HasIndex("ConductorId");
 
                     b.HasIndex("GeographicalCoordinatesId");
 
@@ -454,39 +433,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.ToTable("CurrentSensors");
                 });
 
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.CurrentSensorsEvents", b =>
-                {
-                    b.Property<int>("CurrentSensorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CurrentSensorId", "EventId");
-
-                    b.HasIndex("EventId");
-
-                    b.ToTable("CurrentSensorsEvents");
-                });
-
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.CurrentSensorsImages", b =>
-                {
-                    b.Property<int>("CurrentSensorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ImageId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImageId1")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("CurrentSensorId", "ImageId");
-
-                    b.HasIndex("ImageId1");
-
-                    b.ToTable("CurrentSensorsImages");
-                });
-
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Event", b =>
                 {
                     b.Property<int>("Id")
@@ -494,8 +440,14 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("AddedByUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("CurrentSensorId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
@@ -515,9 +467,18 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("PowerLineId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("AddedByUserId");
+
+                    b.HasIndex("CurrentSensorId");
+
                     b.HasIndex("IsDeleted");
+
+                    b.HasIndex("PowerLineId");
 
                     b.ToTable("Events");
                 });
@@ -529,8 +490,8 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AreaId")
-                        .HasColumnType("int");
+                    b.Property<string>("AddedByUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -552,7 +513,7 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AreaId");
+                    b.HasIndex("AddedByUserId");
 
                     b.HasIndex("IsDeleted");
 
@@ -576,9 +537,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("CurrentSensorId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Extension")
                         .HasColumnType("nvarchar(max)");
 
@@ -599,8 +557,6 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.HasIndex("ConductorId");
 
-                    b.HasIndex("CurrentSensorId");
-
                     b.HasIndex("WeatherStationId");
 
                     b.ToTable("Images");
@@ -613,7 +569,10 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ConductorId")
+                    b.Property<string>("AddedByUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("ConductorId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOn")
@@ -639,6 +598,8 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AddedByUserId");
+
                     b.HasIndex("ConductorId");
 
                     b.HasIndex("IsDeleted");
@@ -661,21 +622,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.ToTable("PowerLinesAreas");
                 });
 
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.PowerLinesEvents", b =>
-                {
-                    b.Property<int>("PowerLineId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
-                    b.HasKey("PowerLineId", "EventId");
-
-                    b.HasIndex("EventId");
-
-                    b.ToTable("PowerLinesEvents");
-                });
-
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.WeatherStation", b =>
                 {
                     b.Property<int>("Id")
@@ -692,10 +638,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DescriptionImageId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("GeographicalCoordinatesId")
+                    b.Property<int?>("GeographicalCoordinatesId")
                         .HasColumnType("int");
 
                     b.Property<string>("IPAddress")
@@ -703,9 +646,6 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.Property<string>("InstalationDescription")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("InstallationImageId")
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -723,33 +663,11 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.HasIndex("AddedByUserId");
 
-                    b.HasIndex("DescriptionImageId");
-
                     b.HasIndex("GeographicalCoordinatesId");
-
-                    b.HasIndex("InstallationImageId");
 
                     b.HasIndex("IsDeleted");
 
                     b.ToTable("WeatherStations");
-                });
-
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.WeatherStationsImages", b =>
-                {
-                    b.Property<int>("WeatherStationId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ImageId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImageId1")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("WeatherStationId", "ImageId");
-
-                    b.HasIndex("ImageId1");
-
-                    b.ToTable("WeatherStationsImages");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -808,6 +726,10 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.HasOne("PowerSystemMonitoring.Data.Models.ApplicationUser", "AddedByUser")
                         .WithMany()
                         .HasForeignKey("AddedByUserId");
+
+                    b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", null)
+                        .WithMany("Areas")
+                        .HasForeignKey("PowerLineId");
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Conductor", b =>
@@ -815,19 +737,6 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.HasOne("PowerSystemMonitoring.Data.Models.ApplicationUser", "AddedByUser")
                         .WithMany()
                         .HasForeignKey("AddedByUserId");
-                });
-
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.ConductorsImages", b =>
-                {
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Conductor", "Conductor")
-                        .WithMany()
-                        .HasForeignKey("ConductorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Image", "Image")
-                        .WithMany("Conductors")
-                        .HasForeignKey("ImageId1");
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.CurrentSensor", b =>
@@ -838,70 +747,41 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.HasOne("PowerSystemMonitoring.Data.Models.Area", "Area")
                         .WithMany("CurrentSensors")
-                        .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Conductor", "Conductor")
-                        .WithMany("CurrentSensors")
-                        .HasForeignKey("ConductorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("AreaId");
 
                     b.HasOne("PowerSystemMonitoring.Data.Models.GeographicalCoordinates", "GeographicalCoordinates")
                         .WithMany()
-                        .HasForeignKey("GeographicalCoordinatesId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("GeographicalCoordinatesId");
 
                     b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", "PowerLine")
                         .WithMany("CurrentSensors")
-                        .HasForeignKey("PowerLineId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("PowerLineId");
 
                     b.HasOne("PowerSystemMonitoring.Data.Models.WeatherStation", "WeatherStation")
                         .WithMany("CurrentSensors")
-                        .HasForeignKey("WeatherStationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("WeatherStationId");
                 });
 
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.CurrentSensorsEvents", b =>
+            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Event", b =>
                 {
+                    b.HasOne("PowerSystemMonitoring.Data.Models.ApplicationUser", "AddedByUser")
+                        .WithMany()
+                        .HasForeignKey("AddedByUserId");
+
                     b.HasOne("PowerSystemMonitoring.Data.Models.CurrentSensor", "CurrentSensor")
                         .WithMany("Events")
-                        .HasForeignKey("CurrentSensorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("CurrentSensorId");
 
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Event", "Event")
-                        .WithMany("CurrentSensors")
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.CurrentSensorsImages", b =>
-                {
-                    b.HasOne("PowerSystemMonitoring.Data.Models.CurrentSensor", "CurrentSensor")
-                        .WithMany()
-                        .HasForeignKey("CurrentSensorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Image", "Image")
-                        .WithMany("CurrentSensors")
-                        .HasForeignKey("ImageId1");
+                    b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", "PowerLine")
+                        .WithMany("Events")
+                        .HasForeignKey("PowerLineId");
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.GeographicalCoordinates", b =>
                 {
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Area", "Area")
-                        .WithMany("GeographicalCoordinates")
-                        .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                    b.HasOne("PowerSystemMonitoring.Data.Models.ApplicationUser", "AddedByUser")
+                        .WithMany()
+                        .HasForeignKey("AddedByUserId");
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.Image", b =>
@@ -914,53 +794,36 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .WithMany("Images")
                         .HasForeignKey("AreaId");
 
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Conductor", null)
+                    b.HasOne("PowerSystemMonitoring.Data.Models.Conductor", "Conductor")
                         .WithMany("Images")
                         .HasForeignKey("ConductorId");
 
-                    b.HasOne("PowerSystemMonitoring.Data.Models.CurrentSensor", null)
-                        .WithMany("Images")
-                        .HasForeignKey("CurrentSensorId");
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.WeatherStation", null)
+                    b.HasOne("PowerSystemMonitoring.Data.Models.WeatherStation", "WeatherStation")
                         .WithMany("Images")
                         .HasForeignKey("WeatherStationId");
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.PowerLine", b =>
                 {
+                    b.HasOne("PowerSystemMonitoring.Data.Models.ApplicationUser", "AddedByUser")
+                        .WithMany()
+                        .HasForeignKey("AddedByUserId");
+
                     b.HasOne("PowerSystemMonitoring.Data.Models.Conductor", "Conductor")
                         .WithMany()
-                        .HasForeignKey("ConductorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("ConductorId");
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.PowerLinesAreas", b =>
                 {
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Area", "Areas")
+                    b.HasOne("PowerSystemMonitoring.Data.Models.Area", "Area")
                         .WithMany("PowerLines")
                         .HasForeignKey("AreaId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", "PowerLine")
-                        .WithMany("Areas")
-                        .HasForeignKey("PowerLineId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.PowerLinesEvents", b =>
-                {
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Event", "Event")
-                        .WithMany("PowerLines")
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", "PowerLine")
-                        .WithMany("Events")
+                        .WithMany()
                         .HasForeignKey("PowerLineId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -972,32 +835,9 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .WithMany()
                         .HasForeignKey("AddedByUserId");
 
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Image", "DescriptionImage")
-                        .WithMany()
-                        .HasForeignKey("DescriptionImageId");
-
                     b.HasOne("PowerSystemMonitoring.Data.Models.GeographicalCoordinates", "GeographicalCoordinates")
                         .WithMany()
-                        .HasForeignKey("GeographicalCoordinatesId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Image", "InstallationImage")
-                        .WithMany()
-                        .HasForeignKey("InstallationImageId");
-                });
-
-            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.WeatherStationsImages", b =>
-                {
-                    b.HasOne("PowerSystemMonitoring.Data.Models.Image", "Image")
-                        .WithMany("WeatherStations")
-                        .HasForeignKey("ImageId1");
-
-                    b.HasOne("PowerSystemMonitoring.Data.Models.WeatherStation", "WeatherStation")
-                        .WithMany()
-                        .HasForeignKey("WeatherStationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("GeographicalCoordinatesId");
                 });
 #pragma warning restore 612, 618
         }

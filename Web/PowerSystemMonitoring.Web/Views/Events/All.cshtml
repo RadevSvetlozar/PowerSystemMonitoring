@@ -1,0 +1,24 @@
+﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.Event.EventViewModel>
+
+<h1>All Event</h1>
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th scope="col">Name</th>
+            <th scope="col">AddedBy</th>            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var currentEvent in Model)
+        {
+            <tr>               
+                <td>@currentEvent.Name</td>
+                <td>@currentEvent.AddedByUserUsername</td>
+                <td>@currentEvent.Description</td>
+                <td>  <input  asp-action="GetById" asp-route-id="@currentEvent.Id" />Details</td>
+                <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@currentEvent.Id">Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

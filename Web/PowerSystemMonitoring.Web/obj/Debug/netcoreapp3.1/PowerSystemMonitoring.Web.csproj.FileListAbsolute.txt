@@ -458,3 +458,15 @@ C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\P
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Conductors\Create.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Conductors\All.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Conductors\GetById.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\wwwroot\images\conductors\11a8a067-fac7-481b-be10-a5829d532889.jpg
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\wwwroot\images\conductors\36a5d972-5d92-4197-8817-cf17d4fcfc38.jpg
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\wwwroot\images\conductors\47cbfd1d-a48f-4cd0-a43f-0b800c07e354.jpg
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\wwwroot\images\conductors\6c951a7f-90d7-4f6a-8c58-ccd8186ef47c.jpg
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\wwwroot\images\conductors\b23e9967-1003-4b54-9749-57e0e12bda2c.jpg
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\wwwroot\images\conductors\e39261d9-6f0d-477b-ac59-1ea7c1c91ce6.jpg
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Areas\All.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Areas\Create.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Areas\GetById.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Events\All.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Events\Create.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Events\GetById.cshtml.g.cs

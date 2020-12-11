@@ -5,6 +5,8 @@
     using System.ComponentModel.DataAnnotations;
     using System.Text;
 
+    using Microsoft.AspNetCore.Http;
+
     public class ConductorInputModel
     {
         [Required]
@@ -35,5 +37,7 @@
         public int ConductorPerPhase { get; set; }
 
         public bool IsActive { get; set; }
+
+        public IEnumerable<IFormFile> Images { get; set; }
     }
 }

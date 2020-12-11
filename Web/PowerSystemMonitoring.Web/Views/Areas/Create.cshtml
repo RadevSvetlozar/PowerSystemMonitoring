@@ -1,0 +1,19 @@
+﻿@model PowerSystemMonitoring.Web.ViewModels.Area.AreaInputModel
+
+<h1>Create Area</h1>
+<form method="post" class="col-md-6 offset-md-3"
+      enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-check">
+        <label asp-for="Images"></label>
+        <input asp-for="Images" class="form-control">
+        <span asp-validation-for="Images" class="text-danger"></span>
+    </div>
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+      

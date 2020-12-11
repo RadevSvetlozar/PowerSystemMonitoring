@@ -11,9 +11,8 @@
         public Area()
         {
             this.CurrentSensors = new HashSet<CurrentSensor>();
-            this.GeographicalCoordinates = new HashSet<GeographicalCoordinates>();
-            this.Images = new HashSet<Image>();
             this.PowerLines = new HashSet<PowerLinesAreas>();
+            this.Images = new HashSet<Image>();
         }
 
         public string Name { get; set; }
@@ -21,8 +20,6 @@
         public string AddedByUserId { get; set; }
 
         public virtual ApplicationUser AddedByUser { get; set; }
-
-        public virtual ICollection<GeographicalCoordinates> GeographicalCoordinates { get; set; }
 
         public virtual ICollection<CurrentSensor> CurrentSensors { get; set; }
 

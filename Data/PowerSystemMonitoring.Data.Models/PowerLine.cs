@@ -11,9 +11,7 @@
     {
         public PowerLine()
         {
-            this.Areas = new HashSet<PowerLinesAreas>();
             this.CurrentSensors = new HashSet<CurrentSensor>();
-            this.Events = new HashSet<PowerLinesEvents>();
         }
 
         public string Name { get; set; }
@@ -22,14 +20,18 @@
 
         public double Voltage { get; set; }
 
-        public int ConductorId { get; set; }
+        public int? ConductorId { get; set; }
 
         public Conductor Conductor { get; set; }
 
-        public ICollection<PowerLinesAreas> Areas { get; set; }
+        public string AddedByUserId { get; set; }
+
+        public ApplicationUser AddedByUser { get; set; }
+
+        public ICollection<Area> Areas { get; set; }
 
         public ICollection<CurrentSensor> CurrentSensors { get; set; }
 
-        public ICollection<PowerLinesEvents> Events { get; set; }
+        public ICollection<Event> Events { get; set; }
     }
 }

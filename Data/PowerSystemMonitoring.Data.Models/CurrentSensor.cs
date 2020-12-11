@@ -12,8 +12,7 @@
     {
         public CurrentSensor()
         {
-            this.Images = new HashSet<Image>();
-            this.Events = new HashSet<CurrentSensorsEvents>();
+            this.Events = new HashSet<Event>();
         }
 
         public string Name { get; set; }
@@ -34,19 +33,15 @@
 
         public bool IsActive { get; set; }
 
-        public int AreaId { get; set; }
+        public int? AreaId { get; set; }
 
         public virtual Area Area { get; set; }
 
-        public int ConductorId { get; set; }
-
-        public Conductor Conductor { get; set; }
-
-        public int PowerLineId { get; set; }
+        public int? PowerLineId { get; set; }
 
         public virtual PowerLine PowerLine { get; set; }
 
-        public int GeographicalCoordinatesId { get; set; }
+        public int? GeographicalCoordinatesId { get; set; }
 
         public virtual GeographicalCoordinates GeographicalCoordinates { get; set; }
 
@@ -54,12 +49,10 @@
 
         public virtual ApplicationUser AddedByUser { get; set; }
 
-        public int WeatherStationId { get; set; }
+        public int? WeatherStationId { get; set; }
 
         public virtual WeatherStation WeatherStation { get; set; }
 
-        public virtual ICollection<Image> Images { get; set; }
-
-        public virtual ICollection<CurrentSensorsEvents> Events { get; set; }
+        public virtual ICollection<Event> Events { get; set; }
     }
 }

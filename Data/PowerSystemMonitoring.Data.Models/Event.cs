@@ -9,20 +9,22 @@
 
     public class Event : BaseDeletableModel<int>
     {
-        public Event()
-        {
-            this.PowerLines = new HashSet<PowerLinesEvents>();
-            this.CurrentSensors = new HashSet<CurrentSensorsEvents>();
-        }
-
         public string Name { get; set; }
 
         public string Description { get; set; }
 
         public bool IsActive { get; set; }
 
-        public virtual ICollection<PowerLinesEvents> PowerLines { get; set; }
+        public int? PowerLineId { get; set; }
 
-        public virtual ICollection<CurrentSensorsEvents> CurrentSensors { get; set; }
+        public virtual PowerLine PowerLine { get; set; }
+
+        public int? CurrentSensorId { get; set; }
+
+        public virtual CurrentSensor CurrentSensor { get; set; }
+
+        public string AddedByUserId { get; set; }
+
+        public ApplicationUser AddedByUser { get; set; }
     }
 }

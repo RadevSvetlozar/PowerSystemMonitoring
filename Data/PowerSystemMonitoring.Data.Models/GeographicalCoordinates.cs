@@ -12,8 +12,8 @@
 
         public string Longitude { get; set; }
 
-        public int AreaId { get; set; }
+        public string AddedByUserId { get; set; }
 
-        public virtual Area Area { get; set; }
+        public ApplicationUser AddedByUser { get; set; }
     }
 }

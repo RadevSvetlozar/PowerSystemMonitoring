@@ -11,9 +11,6 @@
         public Image()
         {
             this.Id = Guid.NewGuid().ToString();
-            this.WeatherStations = new HashSet<WeatherStationsImages>();
-            this.Conductors = new HashSet<ConductorsImages>();
-            this.CurrentSensors = new HashSet<CurrentSensorsImages>();
         }
 
         public string Extension { get; set; }
@@ -26,10 +23,12 @@
 
         public ApplicationUser AddedByUser { get; set; }
 
-        public virtual ICollection<CurrentSensorsImages> CurrentSensors { get; set; }
+        public int? ConductorId { get; set; }
 
-        public virtual ICollection<ConductorsImages> Conductors { get; set; }
+        public virtual Conductor Conductor { get; set; }
 
-        public virtual ICollection<WeatherStationsImages> WeatherStations { get; set; }
+        public int? WeatherStationId { get; set; }
+
+        public virtual WeatherStation WeatherStation { get; set; }
     }
 }

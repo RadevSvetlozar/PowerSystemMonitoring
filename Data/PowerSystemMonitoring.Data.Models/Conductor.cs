@@ -12,7 +12,6 @@
         public Conductor()
         {
             this.Images = new HashSet<Image>();
-            this.CurrentSensors = new HashSet<CurrentSensor>();
         }
 
         public string Name { get; set; }
@@ -45,12 +44,8 @@
 
         public virtual ApplicationUser AddedByUser { get; set; }
 
-        public int CurrentSensorId { get; set; }
-
         public bool IsActive { get; set; }
 
         public virtual ICollection<Image> Images { get; set; }
-
-        public virtual ICollection<CurrentSensor> CurrentSensors { get; set; }
     }
 }
