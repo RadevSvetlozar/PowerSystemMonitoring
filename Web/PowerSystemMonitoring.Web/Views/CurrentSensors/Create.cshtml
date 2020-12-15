@@ -1,0 +1,65 @@
+﻿@model PowerSystemMonitoring.Web.ViewModels.CurrentSensor.CurrentSensorInputModel
+
+<h1>Create CurrentSensors</h1>
+<form method="post" class="col-md-8 offset-md-2"
+      enctype="multipart/form-data">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Model"></label>
+            <input asp-for="Model" class="form-control" />
+            <span asp-validation-for="Model" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="ConnectionPassword"></label>
+            <input asp-for="ConnectionPassword" class="form-control" />
+            <span asp-validation-for="ConnectionPassword" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="InstallationHeight"></label>
+            <input asp-for="InstallationHeight" class="form-control" />
+            <span asp-validation-for="InstallationHeight" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="DistancePole"></label>
+            <input asp-for="DistancePole" class="form-control">
+            <span asp-validation-for="DistancePole" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Orientation"></label>
+            <input asp-for="Orientation" class="form-control">
+            <span asp-validation-for="Orientation" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="IsActive"></label>
+            <input asp-for="IsActive" class="form-control" />
+            <span asp-validation-for="IsActive" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-control-file col-md-6">
+            <label asp-for="Image"></label>
+            <input asp-for="Image" class="form-control">
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+        </div>
+        <input type="submit" class="btn btn-primary" />
+</form>
+
+

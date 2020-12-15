@@ -1,0 +1,27 @@
+﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.GeographicalCoordinates.GeographicalCoordinatesViewModel>
+
+
+<div>
+    <h1>All geographical coordinates</h1>
+
+    <a type="button" class="btn btn-success" asp-controller="GeographicalCoordinates" asp-action="Create">Create geographical coordinates</a>
+</div>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Longitude</th>
+            <th scope="col">Latitude</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coordinates in Model)
+        {
+            <tr>
+                <td>@coordinates.Longitude</td>
+                <td>@coordinates.Latitude</td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@coordinates.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

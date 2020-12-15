@@ -15,5 +15,9 @@
         public string AddedByUserId { get; set; }
 
         public ApplicationUser AddedByUser { get; set; }
+
+        public int? CurrentSensorId { get; set; }
+
+        public CurrentSensor CurrentSensor { get; set; }
     }
 }

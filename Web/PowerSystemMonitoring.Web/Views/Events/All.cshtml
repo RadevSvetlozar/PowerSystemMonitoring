@@ -1,23 +1,39 @@
 ﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.Event.EventViewModel>
 
-<h1>All Event</h1>
+<div>
+    <h1>All events</h1>
+
+    <a type="button" class="btn btn-success" asp-controller="Events" asp-action="Create">Create event</a>
+</div>
+<br />
 <table class="table">
     <thead>
         <tr>
-            
+
+            <th scope="col">Is active</th>
             <th scope="col">Name</th>
-            <th scope="col">AddedBy</th>            
+            <th scope="col">AddedBy</th>
+            <th scope="col">Description</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var currentEvent in Model)
         {
-            <tr>               
+            <tr>
+                <td>
+                    @if (currentEvent.IsActive)
+                    {
+                        <i class="fas fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="far fa-circle"></i>
+                    }
+                </td>
                 <td>@currentEvent.Name</td>
                 <td>@currentEvent.AddedByUserUsername</td>
                 <td>@currentEvent.Description</td>
-                <td>  <input  asp-action="GetById" asp-route-id="@currentEvent.Id" />Details</td>
-                <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@currentEvent.Id">Details</a></td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@currentEvent.Id">Details</a></td>
             </tr>
         }
     </tbody>

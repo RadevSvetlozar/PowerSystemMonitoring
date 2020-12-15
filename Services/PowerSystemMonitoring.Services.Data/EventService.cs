@@ -28,6 +28,7 @@
                 Description = input.Description,
                 Name = input.Name,
                 IsActive = input.IsActive,
+                AddedByUserId = userId,
             };
 
             await this.eventRepository.AddAsync(eventDb);
@@ -52,6 +53,17 @@
                 .FirstOrDefault();
 
             return eventDb;
+        }
+
+        public async Task UpdateAsync(int id, EditEventInputModel input)
+        {
+            var eventDb = this.eventRepository.All().FirstOrDefault(x => x.Id == id);
+
+            eventDb.Name = input.Name;
+            eventDb.Description = input.Description;
+            eventDb.IsActive = input.IsActive;
+
+            await this.eventRepository.SaveChangesAsync();
         }
     }
 }

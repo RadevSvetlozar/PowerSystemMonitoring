@@ -11,12 +11,10 @@
     {
         public Conductor()
         {
-            this.Images = new HashSet<Image>();
+            this.PowerLines = new HashSet<PowerLine>();
         }
 
         public string Name { get; set; }
-
-        public double Length { get; set; }
 
         public double OuterDiameter { get; set; }
 
@@ -44,8 +42,10 @@
 
         public virtual ApplicationUser AddedByUser { get; set; }
 
-        public bool IsActive { get; set; }
+        public string ImageId { get; set; }
 
-        public virtual ICollection<Image> Images { get; set; }
+        public virtual Image Image { get; set; }
+
+        public virtual ICollection<PowerLine> PowerLines { get; set; }
     }
 }

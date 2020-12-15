@@ -1,24 +1,28 @@
 ﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.Condutor.ConductorViewModel>
 
-<h1>All Conductors</h1>
-<table class="table">
+    <div>
+        <h1>All Conductors</h1>
+
+        <a type="button" class="btn btn-success" asp-controller="Conductors" asp-action="Create">Create conductor</a>
+    </div>
+    <br />
+<table class="table table-hover">
     <thead>
         <tr>
-            
             <th scope="col">Name</th>
-            <th scope="col">AddedBy</th>
-            <th scope="col">IsActive</th>
+            <th scope="col">Current</th>
+            <th scope="col">Max current</th>
         </tr>
     </thead>
     <tbody>
+
         @foreach (var conductor in Model)
         {
-            <tr>               
+            <tr>
                 <td>@conductor.Name</td>
-                <td>@conductor.AddedByUserUsername</td>
-                <td>@conductor.IsActive</td>
-                <td>  <input  asp-action="GetById" asp-route-id="@conductor.Id" />Details</td>
-                <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@conductor.Id">Details</a></td>
+                <td>@conductor.Current</td>
+                <td>@conductor.MaxCurrent</td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@conductor.Id">Edit</a></td>
             </tr>
         }
     </tbody>

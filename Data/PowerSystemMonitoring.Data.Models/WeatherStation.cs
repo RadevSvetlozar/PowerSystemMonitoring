@@ -11,11 +11,20 @@
     {
         public WeatherStation()
         {
-            this.Images = new HashSet<Image>();
             this.CurrentSensors = new HashSet<CurrentSensor>();
         }
 
         public string Name { get; set; }
+
+        public double Temperature { get; set; }
+
+        public string City { get; set; }
+
+        public string IPAddress { get; set; }
+
+        public bool IsActive { get; set; }
+
+        public string InstalationDescription { get; set; }
 
         public string AddedByUserId { get; set; }
 
@@ -25,13 +34,7 @@
 
         public virtual GeographicalCoordinates GeographicalCoordinates { get; set; }
 
-        public string IPAddress { get; set; }
-
-        public bool IsActive { get; set; }
-
-        public string InstalationDescription { get; set; }
-
-        public virtual ICollection<Image> Images { get; set; }
+        public virtual Image Image { get; set; }
 
         public virtual ICollection<CurrentSensor> CurrentSensors { get; set; }
     }

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.PoweLine.PowerLineViewModel>
+
+<div>
+    <h1>All power lines</h1>
+
+    <a type="button" class="btn btn-success" asp-controller="PowerLines" asp-action="Create">Create power line</a>
+</div>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+
+            <th scope="col">Name</th>
+            <th scope="col">Length</th>
+            <th scope="col">Voltage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var powerLine in Model)
+        {
+            <tr>
+                <td>@powerLine.Name</td>
+                <td>@powerLine.Length km</td>
+                <td>@powerLine.Voltage kV</td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@powerLine.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

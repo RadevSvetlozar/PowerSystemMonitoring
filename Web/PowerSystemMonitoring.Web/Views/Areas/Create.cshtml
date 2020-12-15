@@ -3,17 +3,25 @@
 <h1>Create Area</h1>
 <form method="post" class="col-md-6 offset-md-3"
       enctype="multipart/form-data">
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-row">
+            <div class="col-md-2">
+                <label asp-for="Image"></label>
+            </div>
+            <div class="col-md-2">
+                <input asp-for="Image" type="file">
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+        </div>
     </div>
-    <div class="form-check">
-        <label asp-for="Images"></label>
-        <input asp-for="Images" class="form-control">
-        <span asp-validation-for="Images" class="text-danger"></span>
-    </div>
+    <hr />
     <input type="submit" class="btn btn-primary" />
 </form>
 
-      
+
+

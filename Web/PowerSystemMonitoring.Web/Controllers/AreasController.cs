@@ -66,5 +66,29 @@
 
             return this.View(area);
         }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            var inputModel = this.areaService.GetById<AreaEditModel>(id);
+
+            return this.View(inputModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, AreaEditModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+            var user = await this.userManager.GetUserAsync(this.User);
+
+            await this.areaService.UpdateAsync(id, input, user.Id, $"{this.webHostEnvironment.WebRootPath}/images");
+
+            return this.RedirectToAction(nameof(this.All), new { id });
+        }
     }
 }

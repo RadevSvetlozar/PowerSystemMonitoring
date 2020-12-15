@@ -23,11 +23,11 @@
 
         public void CreateMappings(IProfileExpression configuration)
         {
-            configuration.CreateMap<Area, AreaViewModel>()
-                    .ForMember(x => x.ImageUrl, opt =>
-                    opt.MapFrom(x => x.Images.FirstOrDefault().RemoteImageUrl != null ?
-                    x.Images.FirstOrDefault().RemoteImageUrl :
-                    "/images/areas/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension));
+            configuration.CreateMap<Area, AreaEditModel>()
+                .ForMember(x => x.ImageUrl, opt =>
+                opt.MapFrom(x => x.Image.RemoteImageUrl != null ?
+                x.Image.RemoteImageUrl :
+                "/images/areas/" + x.Image.Id + "." + x.Image.Extension));
         }
     }
 }

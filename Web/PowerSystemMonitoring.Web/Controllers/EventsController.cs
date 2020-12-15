@@ -59,5 +59,27 @@
 
             return this.View(currentEvent);
         }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            var inputModel = this.eventService.GetById<EditEventInputModel>(id);
+
+            return this.View(inputModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, EditEventInputModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+            await this.eventService.UpdateAsync(id, input);
+
+            return this.RedirectToAction(nameof(this.All), new { id });
+        }
     }
 }

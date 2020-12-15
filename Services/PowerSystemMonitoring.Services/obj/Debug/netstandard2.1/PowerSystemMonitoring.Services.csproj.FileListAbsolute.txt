@@ -1,7 +1,6 @@
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.deps.json
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.dll
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services\bin\Debug\netstandard2.1\PowerSystemMonitoring.Services.pdb
-C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.csprojAssemblyReference.cache
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.csproj.CoreCompileInputs.cache
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.AssemblyInfoInputs.cache
 C:\PowerSystemMonitoring\Services\PowerSystemMonitoring.Services\obj\Debug\netstandard2.1\PowerSystemMonitoring.Services.AssemblyInfo.cs

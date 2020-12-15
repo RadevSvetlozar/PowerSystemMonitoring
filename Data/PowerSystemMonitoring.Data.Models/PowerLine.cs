@@ -24,6 +24,10 @@
 
         public Conductor Conductor { get; set; }
 
+        public int? ImageId { get; set; }
+
+        public Image Image { get; set; }
+
         public string AddedByUserId { get; set; }
 
         public ApplicationUser AddedByUser { get; set; }

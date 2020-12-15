@@ -36,8 +36,6 @@
 
         public int ConductorPerPhase { get; set; }
 
-        public bool IsActive { get; set; }
-
-        public IEnumerable<IFormFile> Images { get; set; }
+        public IFormFile Image { get; set; }
     }
 }

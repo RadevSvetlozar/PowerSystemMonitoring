@@ -1,0 +1,108 @@
+﻿@model PowerSystemMonitoring.Web.ViewModels.CurrentSensor.EditCurrentSensor
+
+<h1>Edit current sensor</h1>
+<form method="post" class=""
+      enctype="multipart/form-data">
+    <div class="row">
+        @if (Model.ImageUrl != null)
+        {
+            <div class="col-12 col-md-2">
+                <img class="img-fluid w-100" src=@Model.ImageUrl alt="@Model.Name" />
+            </div>
+        }
+        else
+        {
+            <div>
+                <img src="~/images/common/No_Image.jpg" />
+            </div>
+        }
+
+        <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+            <div class="text-center text-sm-left col-md-6">
+                <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">@Model.Name</h4>
+                <p class="mb-0"></p>
+                <br />
+                <h6 class="pt-sm-2 pb-1 mb-0 text-nowrap">Change photo</h6>
+
+                <div>
+                    <input asp-for="ImageFile" type="file">
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+
+
+            </div>
+            <div class="text-center text-sm-right">
+                <label>Created on</label>
+                <div class="text-muted"><small>@Model.CreatedOn</small></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Model"></label>
+            <input asp-for="Model" class="form-control" />
+            <span asp-validation-for="Model" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="ConnectionPassword"></label>
+            <input asp-for="ConnectionPassword" class="form-control" />
+            <span asp-validation-for="ConnectionPassword" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="InstallationHeight"></label>
+            <input asp-for="InstallationHeight" class="form-control" />
+            <span asp-validation-for="InstallationHeight" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="DistancePole"></label>
+            <input asp-for="DistancePole" class="form-control">
+            <span asp-validation-for="DistancePole" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Orientation"></label>
+            <input asp-for="Orientation" class="form-control">
+            <span asp-validation-for="Orientation" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="IsActive"></label>
+            <input asp-for="IsActive" class="form-control" />
+            <span asp-validation-for="IsActive" class="text-danger"></span>
+        </div>
+    </div>
+    <h5>Geographical coordinates</h5>
+    <hr />
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Latitude"></label>
+            <input asp-for="Latitude" class="form-control">
+            <span asp-validation-for="Latitude" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Longitude"></label>
+            <input asp-for="Longitude" class="form-control" />
+            <span asp-validation-for="Longitude" class="text-danger"></span>
+        </div>
+    </div>
+    <hr />
+    <input type="hidden" asp-for="@Model.PowerLineId" />
+    <input type="submit" class="btn btn-primary" value="Save changes" />
+</form>
+

@@ -95,3 +95,10 @@ C:\PowerSystemMonitoring\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.csproj.Co
 C:\PowerSystemMonitoring\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.dll
 C:\PowerSystemMonitoring\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.pdb
 C:\PowerSystemMonitoring\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.genruntimeconfig.cache
+C:\PowerSystemMonitoring\Tests\Sandbox\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+C:\PowerSystemMonitoring\Tests\Sandbox\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\PowerSystemMonitoring\Tests\Sandbox\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\PowerSystemMonitoring\Tests\Sandbox\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\PowerSystemMonitoring\Tests\Sandbox\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\PowerSystemMonitoring\Tests\Sandbox\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\PowerSystemMonitoring\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll

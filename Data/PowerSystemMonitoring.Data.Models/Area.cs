@@ -12,7 +12,6 @@
         {
             this.CurrentSensors = new HashSet<CurrentSensor>();
             this.PowerLines = new HashSet<PowerLinesAreas>();
-            this.Images = new HashSet<Image>();
         }
 
         public string Name { get; set; }
@@ -23,7 +22,7 @@
 
         public virtual ICollection<CurrentSensor> CurrentSensors { get; set; }
 
-        public virtual ICollection<Image> Images { get; set; }
+        public virtual Image Image { get; set; }
 
         public ICollection<PowerLinesAreas> PowerLines { get; set; }
     }

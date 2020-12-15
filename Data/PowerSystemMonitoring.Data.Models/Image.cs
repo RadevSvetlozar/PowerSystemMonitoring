@@ -6,7 +6,7 @@
 
     using PowerSystemMonitoring.Data.Common.Models;
 
-    public class Image : BaseModel<string>
+    public class Image : BaseDeletableModel<string>
     {
         public Image()
         {
@@ -27,8 +27,20 @@
 
         public virtual Conductor Conductor { get; set; }
 
+        public int? CurrentSensorId { get; set; }
+
+        public virtual CurrentSensor CurrentSensor { get; set; }
+
         public int? WeatherStationId { get; set; }
 
         public virtual WeatherStation WeatherStation { get; set; }
+
+        public int? AreaId { get; set; }
+
+        public virtual Area Area { get; set; }
+
+        public int? PowerLineId { get; set; }
+
+        public virtual PowerLine PowerLine { get; set; }
     }
 }

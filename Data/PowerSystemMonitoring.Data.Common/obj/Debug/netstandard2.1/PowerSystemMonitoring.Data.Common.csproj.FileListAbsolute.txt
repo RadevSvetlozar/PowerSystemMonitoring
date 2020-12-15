@@ -1,9 +1,9 @@
 C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.deps.json
 C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.dll
 C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\bin\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.pdb
-C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\obj\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.csprojAssemblyReference.cache
 C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\obj\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.csproj.CoreCompileInputs.cache
 C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\obj\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.AssemblyInfoInputs.cache
 C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\obj\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.AssemblyInfo.cs
 C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\obj\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.dll
 C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\obj\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.pdb
+C:\PowerSystemMonitoring\Data\PowerSystemMonitoring.Data.Common\obj\Debug\netstandard2.1\PowerSystemMonitoring.Data.Common.csprojAssemblyReference.cache

@@ -7,6 +7,8 @@
     using System.Text;
     using System.Threading.Tasks;
 
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.EntityFrameworkCore.Metadata.Internal;
     using PowerSystemMonitoring.Data.Common.Repositories;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Mapping;
@@ -16,10 +18,14 @@
     {
         private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif" };
         private readonly IDeletableEntityRepository<Conductor> conductorsRepository;
+        private readonly IDeletableEntityRepository<Image> imageRepository;
 
-        public ConductorService(IDeletableEntityRepository<Conductor> conductorsRepository)
+        public ConductorService(
+            IDeletableEntityRepository<Conductor> conductorsRepository,
+            IDeletableEntityRepository<Image> imageRepository)
         {
             this.conductorsRepository = conductorsRepository;
+            this.imageRepository = imageRepository;
         }
 
         public async Task CreateAsync(ConductorInputModel input, string userId, string imagePath = null)
@@ -41,30 +47,11 @@
                 Weight = input.Weight,
             };
 
-            Directory.CreateDirectory($"{imagePath}/conductors/");
-
-            foreach (var image in input.Images)
+            if (input.Image != null)
             {
-                var extencion = Path.GetExtension(image.FileName).TrimStart('.');
+                var image = await this.CreateImageAsync(input.Image, userId, imagePath);
 
-                if (!this.allowedExtensions.Any(x => extencion.EndsWith(x)))
-                {
-                    throw new Exception($"Invalid image extension {extencion}");
-                }
-
-                var dbImage = new Image
-                {
-                    AddedByUserId = userId,
-                    Extension = extencion,
-                };
-
-                conductor.Images.Add(dbImage);
-
-                var physicalPath = $"{imagePath}/conductors/{dbImage.Id}.{extencion}";
-
-                using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
-
-                await image.CopyToAsync(fileStream);
+                conductor.Image = image;
             }
 
             await this.conductorsRepository.AddAsync(conductor);
@@ -73,9 +60,11 @@
 
         public IEnumerable<T> GetAll<T>()
         {
-            return this.conductorsRepository.All()
+            var conductors = this.conductorsRepository.All()
                  .OrderByDescending(x => x.Id).To<T>()
                  .ToList();
+
+            return conductors;
         }
 
         public T GetById<T>(int id)
@@ -86,6 +75,59 @@
                 .FirstOrDefault();
 
             return conductor;
+        }
+
+        public async Task UpdateAsync(int id, ConductorEditModel input, string userId, string imagePath)
+        {
+            var conductor = this.conductorsRepository.All().FirstOrDefault(x => x.Id == id);
+
+            var imageDb = this.imageRepository.All().Where(x => x.ConductorId == conductor.Id).FirstOrDefault();
+
+            if (input.ImageFile != null)
+            {
+                var image = await this.CreateImageAsync(input.ImageFile, userId, imagePath);
+                if (imageDb != null)
+                {
+                    imageDb.IsDeleted = true;
+                }
+
+                conductor.Image = image;
+            }
+
+            conductor.InnerDiameter = input.InnerDiameter;
+            conductor.MaxCurrent = input.MaxCurrent;
+            conductor.MaxTemperature = input.MaxTemperature;
+            conductor.Name = input.Name;
+            conductor.OuterDiameter = input.OuterDiameter;
+            conductor.RTCoefficient = input.RTCoefficient;
+            conductor.Section = input.Section;
+            conductor.Weight = input.Weight;
+
+            await this.conductorsRepository.SaveChangesAsync();
+        }
+
+        private async Task<Image> CreateImageAsync(IFormFile file, string userId, string imagePath)
+        {
+            Directory.CreateDirectory($"{imagePath}/conductors/");
+
+            var extencion = Path.GetExtension(file.FileName).TrimStart('.');
+
+            if (!this.allowedExtensions.Any(x => extencion.EndsWith(x)))
+            {
+                throw new Exception($"Invalid image extension {extencion}");
+            }
+
+            var dbImage = new Image
+            {
+                AddedByUserId = userId,
+                Extension = extencion,
+            };
+
+            var physicalPath = $"{imagePath}/conductors/{dbImage.Id}.{extencion}";
+            Stream fileStream = new FileStream(physicalPath, FileMode.Create);
+
+            await file.CopyToAsync(fileStream);
+            return dbImage;
         }
     }
 }

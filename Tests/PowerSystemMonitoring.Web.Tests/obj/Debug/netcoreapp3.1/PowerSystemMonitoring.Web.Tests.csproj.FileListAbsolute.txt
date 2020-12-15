@@ -526,3 +526,10 @@ C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcore
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\obj\Debug\netcoreapp3.1\staticwebassets\PowerSystemMonitoring.Web.Tests.StaticWebAssets.Manifest.cache
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\obj\Debug\netcoreapp3.1\staticwebassets\PowerSystemMonitoring.Web.Tests.StaticWebAssets.xml
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.Tests.genruntimeconfig.cache
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll

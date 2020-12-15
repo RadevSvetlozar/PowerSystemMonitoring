@@ -66,6 +66,31 @@
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
 
+            builder.Entity<Conductor>()
+                .HasOne(i => i.Image)
+                .WithOne(c => c.Conductor)
+                .HasForeignKey<Image>(b => b.ConductorId);
+
+            builder.Entity<Area>()
+   .HasOne(i => i.Image)
+   .WithOne(c => c.Area)
+   .HasForeignKey<Image>(b => b.AreaId);
+
+            builder.Entity<CurrentSensor>()
+   .HasOne(i => i.Image)
+   .WithOne(c => c.CurrentSensor)
+   .HasForeignKey<Image>(b => b.CurrentSensorId);
+
+            builder.Entity<CurrentSensor>()
+   .HasOne(i => i.GeographicalCoordinates)
+   .WithOne(c => c.CurrentSensor)
+   .HasForeignKey<GeographicalCoordinates>(b => b.CurrentSensorId);
+
+            builder.Entity<PowerLine>()
+  .HasOne(i => i.Image)
+  .WithOne(c => c.PowerLine)
+  .HasForeignKey<Image>(b => b.PowerLineId);
+
             builder.Entity<PowerLinesAreas>().HasKey(x => new { x.PowerLineId, x.AreaId });
 
             this.ConfigureUserIdentityRelations(builder);

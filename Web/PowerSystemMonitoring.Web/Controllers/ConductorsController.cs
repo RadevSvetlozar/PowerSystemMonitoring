@@ -62,12 +62,35 @@
             return this.View(conductors);
         }
 
-        [Authorize]
         public IActionResult GetById(int id)
         {
-            var conductor = this.conductorService.GetById<ConductorViewModel>(id);
+            var currentEvent = this.conductorService.GetById<ConductorViewModel>(id);
 
-            return this.View(conductor);
+            return this.View(currentEvent);
+        }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            var inputModel = this.conductorService.GetById<ConductorEditModel>(id);
+
+            return this.View(inputModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, ConductorEditModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+            var user = await this.userManager.GetUserAsync(this.User);
+
+            await this.conductorService.UpdateAsync(id, input, user.Id, $"{this.webHostEnvironment.WebRootPath}/images");
+
+            return this.RedirectToAction(nameof(this.Edit), new { id });
         }
     }
 }

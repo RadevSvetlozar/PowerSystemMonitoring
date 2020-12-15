@@ -53,6 +53,10 @@
 
         public virtual WeatherStation WeatherStation { get; set; }
 
+        public string ImageId { get; set; }
+
+        public virtual Image Image { get; set; }
+
         public virtual ICollection<Event> Events { get; set; }
     }
 }

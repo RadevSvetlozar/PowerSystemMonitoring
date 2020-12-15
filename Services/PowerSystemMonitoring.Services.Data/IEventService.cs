@@ -15,5 +15,7 @@
         IEnumerable<T> GetAll<T>();
 
         T GetById<T>(int id);
+
+        Task UpdateAsync(int id, EditEventInputModel input);
     }
 }
