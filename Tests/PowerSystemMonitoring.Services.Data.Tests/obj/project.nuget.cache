@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BMPDvbdeCD50CsEtsvUyJRpPr9WlRyFGnL9Fps1m6n2UJfGDTcZl9gBgr0WK2g5JZKhw8tgHVE9FXSU+3DUicA==",
+  "dgSpecHash": "0LKHTjaLjEIp3MVxh7ZfOq8pJmX6XKvi/jQ65VM4Jrl+FpVZiH1n/uu+Sd2Ze4x6PeaaUaNOvIAfg2mExuOrXQ==",
   "success": true,
   "projectFilePath": "C:\\PowerSystemMonitoring\\Tests\\PowerSystemMonitoring.Services.Data.Tests\\PowerSystemMonitoring.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\radev\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",

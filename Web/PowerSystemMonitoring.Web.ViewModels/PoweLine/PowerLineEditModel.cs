@@ -39,7 +39,6 @@
                 opt.MapFrom(x => x.Image.RemoteImageUrl != null ?
                 x.Image.RemoteImageUrl :
                 "/images/powerLines/" + x.Image.Id + "." + x.Image.Extension));
-
         }
     }
 }

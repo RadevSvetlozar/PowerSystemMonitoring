@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "gB+vuBBCHKu4NSnAnGTgj9rxm8Yu19R5OsCnxrXgZGLk11PsULCvx7ZIKD5uKC1DgY76SiYOIKhiW5DgOL7xhA==",
+  "dgSpecHash": "z8Yl6vs0U/xmA0GM76ANp+zgrd4jgdwmcSP4T5O9FSINQQkhQOCtBM+VWxNopSx40K6lpx0e5H86Si7oHe7s3w==",
   "success": true,
   "projectFilePath": "C:\\PowerSystemMonitoring\\Web\\PowerSystemMonitoring.Web\\PowerSystemMonitoring.Web.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\radev\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
+    "C:\\Users\\radev\\.nuget\\packages\\jquery\\3.5.1\\jquery.3.5.1.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.7\\microsoft.aspnet.webpages.3.2.7.nupkg.sha512",

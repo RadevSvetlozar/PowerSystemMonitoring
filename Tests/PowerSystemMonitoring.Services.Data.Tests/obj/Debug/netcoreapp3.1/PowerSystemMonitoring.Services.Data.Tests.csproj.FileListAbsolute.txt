@@ -173,3 +173,4 @@ C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Deb
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\AngleSharp.dll

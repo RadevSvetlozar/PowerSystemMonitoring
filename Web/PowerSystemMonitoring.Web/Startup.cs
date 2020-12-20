@@ -69,6 +69,7 @@
             services.AddTransient<IGeographicalCoordinatesService, GeographicalCoordinatesService>();
             services.AddTransient<IWeatherStationService, WeatherStationService>();
             services.AddTransient<IPowerLineService, PowerLineService>();
+            services.AddTransient<IPowerSystemLoad, PowerSystemLoad>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

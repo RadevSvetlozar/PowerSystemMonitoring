@@ -424,9 +424,6 @@ C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\P
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.ViewModels.pdb
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\PowerSystemMonitoring.Data.Common.pdb
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.csprojAssemblyReference.cache
-C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.csproj.CoreCompileInputs.cache
-C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cs
-C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.RazorAssemblyInfo.cache
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.RazorAssemblyInfo.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.AssemblyInfoInputs.cache
@@ -490,3 +487,9 @@ C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\R
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerLines\GetById.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerLines\Edit.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\CurrentSensors\AddToPowerLine.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index1.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.csproj.CoreCompileInputs.cache
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\AngleSharp.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerSystemLoads\GetAllLoads.cshtml.g.cs

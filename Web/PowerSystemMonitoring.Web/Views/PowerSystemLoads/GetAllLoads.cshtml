@@ -1,0 +1,37 @@
+﻿@model PowerSystemMonitoring.Web.ViewModels.PowerSystemLoad.PowerSystemLoadViewModel
+
+<div>
+    <h1>All loads in Bulgaria</h1>
+    <h4>@Model.DateTime</h4>
+
+
+</div>
+<br />
+<table class="table table-bordered">
+    <thead class="alert-primary">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">MW</th>
+            <th scope="col">MW, %</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var unit in Model.Units)
+        {
+            <tr>
+                <td>@unit.Name</td>
+                <td>@unit.LoadAbsoluteValute</td>
+                <td>@unit.LoadPercentageValute %</td>
+
+            </tr>
+        }
+        <tr>
+            <td class="alert-success">Total load</td>
+            <td  colspan="2" class="alert-success text-center"> @Model.TotalLoad MW</td>
+          
+
+        </tr>
+
+    </tbody>
+</table>
+

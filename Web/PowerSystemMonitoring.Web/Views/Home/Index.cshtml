@@ -3,11 +3,32 @@
     this.ViewData["Title"] = "Home Page";
 }
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-        
-        <img src="~/images/index/Karta_nova_03_2012_BG.jpg" class="img-thumbnail" />
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
+
+
+    
+    <div class="container">
+
+        <div class="pyramid">
+            
+            <img src="~/images/index/TDUIztok.png" usemap="#Map" class="map"  />
+            <map name="Map" id="Map">
+
+                <area href="/PowerLines/Edit/?id=3" shape="poly" coords="526, 290, 526, 300, 68, 336, 68, 346" />
+                <area href="/PowerLines/Edit/?id=5" shape="poly" coords="718, 81, 723, 83,550, 272, 556, 276" />
+                <area href="/PowerLines/Edit/?id=4" shape="poly" coords="855, 136, 860, 142, 645, 314, 653, 320" />
+
+                <area href="/PowerLines/Edit/?id=6" shape="poly" coords="563, 286, 562, 293, 632, 315, 629, 320" />
+                <area href="/PowerLines/Edit/?id=7" shape="poly" coords="562, 302, 559, 308, 623, 326, 622, 332" />
+
+
+            </map>
+        </div>
+
     </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
 
 

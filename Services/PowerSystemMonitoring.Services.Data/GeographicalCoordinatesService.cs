@@ -61,7 +61,7 @@
         public async Task UpdateAsync(int id, EditGeographicalCoordinatesModel input)
         {
             var coordinates = this.geographicalCoordinatesReposotory.All().FirstOrDefault(x => x.Id == id);
-         
+
             coordinates.Latitude = input.Latitude;
             coordinates.Longitude = input.Longitude;
 

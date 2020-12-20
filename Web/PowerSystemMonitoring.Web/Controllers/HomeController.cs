@@ -12,6 +12,11 @@
             return this.View();
         }
 
+        public IActionResult Index1()
+        {
+            return this.View();
+        }
+
         public IActionResult Privacy()
         {
             return this.View();

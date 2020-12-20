@@ -6,6 +6,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using System.Web.WebPages.Html;
 
     using Microsoft.AspNetCore.Http;
     using PowerSystemMonitoring.Data.Common.Repositories;
@@ -13,7 +14,6 @@
     using PowerSystemMonitoring.Services.Mapping;
     using PowerSystemMonitoring.Web.ViewModels.Condutor;
     using PowerSystemMonitoring.Web.ViewModels.CurrentSensor;
-    using System.Web.WebPages.Html;
 
     public class CurrentSensorService : ICurrentSensorService
     {
@@ -100,6 +100,7 @@
 
             return list;
         }
+
         public IEnumerable<T> GetAllByPowerLineId<T>(int id)
         {
             var sensors = this.currentSensorRepository.All()
@@ -183,6 +184,5 @@
             await file.CopyToAsync(fileStream);
             return dbImage;
         }
-
     }
 }

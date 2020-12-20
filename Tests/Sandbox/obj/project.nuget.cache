@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "N0jf5qf3GSYWxezSQBTAm8xk19p0/jDSV6JZ19oiz1b88uww3YO0dg3Vgk6zsE1Fpf640SshtVr7UKbG4+5YsA==",
+  "dgSpecHash": "pV6EBi2CQ9VBwxWeZjAD8BowDkHmfsPWTCCbwmEKpIuEhYDVEEgIyBDmbCPOBlqex1s8nluWPHAJosVaZ9m4Qg==",
   "success": true,
   "projectFilePath": "C:\\PowerSystemMonitoring\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\radev\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",
     "C:\\Users\\radev\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
