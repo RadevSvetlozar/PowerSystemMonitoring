@@ -493,3 +493,4 @@ C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\P
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\AngleSharp.dll
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerSystemLoads\GetAllLoads.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Events\AllSorted.cshtml.g.cs

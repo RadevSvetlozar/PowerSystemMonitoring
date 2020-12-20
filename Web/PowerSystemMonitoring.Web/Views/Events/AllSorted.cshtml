@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.Event.EventViewModel>
+
+<div>
+    <h1>List of all events!</h1>
+</div>
+<br />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.ActionLink("All", "AllSorted", "Events", new { sortOrder = "s" })/
+                @Html.ActionLink("IsActive", "AllSorted", "Events", new { sortOrder = "isActive" })/
+                @Html.ActionLink("IsNotActive", "AllSorted", "Events", new { sortOrder = "isNotActive" })
+            </th>
+            <th scope="col">Name</th>
+            <th scope="col">
+                Power Line
+                @Html.ActionLink("Asc", "AllSorted", "Events", new { sortOrder = "powerLine_asc" })/
+                @Html.ActionLink("Desc", "AllSorted", "Events", new { sortOrder = "powerLine_desc" })
+            </th>
+            <th scope="col">
+                Current Sensor
+                @Html.ActionLink("Asc", "AllSorted", "Events", new { sortOrder = "currentSensor_asc" })/
+                @Html.ActionLink("Desc", "AllSorted", "Events", new { sortOrder = "currentSensor_desc" })
+            </th>
+            <th scope="col">
+                Date
+                @Html.ActionLink("Asc", "AllSorted", "Events", new { sortOrder = "date_asc" })/
+                @Html.ActionLink("Desc", "AllSorted", "Events", new { sortOrder = "date_desc" })
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var currentEvent in Model)
+        {
+            <tr>
+                <td>
+                    @if (currentEvent.IsActive)
+                    {
+                        <i class="fas fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="far fa-circle"></i>
+                    }
+                </td>
+                <td>@currentEvent.Name</td>
+                <td>@currentEvent.PowerLineName</td>
+                <td>@currentEvent.CurrentSensorName</td>
+                <td>@currentEvent.Description</td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@currentEvent.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

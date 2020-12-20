@@ -52,6 +52,16 @@
 
             return this.View(events);
         }
+    
+
+        [Authorize]
+        
+        public IActionResult AllSorted(string sortOrder = null)
+        {
+            var events = this.eventService.GetAllSorted<EventViewModel>(sortOrder);
+
+            return this.View(events);
+        }
 
         public IActionResult GetById(int id)
         {

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.Tracing;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
@@ -43,6 +44,44 @@
                 .ToList();
 
             return events;
+        }
+
+        public IEnumerable<T> GetAllSorted<T>(string sortOrder)
+        {
+
+            var events = this.eventRepository.All();
+            switch (sortOrder)
+            {
+                case "powerLine_asc":
+                    events = events.OrderBy(x => x.PowerLine.Name);
+                    break;
+                case "powerLine_desc":
+                    events = events.OrderByDescending(x => x.PowerLine.Name);
+                    break;
+                case "currentSensor_asc":
+                    events = events.OrderBy(x => x.CurrentSensor.Name);
+                    break;
+                case "currentSensor_desc":
+                    events = events.OrderByDescending(x => x.CurrentSensor.Name);
+                    break;
+                case "date_asc":
+                    events = events.OrderBy(x => x.CreatedOn);
+                    break;
+                case "date_desc":
+                    events = events.OrderByDescending(x => x.CreatedOn);
+                    break;
+                case "isActive":
+                    events = events.Where(x => x.IsActive);
+                    break;
+                case "isNotActive":
+                    events = events.Where(x => !x.IsActive);
+                    break;
+                default:
+                    events = events.OrderBy(s => s.CreatedOn);
+                    break;
+            }
+
+            return events.To<T>().ToList();
         }
 
         public T GetById<T>(int id)

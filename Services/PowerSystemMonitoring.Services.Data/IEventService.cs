@@ -14,6 +14,8 @@
 
         IEnumerable<T> GetAll<T>();
 
+        IEnumerable<T> GetAllSorted<T>(string sortOrder);
+
         T GetById<T>(int id);
 
         Task UpdateAsync(int id, EditEventInputModel input);

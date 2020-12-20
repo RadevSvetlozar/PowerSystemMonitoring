@@ -16,6 +16,10 @@
         public string Description { get; set; }
 
         public string AddedByUserUsername { get; set; }
+        
+        public string CurrentSensorName { get; set; }
+
+        public string PowerLineName { get; set; }
 
         public bool IsActive { get; set; }
     }
