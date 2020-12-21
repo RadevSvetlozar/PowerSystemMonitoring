@@ -42,6 +42,8 @@
 
         public DbSet<PowerLinesAreas> PowerLinesAreas { get; set; }
 
+        public DbSet<RealTimeValues> RealTimeValues { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -85,6 +87,11 @@
    .HasOne(i => i.GeographicalCoordinates)
    .WithOne(c => c.CurrentSensor)
    .HasForeignKey<GeographicalCoordinates>(b => b.CurrentSensorId);
+
+            builder.Entity<CurrentSensor>()
+.HasOne(i => i.RealTimeValues)
+.WithOne(c => c.CurrentSensor)
+.HasForeignKey<RealTimeValues>(b => b.CurrentSensorId);
 
             builder.Entity<PowerLine>()
   .HasOne(i => i.Image)

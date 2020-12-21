@@ -413,6 +413,9 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.Property<int?>("PowerLineId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("RealTimeValuesId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("WeatherStationId")
                         .HasColumnType("int");
 
@@ -658,6 +661,45 @@ namespace PowerSystemMonitoring.Data.Migrations
                     b.ToTable("PowerLinesAreas");
                 });
 
+            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.RealTimeValues", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<float>("Current")
+                        .HasColumnType("real");
+
+                    b.Property<int?>("CurrentSensorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<float>("Temparature")
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CurrentSensorId")
+                        .IsUnique()
+                        .HasFilter("[CurrentSensorId] IS NOT NULL");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("RealTimeValues");
+                });
+
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.WeatherStation", b =>
                 {
                     b.Property<int>("Id")
@@ -877,6 +919,13 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .HasForeignKey("PowerLineId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PowerSystemMonitoring.Data.Models.RealTimeValues", b =>
+                {
+                    b.HasOne("PowerSystemMonitoring.Data.Models.CurrentSensor", "CurrentSensor")
+                        .WithOne("RealTimeValues")
+                        .HasForeignKey("PowerSystemMonitoring.Data.Models.RealTimeValues", "CurrentSensorId");
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.WeatherStation", b =>
