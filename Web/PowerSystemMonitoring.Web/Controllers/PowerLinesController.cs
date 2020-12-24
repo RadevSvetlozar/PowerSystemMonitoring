@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-
+    using System.Web.WebPages.Html;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
@@ -13,6 +13,7 @@
     using Microsoft.AspNetCore.Mvc.Rendering;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Data;
+    using PowerSystemMonitoring.Web.ViewModels.Condutor;
     using PowerSystemMonitoring.Web.ViewModels.CurrentSensor;
     using PowerSystemMonitoring.Web.ViewModels.PoweLine;
 
@@ -22,23 +23,29 @@
         private readonly ICurrentSensorService currentSensorService;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IWebHostEnvironment webHostEnvironment;
+        private readonly IConductorService conductorService;
 
         public PowerLinesController(
             IPowerLineService powerLineService,
             ICurrentSensorService currentSensorService,
             UserManager<ApplicationUser> userManager,
-            IWebHostEnvironment webHostEnvironment)
+            IWebHostEnvironment webHostEnvironment,
+            IConductorService conductorService)
         {
             this.powerLineService = powerLineService;
             this.currentSensorService = currentSensorService;
             this.userManager = userManager;
             this.webHostEnvironment = webHostEnvironment;
+            this.conductorService = conductorService;
         }
 
         [Authorize]
         public IActionResult Create()
         {
-            return this.View();
+            var inputModel = new PowerLineInputModel();
+            inputModel.Conductors = this.conductorService.GetAllAsSelectListItem();
+            
+            return this.View(inputModel);
         }
 
         [Authorize]
@@ -72,11 +79,11 @@
         [Authorize]
         public IActionResult Edit(int id)
         {
-            //var sensors = this.currentSensorService.GetAllSensorsAsSelectListItems();
 
             var inputModel = this.powerLineService.GetById<PowerLineEditModel>(id);
-           // inputModel.CurrentSensors = sensors;
+
             inputModel.CurrentSensorsModels = this.currentSensorService.GetAllByPowerLineId<CurrentSensorViewModel>(id);
+            inputModel.Conductors = this.conductorService.GetAllAsSelectListItem();
 
             return this.View(inputModel);
         }

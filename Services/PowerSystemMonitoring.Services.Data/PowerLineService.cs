@@ -46,6 +46,8 @@
                 powerLine.Image = image;
             }
 
+            powerLine.ConductorId = input.ConductorId;
+
             await this.powerLineRepository.AddAsync(powerLine);
             await this.powerLineRepository.SaveChangesAsync();
         }
@@ -90,6 +92,7 @@
             line.Length = input.Length;
             line.Name = input.Name;
             line.Voltage = input.Voltage;
+            line.ConductorId = input.ConductorId;
 
             await this.powerLineRepository.SaveChangesAsync();
         }

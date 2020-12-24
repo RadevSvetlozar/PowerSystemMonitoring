@@ -1,9 +1,8 @@
-﻿namespace PowerSystemMonitoring.Data.Migrations
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace PowerSystemMonitoring.Data.Migrations
 {
-    using System;
-
-    using Microsoft.EntityFrameworkCore.Migrations;
-
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -307,6 +306,7 @@
                     IsActive = table.Column<bool>(nullable: false),
                     AreaId = table.Column<int>(nullable: true),
                     PowerLineId = table.Column<int>(nullable: true),
+                    RealTimeValuesId = table.Column<int>(nullable: true),
                     GeographicalCoordinatesId = table.Column<int>(nullable: true),
                     AddedByUserId = table.Column<string>(nullable: true),
                     WeatherStationId = table.Column<int>(nullable: true),
@@ -348,9 +348,9 @@
                     Name = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     IsActive = table.Column<bool>(nullable: false),
-                    PowerLineId = table.Column<int>(nullable: true),
                     CurrentSensorId = table.Column<int>(nullable: true),
-                    AddedByUserId = table.Column<string>(nullable: true)
+                    AddedByUserId = table.Column<string>(nullable: true),
+                    PowerLineId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -401,6 +401,31 @@
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_GeographicalCoordinates_CurrentSensors_CurrentSensorId",
+                        column: x => x.CurrentSensorId,
+                        principalTable: "CurrentSensors",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RealTimeValues",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedOn = table.Column<DateTime>(nullable: false),
+                    ModifiedOn = table.Column<DateTime>(nullable: true),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    DeletedOn = table.Column<DateTime>(nullable: true),
+                    CurrentSensorId = table.Column<int>(nullable: true),
+                    Current = table.Column<float>(nullable: false),
+                    Temparature = table.Column<float>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RealTimeValues", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RealTimeValues_CurrentSensors_CurrentSensorId",
                         column: x => x.CurrentSensorId,
                         principalTable: "CurrentSensors",
                         principalColumn: "Id",
@@ -704,6 +729,18 @@
                 column: "AreaId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_RealTimeValues_CurrentSensorId",
+                table: "RealTimeValues",
+                column: "CurrentSensorId",
+                unique: true,
+                filter: "[CurrentSensorId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RealTimeValues_IsDeleted",
+                table: "RealTimeValues",
+                column: "IsDeleted");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_WeatherStations_AddedByUserId",
                 table: "WeatherStations",
                 column: "AddedByUserId");
@@ -792,6 +829,9 @@
 
             migrationBuilder.DropTable(
                 name: "PowerLinesAreas");
+
+            migrationBuilder.DropTable(
+                name: "RealTimeValues");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

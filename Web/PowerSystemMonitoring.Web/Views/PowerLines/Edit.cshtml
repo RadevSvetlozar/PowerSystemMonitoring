@@ -1,4 +1,7 @@
 ﻿@model PowerSystemMonitoring.Web.ViewModels.PoweLine.PowerLineEditModel
+@{
+    var ConductorsItems = this.Model.Conductors.Select(x => new SelectListItem(x.Text, x.Value));
+}
 <h1>Edit power line</h1>
 <form method="post" class=""
       enctype="multipart/form-data">
@@ -55,7 +58,12 @@
             <input asp-for="Voltage" class="form-control" />
             <span asp-validation-for="Voltage" class="text-danger"></span>
         </div>
-     
+        <div class="form-group col-md-6">
+            <label asp-for="ConductorId"></label>
+            @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
+            <select asp-for="ConductorId" class="form-control" asp-items="ConductorsItems"></select>
+            <span asp-validation-for="ConductorId" class="text-danger"></span>
+        </div>
 
 
     </div>

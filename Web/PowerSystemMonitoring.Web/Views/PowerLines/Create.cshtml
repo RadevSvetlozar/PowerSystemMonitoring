@@ -1,5 +1,7 @@
 ﻿@model PowerSystemMonitoring.Web.ViewModels.PoweLine.PowerLineInputModel
-
+@{ 
+    var ConductorsItems = this.Model.Conductors.Select(x => new SelectListItem(x.Text, x.Value));
+}
 <h1>Create PowerLine</h1>
 <form method="post" class="col-md-6 offset-md-3"
       enctype="multipart/form-data">
@@ -26,6 +28,12 @@
             <input asp-for="Weight" class="form-control" />
             <span asp-validation-for="Weight" class="text-danger"></span>
         </div>*@
+    <div class="form-group col-md-6">
+        <label asp-for="ConductorId"></label>
+        @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
+        <select asp-for="ConductorId" class="form-control" asp-items="ConductorsItems"></select>
+        <span asp-validation-for="ConductorId" class="text-danger"></span>
+    </div>
     </div>
 
     <input type="submit" class="btn btn-primary" />

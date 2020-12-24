@@ -852,7 +852,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .WithMany("Events")
                         .HasForeignKey("CurrentSensorId");
 
-                    b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", "PowerLine")
+                    b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", null)
                         .WithMany("Events")
                         .HasForeignKey("PowerLineId");
                 });

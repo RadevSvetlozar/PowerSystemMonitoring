@@ -1,10 +1,9 @@
 ﻿namespace PowerSystemMonitoring.Web.ViewModels.CurrentSensor
 {
+    using Microsoft.AspNetCore.Http;
     using System;
     using System.Collections.Generic;
-    using System.Text;
-
-    using Microsoft.AspNetCore.Http;
+    using System.Web.WebPages.Html;
 
     public class CurrentSensorInputModel
     {
@@ -31,5 +30,9 @@
         public bool IsActive { get; set; }
 
         public IFormFile Image { get; set; }
+
+        public int WeatherStationId { get; set; }
+
+        public IEnumerable<SelectListItem> WeatherStations { get; set; }
     }
 }

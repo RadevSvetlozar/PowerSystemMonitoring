@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
     using System.Threading.Tasks;
-
+    using System.Web.WebPages.Html;
     using PowerSystemMonitoring.Web.ViewModels.WeatherStation;
 
     public interface IWeatherStationService
@@ -18,5 +18,7 @@
         Task UpdateAsync(int id, WeatherStationEditModel input, string userId, string imagePath);
 
         Task DeleteAsync(int id);
+
+        IEnumerable<SelectListItem> GetAllAsSelectListItem();
     }
 }

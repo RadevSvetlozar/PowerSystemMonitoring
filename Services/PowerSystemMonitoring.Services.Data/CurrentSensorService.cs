@@ -67,6 +67,8 @@
                 currentSensor.GeographicalCoordinates = coordinates;
             }
 
+            currentSensor.WeatherStationId = input.WeatherStationId;
+
             await this.currentSensorRepository.AddAsync(currentSensor);
             await this.currentSensorRepository.SaveChangesAsync();
         }
@@ -166,6 +168,7 @@
             currentSensor.Orientation = input.Orientation;
             currentSensor.PhoneNumber = input.PhoneNumber;
             currentSensor.ConnectionPassword = input.ConnectionPassword;
+            currentSensor.WeatherStationId = input.WeatherStationId;
 
             await this.currentSensorRepository.SaveChangesAsync();
         }

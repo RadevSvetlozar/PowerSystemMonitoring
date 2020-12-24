@@ -6,7 +6,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-
+    using System.Web.WebPages.Html;
     using Microsoft.AspNetCore.Http;
     using PowerSystemMonitoring.Data.Common.Models;
     using PowerSystemMonitoring.Data.Common.Repositories;
@@ -123,6 +123,18 @@
 
             this.stationRepository.Delete(station);
             await this.stationRepository.SaveChangesAsync();
+
+        }
+
+        public IEnumerable<SelectListItem> GetAllAsSelectListItem()
+        {
+            var stations = this.stationRepository.All().Select(x => new SelectListItem
+            {
+                Text = x.Name,
+                Value = x.Id.ToString(),
+            });
+
+            return stations;
 
         }
     }

@@ -22,6 +22,7 @@
         public double Weight { get; set; }
 
         public double RTCoefficient { get; set; }
+
         public string ImageUrl { get; set; }
 
         public double CoefficientOfThermalExpansion { get; set; }

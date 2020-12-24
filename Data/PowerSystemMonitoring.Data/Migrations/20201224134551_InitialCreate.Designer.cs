@@ -10,8 +10,8 @@ using PowerSystemMonitoring.Data;
 namespace PowerSystemMonitoring.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201221171256_UpdateEntities1")]
-    partial class UpdateEntities1
+    [Migration("20201224134551_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -854,7 +854,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .WithMany("Events")
                         .HasForeignKey("CurrentSensorId");
 
-                    b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", "PowerLine")
+                    b.HasOne("PowerSystemMonitoring.Data.Models.PowerLine", null)
                         .WithMany("Events")
                         .HasForeignKey("PowerLineId");
                 });

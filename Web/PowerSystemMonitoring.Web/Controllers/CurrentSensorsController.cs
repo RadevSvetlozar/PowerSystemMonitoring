@@ -20,24 +20,32 @@
         private readonly ICurrentSensorService currentSensorService;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IGeographicalCoordinatesService geographicalCoordinatesService;
+        private readonly IWeatherStationService weatherStationService;
 
         public CurrentSensorsController(
             IWebHostEnvironment webHostEnvironment,
             ICurrentSensorService currentSensorService,
             UserManager<ApplicationUser> userManager,
-            IGeographicalCoordinatesService geographicalCoordinatesService)
+            IGeographicalCoordinatesService geographicalCoordinatesService,
+            IWeatherStationService weatherStationService)
         {
             this.webHostEnvironment = webHostEnvironment;
             this.currentSensorService = currentSensorService;
             this.userManager = userManager;
             this.geographicalCoordinatesService = geographicalCoordinatesService;
+            this.weatherStationService = weatherStationService;
         }
 
         [Authorize]
         public IActionResult AddToPowerLine(int id)
         {
+            var stations = this.weatherStationService.GetAllAsSelectListItem();
+
+            var inputModel = new CurrentSensorInputModel();
+            inputModel.WeatherStations = stations;
+
             this.TempData["powerLineId"] = id;
-            return this.View();
+            return this.View(inputModel);
         }
 
         [Authorize]
@@ -82,10 +90,13 @@
         [Authorize]
         public IActionResult Edit(int id)
         {
+            var stations = this.weatherStationService.GetAllAsSelectListItem();
+
             var inputModel = this.currentSensorService.GetById<EditCurrentSensor>(id);
             var coordinates = this.geographicalCoordinatesService.GetByCurrentSensorId<GeographicalCoordinatesViewModel>(id);
             inputModel.Latitude = coordinates.Latitude;
             inputModel.Longitude = coordinates.Longitude;
+            inputModel.WeatherStations = stations;
 
             return this.View(inputModel);
         }

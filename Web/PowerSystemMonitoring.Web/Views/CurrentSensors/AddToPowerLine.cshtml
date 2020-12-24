@@ -1,5 +1,7 @@
 ﻿@model PowerSystemMonitoring.Web.ViewModels.CurrentSensor.CurrentSensorInputModel
-
+@{
+    var WeatherStationsItems = this.Model.WeatherStations.Select(x => new SelectListItem(x.Text, x.Value));
+}
 <h1>Create CurrentSensors</h1>
 <form method="post" class="col-md-8 offset-md-2"
       enctype="multipart/form-data">
@@ -71,6 +73,12 @@
             <label asp-for="Image"></label>
             <input asp-for="Image" class="form-control">
             <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="WeatherStationId"></label>
+            @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
+            <select asp-for="WeatherStationId" class="form-control" asp-items="WeatherStationsItems"></select>
+            <span asp-validation-for="WeatherStationId" class="text-danger"></span>
         </div>
     </div>
     <input type="submit" class="btn btn-primary" />

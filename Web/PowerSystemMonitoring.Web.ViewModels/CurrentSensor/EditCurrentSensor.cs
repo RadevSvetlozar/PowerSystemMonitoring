@@ -1,8 +1,7 @@
 ﻿namespace PowerSystemMonitoring.Web.ViewModels.CurrentSensor
 {
     using System.Collections.Generic;
-    using System.Web.Mvc;
-
+    using System.Web.WebPages.Html;
     using AutoMapper;
     using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
@@ -44,6 +43,9 @@
         public IFormFile ImageFile { get; set; }
 
         public string ImageUrl { get; set; }
+        public int WeatherStationId { get; set; }
+
+        public IEnumerable<SelectListItem> WeatherStations { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)
         {

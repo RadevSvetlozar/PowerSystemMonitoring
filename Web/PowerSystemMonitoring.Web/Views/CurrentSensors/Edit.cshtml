@@ -1,5 +1,7 @@
 ﻿@model PowerSystemMonitoring.Web.ViewModels.CurrentSensor.EditCurrentSensor
-
+@{
+    var WeatherStationsItems = this.Model.WeatherStations.Select(x => new SelectListItem(x.Text, x.Value));
+}
 <h1>Edit current sensor</h1>
 <form method="post" class=""
       enctype="multipart/form-data">
@@ -99,6 +101,14 @@
             <label asp-for="Longitude"></label>
             <input asp-for="Longitude" class="form-control" />
             <span asp-validation-for="Longitude" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="WeatherStationId"></label>
+            @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
+            <select asp-for="WeatherStationId" class="form-control" asp-items="WeatherStationsItems"></select>
+            <span asp-validation-for="WeatherStationId" class="text-danger"></span>
         </div>
     </div>
     <hr />

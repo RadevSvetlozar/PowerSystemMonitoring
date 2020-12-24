@@ -27,7 +27,28 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ControlPanel">Control Panel</a>
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Control Panel
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <a class="dropdown-item" asp-controller="Conductors" asp-action="All">Conductors</a>
+
+
+                                    <a class="dropdown-item" asp-controller="Areas" asp-action="All">Areas</a>
+
+
+                                    <a class="dropdown-item" asp-controller="Events" asp-action="All">Events</a>
+
+
+                                    <a class="dropdown-item" asp-controller="CurrentSensors" asp-action="All">Current Sensors</a>
+                                    <a class="dropdown-item" asp-controller="GeographicalCoordinates" asp-action="All">Geographical Coordinates</a>
+                                    <a class="dropdown-item" asp-controller="WeatherStations" asp-action="All">Weather Stations</a>
+                                    <a class="dropdown-item" asp-controller="PowerLines" asp-action="All">PowerLines</a>
+
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="PowerSystemLoads" asp-action="GetAllLoads">Power System Loads</a>
