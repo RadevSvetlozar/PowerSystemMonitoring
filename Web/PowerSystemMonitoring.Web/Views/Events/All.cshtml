@@ -33,7 +33,8 @@
             <td>@currentEvent.Name</td>
             <td>@currentEvent.AddedByUserUsername</td>
             <td>@currentEvent.Description</td>
-            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@currentEvent.Id">Details</a></td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@currentEvent.Id">Edit</a></td>
+            <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@currentEvent.Id">Details</a></td>
             <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@currentEvent.Id">Delete</a></td>
         </tr>
         }

@@ -62,9 +62,11 @@
 
         public IActionResult GetById(int id)
         {
-            var currentEvent = this.powerLineService.GetById<PowerLineViewModel>(id);
+            var inputModel = this.powerLineService.GetById<PowerLineViewModel>(id);
+            // inputModel.CurrentSensors = sensors;
+            inputModel.CurrentSensorsModels = this.currentSensorService.GetAllByPowerLineId<CurrentSensorViewModel>(id);
 
-            return this.View(currentEvent);
+            return this.View(inputModel);
         }
 
         [Authorize]

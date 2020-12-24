@@ -72,7 +72,7 @@
         [Authorize]
         public IActionResult Edit(int id)
         {
-            var inputModel = this.conductorService.GetById<ConductorEditModel>(id);
+            var inputModel = this.conductorService.GetById<ConductorViewModel>(id);
 
             return this.View(inputModel);
         }

@@ -32,6 +32,8 @@
 
         public IFormFile ImageFile { get; set; }
 
+        public string AddedByUserUsername { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<PowerLine, PowerLineEditModel>()

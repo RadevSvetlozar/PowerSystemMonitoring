@@ -23,6 +23,7 @@
                 <td>@conductor.Current</td>
                 <td>@conductor.MaxCurrent</td>
                 <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@conductor.Id">Edit</a></td>
+                <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@conductor.Id">Details</a></td>
                 <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@conductor.Id">Delete</a></td>
             </tr>
         }

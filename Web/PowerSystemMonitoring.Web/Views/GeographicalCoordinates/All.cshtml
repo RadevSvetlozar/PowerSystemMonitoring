@@ -12,6 +12,7 @@
         <tr>
             <th scope="col">Longitude</th>
             <th scope="col">Latitude</th>
+            <th scope="col">Current sensor</th>
         </tr>
     </thead>
     <tbody>
@@ -20,7 +21,9 @@
         <tr>
             <td>@coordinates.Longitude</td>
             <td>@coordinates.Latitude</td>
+            <td>@coordinates.CurrentSensorName</td>
             <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@coordinates.Id">Edit</a></td>
+            <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@coordinates.Id">Details</a></td>
             <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@coordinates.Id">Delete</a></td>
         </tr>
         }

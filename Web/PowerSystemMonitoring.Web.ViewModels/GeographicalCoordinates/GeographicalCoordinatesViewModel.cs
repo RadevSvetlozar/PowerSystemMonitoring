@@ -16,5 +16,7 @@
         public string Longitude { get; set; }
 
         public string AddedByUserUsername { get; set; }
+
+        public string CurrentSensorName { get; set; }
     }
 }

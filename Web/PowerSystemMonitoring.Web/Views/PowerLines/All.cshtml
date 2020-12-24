@@ -22,8 +22,9 @@
             <td>@powerLine.Name</td>
             <td>@powerLine.Length km</td>
             <td>@powerLine.Voltage kV</td>
-            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@powerLine.Id">Edit</a></td>
-            <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@powerLine.Id">Delete</a></td>
+            <td><a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@powerLine.Id">Edit</a></td>
+            <td><a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@powerLine.Id">Details</a></td>
+            <td><a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@powerLine.Id">Delete</a></td>
         </tr>
         }
     </tbody>

@@ -32,6 +32,7 @@
             <td>@station.Name</td>
             <td>@station.Temperature  <i class="fas fa-temperature-low"></i> C </td>
             <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@station.Id">Edit</a></td>
+            <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@station.Id">Details</a></td>
             <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@station.Id">Delete</a></td>
         </tr>
         }

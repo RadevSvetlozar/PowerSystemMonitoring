@@ -12,58 +12,26 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="e-profile">
-                                
-                                <ul class="nav nav-tabs">
-                                    <li class="nav-item"><a href="" class="active nav-link">Details</a></li>
-                                </ul>
-                                <form method="post" id="editForm">
+
+                                <h2>Geographical coordinates details</h2>
+                                <form method="post">
                                     <div class="form-group">
                                         <label asp-for="Latitude"></label>
-                                        <input asp-for="Latitude" class="form-control" />
+                                        <input asp-for="Latitude" class="form-control" readonly/>
                                         <span asp-validation-for="Latitude" class="text-danger"></span>
                                     </div>
                                     <div class="form-group">
                                         <label asp-for="Longitude"></label>
-                                        <input asp-for="Longitude" class="form-control" />
+                                        <input asp-for="Longitude" class="form-control" readonly/>
                                         <span asp-validation-for="Longitude" class="text-danger"></span>
                                     </div>
-                                      <hr />
-                                    <input type="hidden" asp-for="Id" />
+                                    <hr />
                                 </form>
-
-                                <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Save changes</button>
-
-
-
-                                <!-- Modal -->
-                                <div class="modal" id="modalEdit" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Confirm edit</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>
-                                                    Do you confirm this changes?
-                                                </p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary" onclick="editForm.submit()">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>

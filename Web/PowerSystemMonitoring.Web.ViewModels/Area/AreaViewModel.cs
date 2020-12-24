@@ -23,7 +23,7 @@
 
         public void CreateMappings(IProfileExpression configuration)
         {
-            configuration.CreateMap<Area, AreaEditModel>()
+            configuration.CreateMap<Area, AreaViewModel>()
                 .ForMember(x => x.ImageUrl, opt =>
                 opt.MapFrom(x => x.Image.RemoteImageUrl != null ?
                 x.Image.RemoteImageUrl :

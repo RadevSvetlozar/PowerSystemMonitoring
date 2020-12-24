@@ -71,9 +71,12 @@
         [Authorize]
         public IActionResult GetById(int id)
         {
-            var conductor = this.currentSensorService.GetById<CurrentSensorViewModel>(id);
+            var inputModel = this.currentSensorService.GetById<CurrentSensorViewModel>(id);
+            var coordinates = this.geographicalCoordinatesService.GetByCurrentSensorId<GeographicalCoordinatesViewModel>(id);
+            inputModel.Latitude = coordinates.Latitude;
+            inputModel.Longitude = coordinates.Longitude;
 
-            return this.View(conductor);
+            return this.View(inputModel);
         }
 
         [Authorize]

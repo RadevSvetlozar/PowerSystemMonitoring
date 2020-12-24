@@ -9,7 +9,7 @@
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Mapping;
 
-    public class ConductorViewModel : IMapFrom<Conductor>
+    public class ConductorViewModel : IMapFrom<Conductor>, IHaveCustomMappings
     {
         public int Id { get; set; }
 
@@ -22,6 +22,7 @@
         public double Weight { get; set; }
 
         public double RTCoefficient { get; set; }
+        public string ImageUrl { get; set; }
 
         public double CoefficientOfThermalExpansion { get; set; }
 
@@ -42,5 +43,14 @@
         public DateTime CreatedOn { get; set; }
 
         public string Image { get; set; }
+
+        public void CreateMappings(IProfileExpression configuration)
+        {
+            configuration.CreateMap<Conductor, ConductorViewModel>()
+                .ForMember(x => x.ImageUrl, opt =>
+                opt.MapFrom(x => x.Image.RemoteImageUrl != null ?
+                x.Image.RemoteImageUrl :
+                "/images/conductors/" + x.Image.Id + "." + x.Image.Extension));
+        }
     }
 }
