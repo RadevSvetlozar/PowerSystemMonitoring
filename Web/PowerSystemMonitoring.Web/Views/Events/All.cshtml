@@ -19,22 +19,23 @@
     <tbody>
         @foreach (var currentEvent in Model)
         {
-            <tr>
-                <td>
-                    @if (currentEvent.IsActive)
-                    {
-                        <i class="fas fa-check-circle"></i>
-                    }
-                    else
-                    {
-                        <i class="far fa-circle"></i>
-                    }
-                </td>
-                <td>@currentEvent.Name</td>
-                <td>@currentEvent.AddedByUserUsername</td>
-                <td>@currentEvent.Description</td>
-                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@currentEvent.Id">Details</a></td>
-            </tr>
+        <tr>
+            <td>
+                @if (currentEvent.IsActive)
+                {
+                    <i class="fas fa-check-circle"></i>
+                }
+                else
+                {
+                    <i class="far fa-circle"></i>
+                }
+            </td>
+            <td>@currentEvent.Name</td>
+            <td>@currentEvent.AddedByUserUsername</td>
+            <td>@currentEvent.Description</td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@currentEvent.Id">Details</a></td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@currentEvent.Id">Delete</a></td>
+        </tr>
         }
     </tbody>
 </table>

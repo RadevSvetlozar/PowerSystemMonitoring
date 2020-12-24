@@ -90,5 +90,13 @@
 
             return this.RedirectToAction(nameof(this.All), new { id });
         }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            this.areaService.DeleteAsync(id);
+
+            return this.RedirectToAction(nameof(this.All));
+        }
     }
 }

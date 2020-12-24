@@ -102,5 +102,13 @@
             
             return this.RedirectToAction("Edit", "PowerLines", new { id = input.PowerLineId });
         }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            this.currentSensorService.DeleteAsync(id);
+
+            return this.RedirectToAction(nameof(this.All));
+        }
     }
 }

@@ -116,5 +116,14 @@
             await file.CopyToAsync(fileStream);
             return dbImage;
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var station = this.stationRepository.All().FirstOrDefault(x => x.Id == id);
+
+            this.stationRepository.Delete(station);
+            await this.stationRepository.SaveChangesAsync();
+
+        }
     }
 }

@@ -1,22 +1,28 @@
 ﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.Area.AreaViewModel>
 
-<h1>All Areas!</h1>
+<div>
+    <h1>All areas!</h1>
+
+    <a type="button" class="btn btn-success" asp-controller="Areas" asp-action="Create">Create area</a>
+</div>
+<br />
 <table class="table">
     <thead>
         <tr>
-            
+
             <th scope="col">Name</th>
-            <th scope="col">AddedBy</th>            
+            <th scope="col">AddedBy</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var area in Model)
         {
-            <tr>               
+            <tr>
                 <td>@area.Name</td>
                 <td>@area.AddedByUserUsername</td>
-              
+
                 <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@area.Id">Edit</a></td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@area.Id">Delete</a></td>
             </tr>
         }
     </tbody>

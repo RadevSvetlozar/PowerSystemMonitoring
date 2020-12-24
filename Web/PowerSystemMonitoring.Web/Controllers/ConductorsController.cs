@@ -90,7 +90,15 @@
 
             await this.conductorService.UpdateAsync(id, input, user.Id, $"{this.webHostEnvironment.WebRootPath}/images");
 
-            return this.RedirectToAction(nameof(this.Edit), new { id });
+            return this.RedirectToAction(nameof(this.All), new { id });
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            this.conductorService.DeleteAsync(id);
+
+            return this.RedirectToAction(nameof(this.All));
         }
     }
 }

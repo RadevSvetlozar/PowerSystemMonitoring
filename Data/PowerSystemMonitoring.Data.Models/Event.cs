@@ -15,10 +15,6 @@
 
         public bool IsActive { get; set; }
 
-        public int? PowerLineId { get; set; }
-
-        public virtual PowerLine PowerLine { get; set; }
-
         public int? CurrentSensorId { get; set; }
 
         public virtual CurrentSensor CurrentSensor { get; set; }

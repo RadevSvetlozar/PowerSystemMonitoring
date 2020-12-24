@@ -91,5 +91,21 @@
 
             return this.RedirectToAction(nameof(this.All), new { id });
         }
+
+        public async Task<IActionResult> Confirm(int id)
+        {
+            this.eventService.ConfirmEventByIdAsync(id);
+
+            return this.RedirectToAction(nameof(this.AllSorted));
+        }
+
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            this.eventService.DeleteAsync(id);
+
+            return this.RedirectToAction(nameof(this.All));
+        }
     }
 }

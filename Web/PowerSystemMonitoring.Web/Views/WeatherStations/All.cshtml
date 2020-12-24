@@ -18,21 +18,22 @@
 
         @foreach (var station in Model)
         {
-            <tr>
-                <td>
-                    @if (station.IsActive)
-                    {
-                        <i class="fas fa-check-circle"></i>
-                    }
-                    else
-                    {
-                        <i class="far fa-circle"></i>
-                    }
-                </td>
-                <td>@station.Name</td>
-                <td>@station.Temperature  <i class="fas fa-temperature-low"></i> C </td>
-                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@station.Id">Edit</a></td>
-            </tr>
+        <tr>
+            <td>
+                @if (station.IsActive)
+                {
+                    <i class="fas fa-check-circle"></i>
+                }
+                else
+                {
+                    <i class="far fa-circle"></i>
+                }
+            </td>
+            <td>@station.Name</td>
+            <td>@station.Temperature  <i class="fas fa-temperature-low"></i> C </td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@station.Id">Edit</a></td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@station.Id">Delete</a></td>
+        </tr>
         }
     </tbody>
 </table>

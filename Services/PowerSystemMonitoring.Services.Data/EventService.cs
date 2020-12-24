@@ -22,6 +22,15 @@
             this.eventRepository = eventRepository;
         }
 
+        public async Task ConfirmEventByIdAsync(int id)
+        {
+            var eventDb = this.eventRepository.All().FirstOrDefault(x => x.Id == id);
+
+            eventDb.IsActive = false;
+
+            await this.eventRepository.SaveChangesAsync();
+        }
+
         public async Task CreateAsync(EventInputModel input, string userId)
         {
             var eventDb = new Event
@@ -34,6 +43,15 @@
 
             await this.eventRepository.AddAsync(eventDb);
             await this.eventRepository.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var eventDb = this.eventRepository.All().FirstOrDefault(x => x.Id == id);
+
+            this.eventRepository.Delete(eventDb);
+            await this.eventRepository.SaveChangesAsync();
+
         }
 
         public IEnumerable<T> GetAll<T>()
@@ -52,12 +70,6 @@
             var events = this.eventRepository.All();
             switch (sortOrder)
             {
-                case "powerLine_asc":
-                    events = events.OrderBy(x => x.PowerLine.Name);
-                    break;
-                case "powerLine_desc":
-                    events = events.OrderByDescending(x => x.PowerLine.Name);
-                    break;
                 case "currentSensor_asc":
                     events = events.OrderBy(x => x.CurrentSensor.Name);
                     break;
@@ -77,7 +89,7 @@
                     events = events.Where(x => !x.IsActive);
                     break;
                 default:
-                    events = events.OrderBy(s => s.CreatedOn);
+                    events = events.OrderByDescending(s => s.CreatedOn);
                     break;
             }
 

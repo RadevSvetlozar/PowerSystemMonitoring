@@ -18,12 +18,13 @@
     <tbody>
         @foreach (var powerLine in Model)
         {
-            <tr>
-                <td>@powerLine.Name</td>
-                <td>@powerLine.Length km</td>
-                <td>@powerLine.Voltage kV</td>
-                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@powerLine.Id">Edit</a></td>
-            </tr>
+        <tr>
+            <td>@powerLine.Name</td>
+            <td>@powerLine.Length km</td>
+            <td>@powerLine.Voltage kV</td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@powerLine.Id">Edit</a></td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@powerLine.Id">Delete</a></td>
+        </tr>
         }
     </tbody>
 </table>

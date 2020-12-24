@@ -100,5 +100,13 @@
 
             return RedirectToAction("AddToPowerLine", "CurrentSensors", new { id  = id });
         }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            this.powerLineService.DeleteAsync(id);
+
+            return this.RedirectToAction(nameof(this.All));
+        }
     }
 }

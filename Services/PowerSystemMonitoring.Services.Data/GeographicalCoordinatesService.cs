@@ -33,6 +33,15 @@
             await this.geographicalCoordinatesReposotory.SaveChangesAsync();
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var coordinates = this.geographicalCoordinatesReposotory.All().FirstOrDefault(x => x.Id == id);
+
+            this.geographicalCoordinatesReposotory.Delete(coordinates);
+            await this.geographicalCoordinatesReposotory.SaveChangesAsync();
+
+        }
+
         public IEnumerable<T> GetAll<T>()
         {
             return this.geographicalCoordinatesReposotory.All()

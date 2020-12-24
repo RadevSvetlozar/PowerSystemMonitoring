@@ -47,6 +47,15 @@
             await this.areaRepository.SaveChangesAsync();
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var area = this.areaRepository.All().FirstOrDefault(x => x.Id == id);
+
+            this.areaRepository.Delete(area);
+                await this.areaRepository.SaveChangesAsync();
+
+        }
+
         public IEnumerable<T> GetAll<T>()
         {
             return this.areaRepository.AllAsNoTracking()

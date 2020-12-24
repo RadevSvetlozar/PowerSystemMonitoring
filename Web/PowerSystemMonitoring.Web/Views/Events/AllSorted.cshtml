@@ -29,13 +29,19 @@
                 @Html.ActionLink("Asc", "AllSorted", "Events", new { sortOrder = "date_asc" })/
                 @Html.ActionLink("Desc", "AllSorted", "Events", new { sortOrder = "date_desc" })
             </th>
+
         </tr>
     </thead>
     <tbody>
         @foreach (var currentEvent in Model)
         {
-            <tr>
+            string style = currentEvent.IsActive ? "background-color:#ff9999" : null;
+            
+            <tr  style="@style">
+
                 <td>
+
+
                     @if (currentEvent.IsActive)
                     {
                         <i class="fas fa-check-circle"></i>
@@ -49,8 +55,8 @@
                 <td>@currentEvent.PowerLineName</td>
                 <td>@currentEvent.CurrentSensorName</td>
                 <td>@currentEvent.Description</td>
-                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@currentEvent.Id">Edit</a></td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Confirm" asp-route-id="@currentEvent.Id">Confirm</a></td>
             </tr>
         }
     </tbody>
-</table>
+        </table>

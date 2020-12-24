@@ -80,6 +80,15 @@
             return currentSensors;
         }
 
+
+        public async Task DeleteAsync(int id)
+        {
+            var sensor = this.currentSensorRepository.All().FirstOrDefault(x => x.Id == id);
+
+            this.currentSensorRepository.Delete(sensor);
+            await this.currentSensorRepository.SaveChangesAsync();
+
+        }
         public T GetById<T>(int id)
         {
             var currentSensor = this.currentSensorRepository.All()

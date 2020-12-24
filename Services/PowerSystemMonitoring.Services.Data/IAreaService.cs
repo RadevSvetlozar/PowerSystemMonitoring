@@ -15,6 +15,8 @@
 
         T GetById<T>(int id);
 
+        Task DeleteAsync(int id);
+
         Task UpdateAsync(int id, AreaEditModel input, string userId, string imagePath);
     }
 }

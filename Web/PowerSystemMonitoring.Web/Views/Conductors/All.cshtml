@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.Condutor.ConductorViewModel>
 
-    <div>
-        <h1>All Conductors</h1>
+<div>
+    <h1>All Conductors</h1>
 
-        <a type="button" class="btn btn-success" asp-controller="Conductors" asp-action="Create">Create conductor</a>
-    </div>
-    <br />
+    <a type="button" class="btn btn-success" asp-controller="Conductors" asp-action="Create">Create conductor</a>
+</div>
+<br />
 <table class="table table-hover">
     <thead>
         <tr>
@@ -23,6 +23,7 @@
                 <td>@conductor.Current</td>
                 <td>@conductor.MaxCurrent</td>
                 <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@conductor.Id">Edit</a></td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@conductor.Id">Delete</a></td>
             </tr>
         }
     </tbody>

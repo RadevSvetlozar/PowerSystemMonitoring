@@ -21,5 +21,7 @@
         Task UpdateAsync(int id, EditCurrentSensor input, string userId, string imagePath);
 
         IEnumerable<SelectListItem> GetAllSensorsAsSelectListItems();
+
+        Task DeleteAsync(int id);
     }
 }

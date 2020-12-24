@@ -78,5 +78,13 @@
 
             return this.RedirectToAction(nameof(this.All), new { id });
         }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            this.geographicalCoordinatesService.DeleteAsync(id);
+
+            return this.RedirectToAction(nameof(this.All));
+        }
     }
 }

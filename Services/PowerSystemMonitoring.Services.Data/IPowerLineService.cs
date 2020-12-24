@@ -16,5 +16,7 @@
         T GetById<T>(int id);
 
         Task UpdateAsync(int id, PowerLineEditModel input, string userId, string imagePath);
+
+        Task DeleteAsync(int id);
     }
 }

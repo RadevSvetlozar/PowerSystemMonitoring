@@ -58,6 +58,14 @@
             await this.conductorsRepository.SaveChangesAsync();
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var conductor = this.conductorsRepository.All().FirstOrDefault(x => x.Id == id);
+
+            this.conductorsRepository.Delete(conductor);
+            await this.conductorsRepository.SaveChangesAsync();
+
+        }
         public IEnumerable<T> GetAll<T>()
         {
             var conductors = this.conductorsRepository.All()

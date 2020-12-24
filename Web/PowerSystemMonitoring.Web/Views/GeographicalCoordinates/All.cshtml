@@ -17,11 +17,12 @@
     <tbody>
         @foreach (var coordinates in Model)
         {
-            <tr>
-                <td>@coordinates.Longitude</td>
-                <td>@coordinates.Latitude</td>
-                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@coordinates.Id">Edit</a></td>
-            </tr>
+        <tr>
+            <td>@coordinates.Longitude</td>
+            <td>@coordinates.Latitude</td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@coordinates.Id">Edit</a></td>
+            <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@coordinates.Id">Delete</a></td>
+        </tr>
         }
     </tbody>
 </table>

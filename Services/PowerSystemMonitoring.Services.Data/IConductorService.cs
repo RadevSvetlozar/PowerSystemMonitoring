@@ -16,5 +16,6 @@
         T GetById<T>(int id);
 
         Task UpdateAsync(int id, ConductorEditModel input, string userId, string imagePath);
+        Task DeleteAsync(int id);
     }
 }

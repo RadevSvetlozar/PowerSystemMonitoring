@@ -117,5 +117,14 @@
             await file.CopyToAsync(fileStream);
             return dbImage;
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var line = this.powerLineRepository.All().FirstOrDefault(x => x.Id == id);
+
+            this.powerLineRepository.Delete(line);
+            await this.powerLineRepository.SaveChangesAsync();
+
+        }
     }
 }

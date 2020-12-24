@@ -18,5 +18,7 @@
         Task UpdateAsync(int id, EditGeographicalCoordinatesModel input);
 
         T GetByCurrentSensorId<T>(int id);
+
+        Task DeleteAsync(int id);
     }
 }

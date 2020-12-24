@@ -19,5 +19,11 @@
         T GetById<T>(int id);
 
         Task UpdateAsync(int id, EditEventInputModel input);
+
+        Task DeleteAsync(int id);
+
+        Task ConfirmEventByIdAsync(int id);
+
+
     }
 }
