@@ -8,6 +8,7 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using PowerSystemMonitoring.Common;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.ViewModels.GeographicalCoordinates;
@@ -25,13 +26,13 @@
             this.userManager = userManager;
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Create()
         {
             return this.View();
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Create(GeographicalCoordinatesInputModel input)
         {
@@ -50,6 +51,7 @@
             return this.View(events);
         }
 
+        [Authorize]
         public IActionResult GetById(int id)
         {
             var currentEvent = this.geographicalCoordinatesService.GetById<GeographicalCoordinatesViewModel>(id);
@@ -57,7 +59,7 @@
             return this.View(currentEvent);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Edit(int id)
         {
             var inputModel = this.geographicalCoordinatesService.GetById<EditGeographicalCoordinatesModel>(id);
@@ -65,7 +67,7 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, EditGeographicalCoordinatesModel input)
         {
@@ -79,10 +81,10 @@
             return this.RedirectToAction(nameof(this.All), new { id });
         }
 
-        [Authorize]
-        public async Task<IActionResult> Delete(int id)
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        public async Task<IActionResult> DeleteAsync(int id)
         {
-            this.geographicalCoordinatesService.DeleteAsync(id);
+            await this.geographicalCoordinatesService.DeleteAsync(id);
 
             return this.RedirectToAction(nameof(this.All));
         }

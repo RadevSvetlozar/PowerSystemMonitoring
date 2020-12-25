@@ -10,6 +10,7 @@
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore.Metadata.Internal;
+    using PowerSystemMonitoring.Common;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.ViewModels.Condutor;
@@ -30,7 +31,7 @@
             this.webHostEnvironment = webHostEnvironment;
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Create()
         {
             return this.View();
@@ -69,7 +70,7 @@
             return this.View(currentEvent);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Edit(int id)
         {
             var inputModel = this.conductorService.GetById<ConductorEditModel>(id);
@@ -77,7 +78,7 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, ConductorEditModel input)
         {
@@ -93,10 +94,10 @@
             return this.RedirectToAction(nameof(this.All), new { id });
         }
 
-        [Authorize]
-        public async Task<IActionResult> Delete(int id)
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        public async Task<IActionResult> DeleteAsync(int id)
         {
-            this.conductorService.DeleteAsync(id);
+            await this.conductorService.DeleteAsync(id);
 
             return this.RedirectToAction(nameof(this.All));
         }

@@ -11,6 +11,7 @@
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore.Metadata.Internal;
+    using PowerSystemMonitoring.Common;
     using PowerSystemMonitoring.Data.Common.Repositories;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Data;
@@ -32,12 +33,13 @@
             this.userManager = userManager;
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Create()
         {
             return this.View();
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Create(AreaInputModel input)
         {
@@ -67,7 +69,7 @@
             return this.View(area);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Edit(int id)
         {
             var inputModel = this.areaService.GetById<AreaEditModel>(id);
@@ -75,7 +77,7 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, AreaEditModel input)
         {
@@ -91,10 +93,10 @@
             return this.RedirectToAction(nameof(this.All), new { id });
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Delete(int id)
         {
-            this.areaService.DeleteAsync(id);
+            await this.areaService.DeleteAsync(id);
 
             return this.RedirectToAction(nameof(this.All));
         }

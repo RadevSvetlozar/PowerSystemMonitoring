@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.GeographicalCoordinates.GeographicalCoordinatesViewModel>
+@using PowerSystemMonitoring.Common
 
-
-<div>
-    <h1>All geographical coordinates</h1>
-
-    <a type="button" class="btn btn-success" asp-controller="GeographicalCoordinates" asp-action="Create">Create geographical coordinates</a>
-</div>
+    <div>
+        <h1>All geographical coordinates</h1>
+        @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <a type="button" class="btn btn-success" asp-controller="GeographicalCoordinates" asp-action="Create">Create geographical coordinates</a>
+        }
+        </div>
 <br />
 <table class="table">
     <thead>
@@ -22,9 +24,13 @@
             <td>@coordinates.Longitude</td>
             <td>@coordinates.Latitude</td>
             <td>@coordinates.CurrentSensorName</td>
-            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@coordinates.Id">Edit</a></td>
+            @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+            {
+                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@coordinates.Id">Edit</a></td>
+                <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@coordinates.Id">Delete</a></td>
+
+            }
             <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@coordinates.Id">Details</a></td>
-            <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@coordinates.Id">Delete</a></td>
         </tr>
         }
     </tbody>

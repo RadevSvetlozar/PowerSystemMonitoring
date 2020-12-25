@@ -17,11 +17,6 @@
             return this.View();
         }
 
-        public IActionResult Privacy()
-        {
-            return this.View();
-        }
-
         public IActionResult ControlPanel()
         {
             return this.View();

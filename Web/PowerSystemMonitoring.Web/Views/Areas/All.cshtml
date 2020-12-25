@@ -1,10 +1,14 @@
 ﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.Area.AreaViewModel>
+@using PowerSystemMonitoring.Common
 
 <div>
     <h1>All areas!</h1>
-
-    <a type="button" class="btn btn-success" asp-controller="Areas" asp-action="Create">Create area</a>
+    @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <a type="button" class="btn btn-success" asp-controller="Areas" asp-action="Create">Create area</a>
+    }
 </div>
+
 <br />
 <table class="table">
     <thead>
@@ -20,10 +24,13 @@
             <tr>
                 <td>@area.Name</td>
                 <td>@area.AddedByUserUsername</td>
+                @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+                {
+                    <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@area.Id">Edit</a></td>
 
-                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@area.Id">Edit</a></td>
+                    <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@area.Id">Delete</a></td>
+                }
                 <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@area.Id">Details</a></td>
-                <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@area.Id">Delete</a></td>
             </tr>
         }
     </tbody>

@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.WeatherStation.WeatherStationViewModel>
-
+@using PowerSystemMonitoring.Common
     <div>
         <h1>All weather station</h1>
-
-        <a type="button" class="btn btn-success" asp-controller="WeatherStations" asp-action="Create">Create weather station</a>
-    </div>
+        @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <a type="button" class="btn btn-success" asp-controller="WeatherStations" asp-action="Create">Create weather station</a>
+        }
+        </div>
     <br />
 <table class="table table-hover">
     <thead>
@@ -31,9 +33,13 @@
             </td>
             <td>@station.Name</td>
             <td>@station.Temperature  <i class="fas fa-temperature-low"></i> C </td>
-            <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@station.Id">Edit</a></td>
+            @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+            {
+                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@station.Id">Edit</a></td>
+
+                <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@station.Id">Delete</a></td>
+            }
             <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@station.Id">Details</a></td>
-            <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@station.Id">Delete</a></td>
         </tr>
         }
     </tbody>

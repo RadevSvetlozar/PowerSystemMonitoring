@@ -9,6 +9,7 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using PowerSystemMonitoring.Common;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.ViewModels.CurrentSensor;
@@ -36,7 +37,7 @@
             this.weatherStationService = weatherStationService;
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult AddToPowerLine(int id)
         {
             var stations = this.weatherStationService.GetAllAsSelectListItem();
@@ -48,14 +49,14 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> AddToPowerLine(CurrentSensorInputModel input)
         {
             if (!this.ModelState.IsValid)
             {
                 return this.View();
-            };
+            }
 
             int powerLineId = (int)this.TempData["powerLineId"];
 
@@ -87,7 +88,7 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Edit(int id)
         {
             var stations = this.weatherStationService.GetAllAsSelectListItem();
@@ -101,7 +102,7 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, EditCurrentSensor input)
         {
@@ -113,14 +114,14 @@
             var user = await this.userManager.GetUserAsync(this.User);
 
             await this.currentSensorService.UpdateAsync(id, input, user.Id, $"{this.webHostEnvironment.WebRootPath}/images");
-            
+
             return this.RedirectToAction("Edit", "PowerLines", new { id = input.PowerLineId });
         }
 
-        [Authorize]
-        public async Task<IActionResult> Delete(int id)
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        public async Task<IActionResult> DeleteAsync(int id)
         {
-            this.currentSensorService.DeleteAsync(id);
+            await this.currentSensorService.DeleteAsync(id);
 
             return this.RedirectToAction(nameof(this.All));
         }

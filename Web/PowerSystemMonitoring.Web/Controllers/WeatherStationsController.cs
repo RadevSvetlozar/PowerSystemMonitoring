@@ -9,6 +9,7 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using PowerSystemMonitoring.Common;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.ViewModels.WeatherStation;
@@ -29,13 +30,13 @@
             this.webHostEnvironment = webHostEnvironment;
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Create()
         {
             return this.View();
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Create(WeatherStationInputModel input)
         {
@@ -61,6 +62,7 @@
             return this.View(conductors);
         }
 
+        [Authorize]
         public IActionResult GetById(int id)
         {
             var currentEvent = this.weatherStationService.GetById<WeatherStationViewModel>(id);
@@ -68,7 +70,7 @@
             return this.View(currentEvent);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Edit(int id)
         {
             var inputModel = this.weatherStationService.GetById<WeatherStationEditModel>(id);
@@ -76,7 +78,7 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, WeatherStationEditModel input)
         {
@@ -92,10 +94,10 @@
             return this.RedirectToAction(nameof(this.All), new { id });
         }
 
-        [Authorize]
-        public async Task<IActionResult> Delete(int id)
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        public async Task<IActionResult> DeleteAsync(int id)
         {
-            this.weatherStationService.DeleteAsync(id);
+            await this.weatherStationService.DeleteAsync(id);
 
             return this.RedirectToAction(nameof(this.All));
         }

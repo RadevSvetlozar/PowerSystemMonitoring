@@ -5,12 +5,14 @@
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web.WebPages.Html;
+
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     using Microsoft.AspNetCore.Mvc.Rendering;
+    using PowerSystemMonitoring.Common;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.ViewModels.Condutor;
@@ -39,16 +41,16 @@
             this.conductorService = conductorService;
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Create()
         {
             var inputModel = new PowerLineInputModel();
             inputModel.Conductors = this.conductorService.GetAllAsSelectListItem();
-            
+
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Create(PowerLineInputModel input)
         {
@@ -67,19 +69,19 @@
             return this.View(events);
         }
 
+        [Authorize]
         public IActionResult GetById(int id)
         {
             var inputModel = this.powerLineService.GetById<PowerLineViewModel>(id);
-            // inputModel.CurrentSensors = sensors;
+
             inputModel.CurrentSensorsModels = this.currentSensorService.GetAllByPowerLineId<CurrentSensorViewModel>(id);
 
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Edit(int id)
         {
-
             var inputModel = this.powerLineService.GetById<PowerLineEditModel>(id);
 
             inputModel.CurrentSensorsModels = this.currentSensorService.GetAllByPowerLineId<CurrentSensorViewModel>(id);
@@ -88,7 +90,7 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, PowerLineEditModel input)
         {
@@ -104,16 +106,16 @@
             return this.RedirectToAction(nameof(this.All), new { id });
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult AddCurrentSensorToPowerLine(int id)
         {
-
-            return RedirectToAction("AddToPowerLine", "CurrentSensors", new { id  = id });
+            return this.RedirectToAction("AddToPowerLine", "CurrentSensors", new { id = id });
         }
 
-        [Authorize]
-        public async Task<IActionResult> Delete(int id)
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        public async Task<IActionResult> DeleteAsync(int id)
         {
-            this.powerLineService.DeleteAsync(id);
+            await this.powerLineService.DeleteAsync(id);
 
             return this.RedirectToAction(nameof(this.All));
         }
