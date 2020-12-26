@@ -123,7 +123,6 @@
 
             this.stationRepository.Delete(station);
             await this.stationRepository.SaveChangesAsync();
-
         }
 
         public IEnumerable<SelectListItem> GetAllAsSelectListItem()
@@ -135,7 +134,6 @@
             });
 
             return stations;
-
         }
     }
 }

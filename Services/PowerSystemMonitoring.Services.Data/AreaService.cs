@@ -52,8 +52,7 @@
             var area = this.areaRepository.All().FirstOrDefault(x => x.Id == id);
 
             this.areaRepository.Delete(area);
-                await this.areaRepository.SaveChangesAsync();
-
+            await this.areaRepository.SaveChangesAsync();
         }
 
         public IEnumerable<T> GetAll<T>()

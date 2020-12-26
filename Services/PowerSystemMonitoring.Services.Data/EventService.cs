@@ -51,7 +51,6 @@
 
             this.eventRepository.Delete(eventDb);
             await this.eventRepository.SaveChangesAsync();
-
         }
 
         public IEnumerable<T> GetAll<T>()

@@ -23,7 +23,5 @@
         Task DeleteAsync(int id);
 
         Task ConfirmEventByIdAsync(int id);
-
-
     }
 }

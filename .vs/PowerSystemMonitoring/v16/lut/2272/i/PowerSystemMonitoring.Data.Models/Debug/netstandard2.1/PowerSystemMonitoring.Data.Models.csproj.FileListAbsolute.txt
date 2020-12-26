@@ -1,7 +1,0 @@
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Data.Models\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.deps.json
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Data.Models\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.dll
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Data.Models\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.csprojAssemblyReference.cache
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Data.Models\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.AssemblyInfoInputs.cache
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Data.Models\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.AssemblyInfo.cs
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Data.Models\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.csproj.CopyComplete
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Data.Models\Debug\netstandard2.1\PowerSystemMonitoring.Data.Models.dll

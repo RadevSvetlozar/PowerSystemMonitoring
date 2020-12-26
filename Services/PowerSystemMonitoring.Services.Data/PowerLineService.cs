@@ -127,7 +127,6 @@
 
             this.powerLineRepository.Delete(line);
             await this.powerLineRepository.SaveChangesAsync();
-
         }
     }
 }

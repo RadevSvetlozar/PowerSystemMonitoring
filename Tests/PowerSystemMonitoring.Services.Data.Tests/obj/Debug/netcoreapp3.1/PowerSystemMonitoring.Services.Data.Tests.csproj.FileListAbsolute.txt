@@ -1,5 +1,4 @@
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.csprojAssemblyReference.cache
-C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.csproj.CoreCompileInputs.cache
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.AssemblyInfoInputs.cache
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.AssemblyInfo.cs
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\testhost.dll
@@ -174,3 +173,10 @@ C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Deb
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\AngleSharp.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\testImage.jpg
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.WebUtilities.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Services.Data.Tests\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.csproj.CoreCompileInputs.cache

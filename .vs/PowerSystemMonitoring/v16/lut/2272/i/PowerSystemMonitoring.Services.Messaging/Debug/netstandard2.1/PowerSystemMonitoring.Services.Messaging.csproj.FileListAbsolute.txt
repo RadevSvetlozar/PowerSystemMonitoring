@@ -1,7 +1,0 @@
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Messaging\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.deps.json
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Messaging\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.dll
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Messaging\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.csprojAssemblyReference.cache
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Messaging\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.AssemblyInfoInputs.cache
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Messaging\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.AssemblyInfo.cs
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Messaging\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.csproj.CopyComplete
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Messaging\Debug\netstandard2.1\PowerSystemMonitoring.Services.Messaging.dll

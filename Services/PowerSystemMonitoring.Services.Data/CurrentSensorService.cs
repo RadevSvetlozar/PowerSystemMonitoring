@@ -90,7 +90,6 @@
 
             this.currentSensorRepository.Delete(sensor);
             await this.currentSensorRepository.SaveChangesAsync();
-
         }
         public T GetById<T>(int id)
         {

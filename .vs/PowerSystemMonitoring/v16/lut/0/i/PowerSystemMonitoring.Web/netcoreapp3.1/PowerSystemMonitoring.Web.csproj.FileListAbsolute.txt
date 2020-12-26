@@ -303,10 +303,12 @@ C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonito
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\Home\ControlPanel.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\Home\Index1.cshtml.g.cs
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\Home\StatusCodeError.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\PowerLines\All.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\PowerLines\Create.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\PowerLines\Edit.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\PowerLines\GetById.cshtml.g.cs
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\PowerLines\_CurrentSensorPartial.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\PowerSystemLoads\GetAllLoads.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs

@@ -39,7 +39,6 @@
 
             this.geographicalCoordinatesReposotory.Delete(coordinates);
             await this.geographicalCoordinatesReposotory.SaveChangesAsync();
-
         }
 
         public IEnumerable<T> GetAll<T>()

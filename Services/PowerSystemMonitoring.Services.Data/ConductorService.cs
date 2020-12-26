@@ -64,7 +64,6 @@
 
             this.conductorsRepository.Delete(conductor);
             await this.conductorsRepository.SaveChangesAsync();
-
         }
         public IEnumerable<SelectListItem> GetAllAsSelectListItem()
         {
@@ -75,7 +74,6 @@
             });
 
             return conductors;
-
         }
 
         public IEnumerable<T> GetAll<T>()
