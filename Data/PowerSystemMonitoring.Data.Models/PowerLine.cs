@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Reflection;
     using System.Text;
 
@@ -14,10 +15,14 @@
             this.CurrentSensors = new HashSet<CurrentSensor>();
         }
 
+        [Required]
+        [MaxLength(30)]
         public string Name { get; set; }
 
+        [Required]
         public double Length { get; set; }
 
+        [Required]
         public double Voltage { get; set; }
 
         public int? ConductorId { get; set; }

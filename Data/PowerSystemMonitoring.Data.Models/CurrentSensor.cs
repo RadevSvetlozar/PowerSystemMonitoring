@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Reflection;
     using System.Text;
 
@@ -15,22 +16,35 @@
             this.Events = new HashSet<Event>();
         }
 
+        [Required]
+        [MaxLength(25)]
         public string Name { get; set; }
 
+        [Required]
+        [MaxLength(20)]
         public string Model { get; set; }
 
+        [Required]
+        [RegularExpression(@"^(\+\d{1,3}|0)\d{9}$")]
         public string PhoneNumber { get; set; }
 
+        [Required]
         public string ConnectionPassword { get; set; }
 
+        [Required]
+        [MaxLength(15)]
         public string IPAddress { get; set; }
 
+        [Required]
         public double InstallationHeight { get; set; }
 
+        [Required]
         public double DistancePole { get; set; }
 
+        [Required]
         public double Orientation { get; set; }
 
+        [Required]
         public bool IsActive { get; set; }
 
         public int? AreaId { get; set; }

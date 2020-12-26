@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Text;
 
     using Microsoft.AspNetCore.Http;
@@ -14,28 +15,46 @@
             this.PowerLines = new HashSet<PowerLine>();
         }
 
+        [Required]
+        [MaxLength(30)]
         public string Name { get; set; }
 
+        [Required]
         public double OuterDiameter { get; set; }
 
+        [Required]
         public double InnerDiameter { get; set; }
+
+        [Required]
 
         public double Weight { get; set; }
 
+        [Required]
+
         public double RTCoefficient { get; set; }
+
+        [Required]
 
         public double CoefficientOfThermalExpansion { get; set; }
 
+        [Required]
+
         public double Elasticity { get; set; }
+
+        [Required]
 
         public double Section { get; set; }
 
+        [Required]
         public double MaxTemperature { get; set; }
 
+        [Required]
         public double Current { get; set; }
 
+        [Required]
         public double MaxCurrent { get; set; }
 
+        [Required]
         public int ConductorPerPhase { get; set; }
 
         public string AddedByUserId { get; set; }

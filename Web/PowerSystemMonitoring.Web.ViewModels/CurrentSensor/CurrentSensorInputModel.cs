@@ -1,9 +1,10 @@
 ﻿namespace PowerSystemMonitoring.Web.ViewModels.CurrentSensor
 {
-    using Microsoft.AspNetCore.Http;
     using System;
     using System.Collections.Generic;
     using System.Web.WebPages.Html;
+
+    using Microsoft.AspNetCore.Http;
 
     public class CurrentSensorInputModel
     {

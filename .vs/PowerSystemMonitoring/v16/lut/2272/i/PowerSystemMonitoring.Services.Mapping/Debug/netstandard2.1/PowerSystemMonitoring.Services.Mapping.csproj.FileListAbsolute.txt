@@ -1,0 +1,7 @@
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Mapping\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.deps.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Mapping\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Mapping\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.csprojAssemblyReference.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Mapping\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.AssemblyInfoInputs.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Mapping\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.AssemblyInfo.cs
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Mapping\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.csproj.CopyComplete
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Mapping\Debug\netstandard2.1\PowerSystemMonitoring.Services.Mapping.dll
