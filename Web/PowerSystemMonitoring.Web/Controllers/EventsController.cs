@@ -39,6 +39,11 @@
         [HttpPost]
         public async Task<IActionResult> Create(EventInputModel input)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
             var user = await this.userManager.GetUserAsync(this.User);
 
             await this.eventService.CreateAsync(input, user.Id);

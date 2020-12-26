@@ -36,6 +36,11 @@
         [HttpPost]
         public async Task<IActionResult> Create(GeographicalCoordinatesInputModel input)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
             var user = await this.userManager.GetUserAsync(this.User);
 
             await this.geographicalCoordinatesService.CreateAsync(input, user.Id);

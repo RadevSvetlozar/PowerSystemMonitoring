@@ -10,8 +10,8 @@ using PowerSystemMonitoring.Data;
 namespace PowerSystemMonitoring.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201226054119_DatabaseValidation")]
-    partial class DatabaseValidation
+    [Migration("20201226073024_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

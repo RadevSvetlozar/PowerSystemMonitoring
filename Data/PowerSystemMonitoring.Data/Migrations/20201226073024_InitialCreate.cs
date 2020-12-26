@@ -1,9 +1,8 @@
-﻿namespace PowerSystemMonitoring.Data.Migrations
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace PowerSystemMonitoring.Data.Migrations
 {
-    using System;
-
-    using Microsoft.EntityFrameworkCore.Migrations;
-
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -171,7 +170,7 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 30, nullable: false),
                     OuterDiameter = table.Column<double>(nullable: false),
                     InnerDiameter = table.Column<double>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
@@ -207,7 +206,7 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 30, nullable: false),
                     Length = table.Column<double>(nullable: false),
                     Voltage = table.Column<double>(nullable: false),
                     ConductorId = table.Column<int>(nullable: true),
@@ -241,7 +240,7 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 30, nullable: false),
                     AddedByUserId = table.Column<string>(nullable: true),
                     PowerLineId = table.Column<int>(nullable: true)
                 },
@@ -296,11 +295,11 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
-                    Model = table.Column<string>(nullable: true),
-                    PhoneNumber = table.Column<string>(nullable: true),
-                    ConnectionPassword = table.Column<string>(nullable: true),
-                    IPAddress = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 25, nullable: false),
+                    Model = table.Column<string>(maxLength: 20, nullable: false),
+                    PhoneNumber = table.Column<string>(nullable: false),
+                    ConnectionPassword = table.Column<string>(nullable: false),
+                    IPAddress = table.Column<string>(maxLength: 15, nullable: false),
                     InstallationHeight = table.Column<double>(nullable: false),
                     DistancePole = table.Column<double>(nullable: false),
                     Orientation = table.Column<double>(nullable: false),
@@ -346,8 +345,8 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 30, nullable: false),
+                    Description = table.Column<string>(maxLength: 200, nullable: false),
                     IsActive = table.Column<bool>(nullable: false),
                     CurrentSensorId = table.Column<int>(nullable: true),
                     AddedByUserId = table.Column<string>(nullable: true),
@@ -386,8 +385,8 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Latitude = table.Column<string>(nullable: true),
-                    Longitude = table.Column<string>(nullable: true),
+                    Latitude = table.Column<string>(nullable: false),
+                    Longitude = table.Column<string>(nullable: false),
                     AddedByUserId = table.Column<string>(nullable: true),
                     CurrentSensorId = table.Column<int>(nullable: true)
                 },
@@ -443,10 +442,10 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 25, nullable: false),
                     Temperature = table.Column<double>(nullable: false),
-                    City = table.Column<string>(nullable: true),
-                    IPAddress = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: false),
+                    IPAddress = table.Column<string>(nullable: false),
                     IsActive = table.Column<bool>(nullable: false),
                     InstalationDescription = table.Column<string>(nullable: true),
                     AddedByUserId = table.Column<string>(nullable: true),

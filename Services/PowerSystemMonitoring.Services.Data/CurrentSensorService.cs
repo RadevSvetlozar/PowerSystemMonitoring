@@ -76,8 +76,9 @@
         public IEnumerable<T> GetAll<T>()
         {
             var currentSensors = this.currentSensorRepository.All()
-            .To<T>()
-            .ToList();
+                .OrderByDescending(x => x.Id)
+                .To<T>()
+                .ToList();
 
             return currentSensors;
         }

@@ -81,7 +81,7 @@
         public IEnumerable<T> GetAll<T>()
         {
             var conductors = this.conductorsRepository.All()
-                 .OrderByDescending(x => x.Id).To<T>()
+                 .To<T>()
                  .ToList();
 
             return conductors;

@@ -54,6 +54,13 @@
         [HttpPost]
         public async Task<IActionResult> Create(PowerLineInputModel input)
         {
+            if (!this.ModelState.IsValid)
+            {
+                var inputModel = new PowerLineInputModel();
+                inputModel.Conductors = this.conductorService.GetAllAsSelectListItem();
+                return this.View();
+            }
+
             var user = await this.userManager.GetUserAsync(this.User);
 
             await this.powerLineService.CreateAsync(input, user.Id, $"{this.webHostEnvironment.WebRootPath}/images");
