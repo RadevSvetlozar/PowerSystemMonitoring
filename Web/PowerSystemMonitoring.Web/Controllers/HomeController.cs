@@ -22,12 +22,6 @@
             return this.View(model);
         }
 
-        public IActionResult Index1()
-        {
-
-
-            return this.View();
-        }
 
         public IActionResult ControlPanel()
         {

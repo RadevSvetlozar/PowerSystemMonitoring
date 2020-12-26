@@ -1,0 +1,12 @@
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Sandbox\Debug\netcoreapp3.1\Sandbox.exe
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Sandbox\Debug\netcoreapp3.1\appsettings.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Sandbox\Debug\netcoreapp3.1\Sandbox.deps.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Sandbox\Debug\netcoreapp3.1\Sandbox.runtimeconfig.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Sandbox\Debug\netcoreapp3.1\Sandbox.runtimeconfig.dev.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Sandbox\Debug\netcoreapp3.1\Sandbox.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\Sandbox\Debug\netcoreapp3.1\Sandbox.csprojAssemblyReference.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\Sandbox\Debug\netcoreapp3.1\Sandbox.AssemblyInfoInputs.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\Sandbox\Debug\netcoreapp3.1\Sandbox.AssemblyInfo.cs
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\Sandbox\Debug\netcoreapp3.1\Sandbox.csproj.CopyComplete
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\Sandbox\Debug\netcoreapp3.1\Sandbox.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\Sandbox\Debug\netcoreapp3.1\Sandbox.genruntimeconfig.cache

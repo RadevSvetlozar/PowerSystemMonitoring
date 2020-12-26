@@ -1,0 +1,17 @@
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\testhost.exe
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\testhost.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\appsettings.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\testImage.jpg
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.deps.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.runtimeconfig.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.runtimeconfig.dev.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.AssemblyInfoInputs.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.AssemblyInfo.cs
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.csproj.CopyComplete
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.genruntimeconfig.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.csprojAssemblyReference.cache

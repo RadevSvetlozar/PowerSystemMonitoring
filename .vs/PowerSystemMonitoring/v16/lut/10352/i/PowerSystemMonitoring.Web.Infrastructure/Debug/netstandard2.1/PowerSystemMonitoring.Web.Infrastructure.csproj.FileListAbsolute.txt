@@ -1,0 +1,7 @@
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Web.Infrastructure\Debug\netstandard2.1\PowerSystemMonitoring.Web.Infrastructure.deps.json
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\PowerSystemMonitoring.Web.Infrastructure\Debug\netstandard2.1\PowerSystemMonitoring.Web.Infrastructure.dll
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web.Infrastructure\Debug\netstandard2.1\PowerSystemMonitoring.Web.Infrastructure.csprojAssemblyReference.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web.Infrastructure\Debug\netstandard2.1\PowerSystemMonitoring.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web.Infrastructure\Debug\netstandard2.1\PowerSystemMonitoring.Web.Infrastructure.AssemblyInfo.cs
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web.Infrastructure\Debug\netstandard2.1\PowerSystemMonitoring.Web.Infrastructure.csproj.CopyComplete
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web.Infrastructure\Debug\netstandard2.1\PowerSystemMonitoring.Web.Infrastructure.dll
