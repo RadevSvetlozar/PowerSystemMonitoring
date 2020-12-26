@@ -2,12 +2,16 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Text;
     using System.Web.WebPages.Html;
+
     using Microsoft.AspNetCore.Http;
 
     public class PowerLineInputModel
     {
+        [Required]
+        [MaxLength(30)]
         public string Name { get; set; }
 
         public double Length { get; set; }

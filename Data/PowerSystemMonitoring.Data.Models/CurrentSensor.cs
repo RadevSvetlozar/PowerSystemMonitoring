@@ -25,7 +25,6 @@
         public string Model { get; set; }
 
         [Required]
-        [RegularExpression(@"^(\+\d{1,3}|0)\d{9}$")]
         public string PhoneNumber { get; set; }
 
         [Required]

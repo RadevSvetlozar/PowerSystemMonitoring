@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Text;
 
     using PowerSystemMonitoring.Data.Models;
@@ -11,8 +12,10 @@
     {
         public int Id { get; set; }
 
+        [Required]
         public string Latitude { get; set; }
 
-        public string Longitude { get; set; }        
+        [Required]
+        public string Longitude { get; set; }
     }
 }

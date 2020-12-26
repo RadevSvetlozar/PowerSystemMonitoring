@@ -2,24 +2,41 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
     using System.Web.WebPages.Html;
 
     using Microsoft.AspNetCore.Http;
 
     public class CurrentSensorInputModel
     {
+        [Required]
+        [MaxLength(25)]
+        [MinLength(4)]
         public string Name { get; set; }
 
+        [Required]
+        [MaxLength(20)]
+        [MinLength(4)]
         public string Model { get; set; }
 
+        [Required]
+        [RegularExpression(@"^(\+\d{1,3}|0)\d{9}$")]
+        [DisplayName("Phone number")]
         public string PhoneNumber { get; set; }
 
+        [Required]
+        [DisplayName("Connection password")]
         public string ConnectionPassword { get; set; }
 
+        [Required]
+        [DisplayName("IP address")]
         public string IPAddress { get; set; }
 
+        [DisplayName("Installation height")]
         public double InstallationHeight { get; set; }
 
+        [DisplayName("Distance pole")]
         public double DistancePole { get; set; }
 
         public double Orientation { get; set; }

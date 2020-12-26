@@ -2,8 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Text;
     using System.Web.WebPages.Html;
+
     using AutoMapper;
     using Microsoft.AspNetCore.Http;
     using PowerSystemMonitoring.Data.Models;
@@ -14,6 +16,8 @@
     {
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(30)]
         public string Name { get; set; }
 
         public double Length { get; set; }
