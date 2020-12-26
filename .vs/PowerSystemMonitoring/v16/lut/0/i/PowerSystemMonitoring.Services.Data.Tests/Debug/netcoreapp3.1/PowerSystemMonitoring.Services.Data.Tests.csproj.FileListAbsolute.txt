@@ -14,3 +14,4 @@ C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonito
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.csproj.CopyComplete
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.dll
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.genruntimeconfig.cache
+C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Services.Data.Tests\Debug\netcoreapp3.1\PowerSystemMonitoring.Services.Data.Tests.csprojAssemblyReference.cache

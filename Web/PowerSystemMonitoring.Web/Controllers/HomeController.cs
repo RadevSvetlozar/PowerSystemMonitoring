@@ -3,17 +3,29 @@
     using System.Diagnostics;
 
     using Microsoft.AspNetCore.Mvc;
+    using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.ViewModels;
+    using PowerSystemMonitoring.Web.ViewModels.PoweLine;
 
     public class HomeController : BaseController
     {
+        private readonly IPowerLineService powerLineService;
+
+        public HomeController(IPowerLineService powerLineService)
+        {
+            this.powerLineService = powerLineService;
+        }
         public IActionResult Index()
         {
-            return this.View();
+            var model = powerLineService.GetAll<PowerLineViewModel>();
+
+            return this.View(model);
         }
 
         public IActionResult Index1()
         {
+
+
             return this.View();
         }
 

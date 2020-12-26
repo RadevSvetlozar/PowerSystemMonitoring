@@ -266,7 +266,6 @@ C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Web\PowerSystemMo
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.Views.dll
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\b\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.Views.pdb
-C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\PowerSystemMonitoring.Web.csprojAssemblyReference.cache
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\PowerSystemMonitoring.Web.RazorAssemblyInfo.cache
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\PowerSystemMonitoring.Web.RazorAssemblyInfo.cs
 C:\PowerSystemMonitoring\.vs\PowerSystemMonitoring\v16\lut\0\i\PowerSystemMonitoring.Web\netcoreapp3.1\PowerSystemMonitoring.Web.AssemblyInfoInputs.cache

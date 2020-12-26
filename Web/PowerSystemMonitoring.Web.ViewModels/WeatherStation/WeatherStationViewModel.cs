@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+
     using AutoMapper;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Mapping;

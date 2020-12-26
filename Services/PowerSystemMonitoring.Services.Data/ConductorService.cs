@@ -7,6 +7,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using System.Web.WebPages.Html;
+
     using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore.Metadata.Internal;
     using PowerSystemMonitoring.Data.Common.Repositories;
@@ -65,6 +66,7 @@
             this.conductorsRepository.Delete(conductor);
             await this.conductorsRepository.SaveChangesAsync();
         }
+
         public IEnumerable<SelectListItem> GetAllAsSelectListItem()
         {
             var conductors = this.conductorsRepository.All().Select(x => new SelectListItem
@@ -84,8 +86,6 @@
 
             return conductors;
         }
-
-    
 
         public T GetById<T>(int id)
         {

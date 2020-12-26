@@ -5,6 +5,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using System.Web.WebPages.Html;
+
     using PowerSystemMonitoring.Web.ViewModels.Condutor;
 
     public interface IConductorService
@@ -18,6 +19,7 @@
         T GetById<T>(int id);
 
         Task UpdateAsync(int id, ConductorEditModel input, string userId, string imagePath);
+
         Task DeleteAsync(int id);
     }
 }

@@ -92,7 +92,7 @@
             }
             else
             {
-                //app.UseExceptionHandler("/Home/Error");
+                // app.UseExceptionHandler("/Home/Error");
                 app.UseStatusCodePagesWithRedirects("/Home/StatusCoreError?errorCore={0}");
                 app.UseHsts();
             }

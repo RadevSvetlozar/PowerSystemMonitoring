@@ -9,7 +9,7 @@
 
     public interface IPowerLineService
     {
-        Task CreateAsync(PowerLineInputModel input, string userId, string imagePath);
+        Task CreateAsync(PowerLineInputModel input, string userId, string imagePath = null);
 
         IEnumerable<T> GetAll<T>();
 

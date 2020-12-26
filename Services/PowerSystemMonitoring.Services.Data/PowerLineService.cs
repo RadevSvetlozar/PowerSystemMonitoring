@@ -30,7 +30,7 @@
             this.imageRepository = imageRepository;
         }
 
-        public async Task CreateAsync(PowerLineInputModel input, string userId, string imagePath)
+        public async Task CreateAsync(PowerLineInputModel input, string userId, string imagePath = null)
         {
             var powerLine = new PowerLine
             {
