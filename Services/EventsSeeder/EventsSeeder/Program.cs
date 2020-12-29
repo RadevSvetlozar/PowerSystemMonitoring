@@ -43,7 +43,7 @@ namespace CurrentSensorSeeder
                     CurrentSensor = sensor,
                 };
 
-                Thread.Sleep(20000);
+                Thread.Sleep(2000);
 
                 await dbContext.Events.AddAsync(realTimeEvents);
                 await dbContext.SaveChangesAsync();

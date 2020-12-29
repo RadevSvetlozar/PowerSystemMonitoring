@@ -1,9 +1,8 @@
-﻿namespace PowerSystemMonitoring.Data.Migrations
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace PowerSystemMonitoring.Data.Migrations
 {
-    using System;
-
-    using Microsoft.EntityFrameworkCore.Migrations;
-
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -298,16 +297,15 @@
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(maxLength: 25, nullable: false),
                     Model = table.Column<string>(maxLength: 20, nullable: false),
-                    PhoneNumber = table.Column<string>(nullable: false),
+                    PhoneNumber = table.Column<string>(nullable: true),
                     ConnectionPassword = table.Column<string>(nullable: false),
-                    IPAddress = table.Column<string>(maxLength: 15, nullable: false),
+                    IPAddress = table.Column<string>(nullable: true),
                     InstallationHeight = table.Column<double>(nullable: false),
                     DistancePole = table.Column<double>(nullable: false),
                     Orientation = table.Column<double>(nullable: false),
                     IsActive = table.Column<bool>(nullable: false),
                     AreaId = table.Column<int>(nullable: true),
                     PowerLineId = table.Column<int>(nullable: true),
-                    RealTimeValuesId = table.Column<int>(nullable: true),
                     GeographicalCoordinatesId = table.Column<int>(nullable: true),
                     AddedByUserId = table.Column<string>(nullable: true),
                     WeatherStationId = table.Column<int>(nullable: true),
@@ -732,9 +730,7 @@
             migrationBuilder.CreateIndex(
                 name: "IX_RealTimeValues_CurrentSensorId",
                 table: "RealTimeValues",
-                column: "CurrentSensorId",
-                unique: true,
-                filter: "[CurrentSensorId] IS NOT NULL");
+                column: "CurrentSensorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RealTimeValues_IsDeleted",

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.Text;
     using System.Web.WebPages.Html;
@@ -21,6 +22,7 @@
         [Required]
         public double Voltage { get; set; }
 
+        [DisplayName("Conductor")]
         public int ConductorId { get; set; }
 
         public IEnumerable<SelectListItem> Conductors { get; set; }

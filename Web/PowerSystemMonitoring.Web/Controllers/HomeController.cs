@@ -28,21 +28,6 @@
             return this.View(model);
         }
 
-        [Authorize]
-        public IActionResult Chat()
-        {
-            return this.View();
-        }
-
-        public IActionResult Index1()
-        {
-            return this.View();
-        }
-
-        public IActionResult CurrentSensors()
-        {
-            return this.View();
-        }
 
         public IActionResult ControlPanel()
         {

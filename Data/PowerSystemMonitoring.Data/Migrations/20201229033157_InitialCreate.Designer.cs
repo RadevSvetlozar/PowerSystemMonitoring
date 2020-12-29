@@ -10,8 +10,8 @@ using PowerSystemMonitoring.Data;
 namespace PowerSystemMonitoring.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201229012427_UpdateCurrentSensorEntity")]
-    partial class UpdateCurrentSensorEntity
+    [Migration("20201229033157_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

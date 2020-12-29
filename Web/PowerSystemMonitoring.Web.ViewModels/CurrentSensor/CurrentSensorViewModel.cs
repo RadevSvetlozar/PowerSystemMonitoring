@@ -48,6 +48,10 @@
 
         public string AddedByUserUsername { get; set; }
 
+        public string WeatherStationName { get; set; }
+
+        public string WeatherStationTemperature { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<CurrentSensor, CurrentSensorViewModel>()

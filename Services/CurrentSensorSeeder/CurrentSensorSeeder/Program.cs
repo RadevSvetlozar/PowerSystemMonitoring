@@ -18,7 +18,7 @@ namespace CurrentSensorSeeder
             Console.WriteLine("Starting...");
 
 
-            for (int i = 1; i <= 20; i++)
+            for (int i = 1; i <= 50; i++)
             {
                 Random rnd = new Random();
 
@@ -35,7 +35,7 @@ namespace CurrentSensorSeeder
                     CreatedOn = time,
                 };
 
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
 
                 await dbContext.RealTimeValues.AddAsync(realTimeValues);
                 await dbContext.SaveChangesAsync();
