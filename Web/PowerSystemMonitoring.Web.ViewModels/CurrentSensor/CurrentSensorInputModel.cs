@@ -21,7 +21,7 @@
         public string Model { get; set; }
 
         [Required]
-        [RegularExpression(@"^(\+\d{1,3}|0)\d{9}$")]
+        
         [DisplayName("Phone number")]
         public string PhoneNumber { get; set; }
 
@@ -29,7 +29,7 @@
         [DisplayName("Connection password")]
         public string ConnectionPassword { get; set; }
 
-        [Required]
+    
         [DisplayName("IP address")]
         public string IPAddress { get; set; }
 

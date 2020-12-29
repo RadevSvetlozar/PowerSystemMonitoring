@@ -14,6 +14,7 @@
         public CurrentSensor()
         {
             this.Events = new HashSet<Event>();
+            this.RealTimeValues = new HashSet<RealTimeValues>();
         }
 
         [Required]
@@ -24,14 +25,12 @@
         [MaxLength(20)]
         public string Model { get; set; }
 
-        [Required]
         public string PhoneNumber { get; set; }
 
         [Required]
         public string ConnectionPassword { get; set; }
 
-        [Required]
-        [MaxLength(15)]
+
         public string IPAddress { get; set; }
 
         [Required]
@@ -54,9 +53,7 @@
 
         public virtual PowerLine PowerLine { get; set; }
 
-        public int? RealTimeValuesId { get; set; }
-
-        public virtual RealTimeValues RealTimeValues { get; set; }
+        public virtual ICollection<RealTimeValues> RealTimeValues { get; set; }
 
         public int? GeographicalCoordinatesId { get; set; }
 

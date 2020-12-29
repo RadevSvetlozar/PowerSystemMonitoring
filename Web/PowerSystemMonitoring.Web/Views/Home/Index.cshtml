@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.PoweLine.PowerLineViewModel>
+﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.CurrentSensor.CurrentSensorViewModel>
 @using PowerSystemMonitoring.Common
 @{
     this.ViewData["Title"] = "Home Page";
@@ -7,40 +7,56 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-
     <div class="row ">
-     
-        @foreach (var powerLine in Model)
+        @foreach (var sensor in Model)
         {
             <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    @if (powerLine.ImageUrl != null)
+                <div class="card" >
+                    @if (sensor.ImageUrl != null)
                     {
-                        <img class="card-img-top " src="@powerLine.ImageUrl" alt="Card image cap">
+                        <img class="card-img-top img-responsive rounded-sm" style="display:inline-block" src="@sensor.ImageUrl" alt="Card image cap">
                     }
                     else
                     {
                         <div>
-                            <img src="~/images/common/No_Image.jpg"  />
+                            <img src="~/images/common/No_Image.jpg " style="display:inline-block" class="card-img-top img-responsive" />
                         </div>
                     }
                     <div class="card-body">
-                        <h5 class="card-title">@powerLine.Name</h5>
+                        <h5 class="card-title">@sensor.Name</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Instalation on @sensor.PowerLineName</h6>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Voltage: @powerLine.Voltage kV</li>
-                        <li class="list-group-item">Length: @powerLine.Length km</li>
+                        <li id="@("curr" + sensor.Id)" class="list-group-item"> - </li>
+                        <li id="@("temp" + sensor.Id)" class="list-group-item"> - </li>
                     </ul>
                     <div class="card-body">
-                        <a href="/PowerLines/GetById/?id=@powerLine.Id" class=" btn btn-primary">View PoweLine</a>
+                        <a href="/CurrentSensors/GetById/?id=@sensor.Id" class=" btn btn-primary">View current sensor</a>
                     </div>
                 </div>
             </div>
         }
+
     </div>
-
-
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+@section Scripts{
+    <script>
+        var connection =
+            new signalR.HubConnectionBuilder()
+                .withUrl("/sensors")
+                .build();
 
+        connection.start().catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        connection.on("NewMessage", // ot huba
+            function (model) {
+                document.getElementById("curr".concat(model.currentSensorId)).innerHTML = "Current: ".concat(model.current);
+                document.getElementById("temp".concat(model.currentSensorId)).innerHTML = "Temperature: ".concat(model.temperature);
+            });
+    </script>
+}

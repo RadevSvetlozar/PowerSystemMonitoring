@@ -28,14 +28,9 @@ namespace CurrentSensorSeeder
                 optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=PowerSystemMonitoring;Integrated Security=true;");
             }
         }
-
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.Entity<CurrentSensor>()
-.HasOne(i => i.RealTimeValues)
-.WithOne(c => c.CurrentSensor)
-.HasForeignKey<RealTimeValues>(b => b.CurrentSensorId);
-
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

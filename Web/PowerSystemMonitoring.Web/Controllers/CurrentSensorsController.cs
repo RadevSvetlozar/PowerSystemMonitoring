@@ -51,11 +51,17 @@
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
-        public async Task<IActionResult> AddToPowerLine(CurrentSensorInputModel input)
+        public async Task<IActionResult> AddToPowerLine(CurrentSensorInputModel input, int id)
         {
             if (!this.ModelState.IsValid)
             {
-                return this.View();
+                var stations = this.weatherStationService.GetAllAsSelectListItem();
+
+                var inputModel = new CurrentSensorInputModel();
+                inputModel.WeatherStations = stations;
+
+                this.TempData["powerLineId"] = id;
+                return this.View(inputModel);
             }
 
             int powerLineId = (int)this.TempData["powerLineId"];

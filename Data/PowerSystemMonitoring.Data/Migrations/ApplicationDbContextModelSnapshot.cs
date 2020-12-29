@@ -386,9 +386,7 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("IPAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(15)")
-                        .HasMaxLength(15);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageId")
                         .HasColumnType("nvarchar(max)");
@@ -419,13 +417,9 @@ namespace PowerSystemMonitoring.Data.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("PowerLineId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RealTimeValuesId")
                         .HasColumnType("int");
 
                     b.Property<int?>("WeatherStationId")
@@ -711,9 +705,7 @@ namespace PowerSystemMonitoring.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CurrentSensorId")
-                        .IsUnique()
-                        .HasFilter("[CurrentSensorId] IS NOT NULL");
+                    b.HasIndex("CurrentSensorId");
 
                     b.HasIndex("IsDeleted");
 
@@ -948,8 +940,8 @@ namespace PowerSystemMonitoring.Data.Migrations
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.RealTimeValues", b =>
                 {
                     b.HasOne("PowerSystemMonitoring.Data.Models.CurrentSensor", "CurrentSensor")
-                        .WithOne("RealTimeValues")
-                        .HasForeignKey("PowerSystemMonitoring.Data.Models.RealTimeValues", "CurrentSensorId");
+                        .WithMany("RealTimeValues")
+                        .HasForeignKey("CurrentSensorId");
                 });
 
             modelBuilder.Entity("PowerSystemMonitoring.Data.Models.WeatherStation", b =>

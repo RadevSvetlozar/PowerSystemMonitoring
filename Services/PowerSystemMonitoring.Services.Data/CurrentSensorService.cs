@@ -12,8 +12,11 @@
     using PowerSystemMonitoring.Data.Common.Repositories;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Mapping;
+
     using PowerSystemMonitoring.Web.ViewModels.Condutor;
     using PowerSystemMonitoring.Web.ViewModels.CurrentSensor;
+    using System.Data.SqlClient;
+    using System.Data;
 
     public class CurrentSensorService : ICurrentSensorService
     {
@@ -143,19 +146,19 @@
 
             if (currentSensor.GeographicalCoordinates != null)
             {
-               var coordinates = new GeographicalCoordinates
+                var coordinates = new GeographicalCoordinates
                 {
                     AddedByUserId = userId,
                     Latitude = input.Latitude,
                     Longitude = input.Longitude,
                 };
-               if (coordinatesDb != null)
+                if (coordinatesDb != null)
                 {
                     coordinatesDb.IsDeleted = true;
                 }
 
-               currentSensor.GeographicalCoordinates = coordinates;
-               await this.coordinatesRepository.AddAsync(coordinates);
+                currentSensor.GeographicalCoordinates = coordinates;
+                await this.coordinatesRepository.AddAsync(coordinates);
             }
 
             currentSensor.GeographicalCoordinates.Longitude = input.Longitude;
@@ -196,5 +199,8 @@
             await file.CopyToAsync(fileStream);
             return dbImage;
         }
+
+
+        
     }
 }

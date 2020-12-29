@@ -534,3 +534,7 @@ C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcore
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
 C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\AngleSharp.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\SQLProcedureDependency.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\PowerSystemMonitoring\Tests\PowerSystemMonitoring.Web.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

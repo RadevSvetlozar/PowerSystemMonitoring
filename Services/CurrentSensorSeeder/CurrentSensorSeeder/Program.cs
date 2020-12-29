@@ -18,27 +18,29 @@ namespace CurrentSensorSeeder
             Console.WriteLine("Starting...");
 
 
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 Random rnd = new Random();
 
                 var current = (float)rnd.Next(100, 150);
                 var temparature = (float)rnd.Next(20, 40);
                 var time = DateTime.UtcNow;
+                var sensor = sensors.OrderBy(x => Guid.NewGuid()).FirstOrDefault();
 
                 var realTimeValues = new RealTimeValues
                 {
+                    CurrentSensorId = sensor.Id,
                     Current = current,
                     Temparature = temparature,
                     CreatedOn = time,
                 };
 
-                Thread.Sleep(20000);
+                Thread.Sleep(1000);
 
                 await dbContext.RealTimeValues.AddAsync(realTimeValues);
                 await dbContext.SaveChangesAsync();
 
-                Console.WriteLine($"Send: I = {current}; T = {temparature}; Time = {time}");
+                Console.WriteLine($"Send to Sensor{sensor.Name}: I = {current}; T = {temparature}; Time = {time}");
 
             }
         }

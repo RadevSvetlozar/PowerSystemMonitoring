@@ -486,9 +486,6 @@ C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\R
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerLines\GetById.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerLines\Edit.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\CurrentSensors\AddToPowerLine.cshtml.g.cs
-C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.csproj.CoreCompileInputs.cache
-C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cs
-C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\AngleSharp.dll
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerSystemLoads\GetAllLoads.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Events\AllSorted.cshtml.g.cs
@@ -496,3 +493,13 @@ C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\R
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\WeatherStations\GetById.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\StatusCodeError.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerLines\_CurrentSensorPartial.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index1.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\currentSensors.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\SQLProcedureDependency.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.csproj.CoreCompileInputs.cache
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\PowerSystemMonitoring.Web.MvcApplicationPartsAssemblyInfo.cache

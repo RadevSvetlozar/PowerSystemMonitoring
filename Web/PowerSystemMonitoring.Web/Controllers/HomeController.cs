@@ -1,27 +1,50 @@
 ﻿namespace PowerSystemMonitoring.Web.Controllers
 {
+    using System.Data;
+    using System.Data.SqlClient;
     using System.Diagnostics;
-
+    using System.Web.Mvc;
     using Microsoft.AspNetCore.Mvc;
     using PowerSystemMonitoring.Services.Data;
+    using PowerSystemMonitoring.Web.Hubs;
     using PowerSystemMonitoring.Web.ViewModels;
+    using PowerSystemMonitoring.Web.ViewModels.CurrentSensor;
     using PowerSystemMonitoring.Web.ViewModels.PoweLine;
 
     public class HomeController : BaseController
     {
-        private readonly IPowerLineService powerLineService;
+        private readonly ICurrentSensorService currentSensorService;
 
-        public HomeController(IPowerLineService powerLineService)
+        public HomeController(ICurrentSensorService currentSensorService)
         {
-            this.powerLineService = powerLineService;
+            this.currentSensorService = currentSensorService;
         }
+
         public IActionResult Index()
         {
-            var model = powerLineService.GetAll<PowerLineViewModel>();
+            var model = this.currentSensorService.GetAll<CurrentSensorViewModel>();
 
             return this.View(model);
         }
 
+        [Authorize]
+        public IActionResult Chat()
+        {
+           
+            return this.View();
+        }
+
+
+        public IActionResult Index1()
+        {
+            return this.View();
+        }
+
+    
+        public IActionResult CurrentSensors()
+        {
+            return this.View();
+        }
 
         public IActionResult ControlPanel()
         {

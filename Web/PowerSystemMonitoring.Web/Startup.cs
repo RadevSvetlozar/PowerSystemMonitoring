@@ -6,7 +6,9 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Data.SqlClient;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Internal;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
@@ -19,6 +21,8 @@
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Services.Mapping;
     using PowerSystemMonitoring.Services.Messaging;
+    using PowerSystemMonitoring.Web.Hubs;
+    using PowerSystemMonitoring.Web.Services;
     using PowerSystemMonitoring.Web.ViewModels;
 
     public class Startup
@@ -54,6 +58,7 @@
             services.AddRazorPages();
 
             services.AddSingleton(this.configuration);
+       
 
             // Data repositories
             services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
@@ -70,10 +75,16 @@
             services.AddTransient<IWeatherStationService, WeatherStationService>();
             services.AddTransient<IPowerLineService, PowerLineService>();
             services.AddTransient<IPowerSystemLoad, PowerSystemLoad>();
+            services.AddScoped<IRealTimeCurrentSensorService, RealTimeCurrentSensorService>();
+            services.AddScoped<IDatabaseChageNotificationService, SqlDependencyService>();
+          
+
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+             IDatabaseChageNotificationService databaseChageNotificationService)
         {
             AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).GetTypeInfo().Assembly);
 
@@ -106,13 +117,21 @@
             app.UseAuthentication();
             app.UseAuthorization();
 
+            
+
+
+
             app.UseEndpoints(
                 endpoints =>
                     {
+                        endpoints.MapHub<CurrentSensorsHub>("/sensors");
+                        endpoints.MapHub<ChatHub>("/chat");
                         endpoints.MapControllerRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                         endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
                         endpoints.MapRazorPages();
                     });
+
+            databaseChageNotificationService.Config();
         }
     }
 }
