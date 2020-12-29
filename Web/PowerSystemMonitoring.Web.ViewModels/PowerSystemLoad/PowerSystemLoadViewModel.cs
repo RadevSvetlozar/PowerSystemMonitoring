@@ -13,5 +13,5 @@
         public DateTime DateTime => DateTime.UtcNow;
 
         public IEnumerable<PowerSystemLoadUnitViewModel> Units { get; set; }
-}
+    }
 }

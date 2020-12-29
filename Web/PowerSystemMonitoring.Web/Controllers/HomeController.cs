@@ -4,6 +4,7 @@
     using System.Data.SqlClient;
     using System.Diagnostics;
     using System.Web.Mvc;
+
     using Microsoft.AspNetCore.Mvc;
     using PowerSystemMonitoring.Services.Data;
     using PowerSystemMonitoring.Web.Hubs;
@@ -30,17 +31,14 @@
         [Authorize]
         public IActionResult Chat()
         {
-           
             return this.View();
         }
-
 
         public IActionResult Index1()
         {
             return this.View();
         }
 
-    
         public IActionResult CurrentSensors()
         {
             return this.View();

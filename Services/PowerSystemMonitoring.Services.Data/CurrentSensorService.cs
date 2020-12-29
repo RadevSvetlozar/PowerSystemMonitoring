@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SqlClient;
     using System.IO;
     using System.Linq;
     using System.Text;
@@ -12,11 +14,8 @@
     using PowerSystemMonitoring.Data.Common.Repositories;
     using PowerSystemMonitoring.Data.Models;
     using PowerSystemMonitoring.Services.Mapping;
-
     using PowerSystemMonitoring.Web.ViewModels.Condutor;
     using PowerSystemMonitoring.Web.ViewModels.CurrentSensor;
-    using System.Data.SqlClient;
-    using System.Data;
 
     public class CurrentSensorService : ICurrentSensorService
     {
@@ -199,8 +198,5 @@
             await file.CopyToAsync(fileStream);
             return dbImage;
         }
-
-
-        
     }
 }

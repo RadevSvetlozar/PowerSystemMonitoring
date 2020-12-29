@@ -1,12 +1,9 @@
 ﻿@model IEnumerable<PowerSystemMonitoring.Web.ViewModels.CurrentSensor.CurrentSensorViewModel>
 @using PowerSystemMonitoring.Common
-    <div>
-        <h1>All current sensors</h1>
-        @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-        {
-            <a type="button" class="btn btn-success" asp-controller="CurrentSensors" asp-action="Create">Create current sensor</a>
-        }
-        </div>
+<div>
+    <h1>All current sensors</h1>
+
+</div>
 <br />
 <table class="table">
     <thead>
@@ -20,25 +17,25 @@
     <tbody>
         @foreach (var sensor in Model)
         {
-        <tr>
-            <td>
-                @if (sensor.IsActive)
+            <tr>
+                <td>
+                    @if (sensor.IsActive)
+                    {
+                        <i class="fas fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="far fa-circle"></i>
+                    }
+                </td>
+                <td>@sensor.Name</td>
+                <td>@sensor.PowerLineName</td>
+                @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                 {
-                    <i class="fas fa-check-circle"></i>
-                }
-                else
-                {
-                    <i class="far fa-circle"></i>
-                }
-            </td>
-            <td>@sensor.Name</td>
-            <td>@sensor.PowerLineName</td>
-            @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-            {
-                <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@sensor.Id">Edit</a></td>
+                    <td>  <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@sensor.Id">Edit</a></td>
 
-                <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@sensor.Id">Delete</a></td>
-            }
+                    <td>  <a type="button" class="btn btn-success" asp-action="Delete" asp-route-id="@sensor.Id">Delete</a></td>
+                }
                 <td>  <a type="button" class="btn btn-success" asp-action="GetById" asp-route-id="@sensor.Id">Details</a></td>
             </tr>
         }

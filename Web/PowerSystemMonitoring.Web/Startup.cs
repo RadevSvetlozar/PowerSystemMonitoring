@@ -58,7 +58,6 @@
             services.AddRazorPages();
 
             services.AddSingleton(this.configuration);
-       
 
             // Data repositories
             services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
@@ -77,7 +76,6 @@
             services.AddTransient<IPowerSystemLoad, PowerSystemLoad>();
             services.AddScoped<IRealTimeCurrentSensorService, RealTimeCurrentSensorService>();
             services.AddScoped<IDatabaseChageNotificationService, SqlDependencyService>();
-          
 
             services.AddSignalR();
         }
@@ -116,10 +114,6 @@
 
             app.UseAuthentication();
             app.UseAuthorization();
-
-            
-
-
 
             app.UseEndpoints(
                 endpoints =>

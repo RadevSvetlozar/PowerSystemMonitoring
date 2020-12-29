@@ -35,7 +35,6 @@
 
                 var inputModel = new EventInputModel
                 {
-
                     Name = "test",
                 };
 
@@ -65,7 +64,6 @@
 
                 var inputModel = new EventInputModel
                 {
-
                     Name = "test",
                 };
 
@@ -102,7 +100,6 @@
 
                 var inputModel = new EventInputModel
                 {
-
                     Name = "test",
                 };
 
@@ -140,7 +137,6 @@
 
                 var inputModel = new EventInputModel
                 {
-
                     Name = "test",
                 };
 

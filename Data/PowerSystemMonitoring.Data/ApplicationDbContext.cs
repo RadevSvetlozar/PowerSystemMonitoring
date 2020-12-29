@@ -88,8 +88,6 @@
    .WithOne(c => c.CurrentSensor)
    .HasForeignKey<GeographicalCoordinates>(b => b.CurrentSensorId);
 
-         
-
             builder.Entity<PowerLine>()
   .HasOne(i => i.Image)
   .WithOne(c => c.PowerLine)

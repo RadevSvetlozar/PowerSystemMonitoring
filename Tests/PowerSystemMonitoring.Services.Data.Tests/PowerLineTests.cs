@@ -20,7 +20,8 @@
         public async Task CreateCorrectllyPowerLineModel()
         {
             var list = new List<PowerLine>();
-            var mockRepoPowerLine = new Mock<IDeletableEntityRepository<PowerLine>>(); var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
+            var mockRepoPowerLine = new Mock<IDeletableEntityRepository<PowerLine>>();
+            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
             var mockRepoImage = new Mock<IDeletableEntityRepository<Image>>();
 
             mockRepoPowerLine.Setup(x => x.All()).Returns(list.AsQueryable());
@@ -36,7 +37,6 @@
 
                 var inputModel = new PowerLineInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
@@ -68,7 +68,6 @@
 
                 var inputModel = new PowerLineInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
@@ -91,7 +90,8 @@
         public async Task TestGetAllWorkCorrectllyPowerLineModel<T>()
         {
             var list = new List<PowerLine>();
-            var mockRepoPowerLine = new Mock<IDeletableEntityRepository<PowerLine>>(); var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
+            var mockRepoPowerLine = new Mock<IDeletableEntityRepository<PowerLine>>();
+            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
             var mockRepoImage = new Mock<IDeletableEntityRepository<Image>>();
 
             mockRepoPowerLine.Setup(x => x.All()).Returns(list.AsQueryable());
@@ -107,7 +107,6 @@
 
                 var inputModel = new PowerLineInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
@@ -131,7 +130,8 @@
         public async Task<T> TestGetByIdWorkCorrectllyPowerLineModel<T>()
         {
             var list = new List<PowerLine>();
-            var mockRepoPowerLine = new Mock<IDeletableEntityRepository<PowerLine>>(); var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
+            var mockRepoPowerLine = new Mock<IDeletableEntityRepository<PowerLine>>();
+            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
             var mockRepoImage = new Mock<IDeletableEntityRepository<Image>>();
 
             mockRepoPowerLine.Setup(x => x.All()).Returns(list.AsQueryable());
@@ -147,7 +147,6 @@
 
                 var inputModel = new PowerLineInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };

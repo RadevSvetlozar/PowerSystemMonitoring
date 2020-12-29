@@ -493,7 +493,6 @@ C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\R
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\WeatherStations\GetById.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\StatusCodeError.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\PowerLines\_CurrentSensorPartial.cshtml.g.cs
-C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index1.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\currentSensors.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs
 C:\PowerSystemMonitoring\Web\PowerSystemMonitoring.Web\bin\Debug\netcoreapp3.1\SQLProcedureDependency.dll

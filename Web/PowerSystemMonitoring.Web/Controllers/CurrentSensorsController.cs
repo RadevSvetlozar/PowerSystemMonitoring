@@ -114,7 +114,14 @@
         {
             if (!this.ModelState.IsValid)
             {
-                return this.View();
+                var stations = this.weatherStationService.GetAllAsSelectListItem();
+
+                var inputModel = this.currentSensorService.GetById<EditCurrentSensor>(id);
+                var coordinates = this.geographicalCoordinatesService.GetByCurrentSensorId<GeographicalCoordinatesViewModel>(id);
+                inputModel.Latitude = coordinates.Latitude;
+                inputModel.Longitude = coordinates.Longitude;
+                inputModel.WeatherStations = stations;
+                return this.View(inputModel);
             }
 
             var user = await this.userManager.GetUserAsync(this.User);

@@ -21,7 +21,7 @@
         public string Model { get; set; }
 
         [Required]
-        
+
         [DisplayName("Phone number")]
         public string PhoneNumber { get; set; }
 
@@ -29,7 +29,6 @@
         [DisplayName("Connection password")]
         public string ConnectionPassword { get; set; }
 
-    
         [DisplayName("IP address")]
         public string IPAddress { get; set; }
 

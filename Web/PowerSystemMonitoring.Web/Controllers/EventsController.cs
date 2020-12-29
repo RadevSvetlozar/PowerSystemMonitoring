@@ -100,9 +100,9 @@
         [Authorize]
         public async Task<IActionResult> ConfirmAsync(int id)
         {
-           await this.eventService.ConfirmEventByIdAsync(id);
+            await this.eventService.ConfirmEventByIdAsync(id);
 
-           return this.RedirectToAction(nameof(this.AllSorted));
+            return this.RedirectToAction(nameof(this.AllSorted));
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]

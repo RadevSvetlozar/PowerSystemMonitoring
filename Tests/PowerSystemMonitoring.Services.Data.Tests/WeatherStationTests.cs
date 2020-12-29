@@ -36,7 +36,6 @@
 
                 var inputModel = new WeatherStationInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
@@ -68,7 +67,6 @@
 
                 var inputModel = new WeatherStationInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
@@ -107,7 +105,6 @@
 
                 var inputModel = new WeatherStationInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
@@ -147,7 +144,6 @@
 
                 var inputModel = new WeatherStationInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };

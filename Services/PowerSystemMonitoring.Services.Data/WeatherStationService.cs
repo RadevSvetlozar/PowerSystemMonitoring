@@ -94,6 +94,25 @@
             await this.stationRepository.SaveChangesAsync();
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var station = this.stationRepository.All().FirstOrDefault(x => x.Id == id);
+
+            this.stationRepository.Delete(station);
+            await this.stationRepository.SaveChangesAsync();
+        }
+
+        public IEnumerable<SelectListItem> GetAllAsSelectListItem()
+        {
+            var stations = this.stationRepository.All().Select(x => new SelectListItem
+            {
+                Text = x.Name,
+                Value = x.Id.ToString(),
+            });
+
+            return stations;
+        }
+
         private async Task<Image> CreateImageAsync(IFormFile file, string userId, string imagePath)
         {
             Directory.CreateDirectory($"{imagePath}/weatherStations/");
@@ -116,25 +135,6 @@
 
             await file.CopyToAsync(fileStream);
             return dbImage;
-        }
-
-        public async Task DeleteAsync(int id)
-        {
-            var station = this.stationRepository.All().FirstOrDefault(x => x.Id == id);
-
-            this.stationRepository.Delete(station);
-            await this.stationRepository.SaveChangesAsync();
-        }
-
-        public IEnumerable<SelectListItem> GetAllAsSelectListItem()
-        {
-            var stations = this.stationRepository.All().Select(x => new SelectListItem
-            {
-                Text = x.Name,
-                Value = x.Id.ToString(),
-            });
-
-            return stations;
         }
     }
 }

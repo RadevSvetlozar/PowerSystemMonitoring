@@ -39,7 +39,6 @@
 
                 var inputModel = new AreaInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };

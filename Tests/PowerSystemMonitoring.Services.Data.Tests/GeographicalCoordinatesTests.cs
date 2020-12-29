@@ -35,7 +35,6 @@
 
                 var inputModel = new GeographicalCoordinatesInputModel
                 {
-
                     Latitude = "test",
                     Longitude = "test1",
                 };
@@ -66,7 +65,6 @@
 
                 var inputModel = new GeographicalCoordinatesInputModel
                 {
-
                     Latitude = "test",
                     Longitude = "test1",
                 };
@@ -103,7 +101,6 @@
 
                 var inputModel = new GeographicalCoordinatesInputModel
                 {
-
                     Latitude = "test",
                     Longitude = "test1",
                 };
@@ -142,7 +139,6 @@
 
                 var inputModel = new GeographicalCoordinatesInputModel
                 {
-
                     Latitude = "test",
                     Longitude = "test1",
                 };

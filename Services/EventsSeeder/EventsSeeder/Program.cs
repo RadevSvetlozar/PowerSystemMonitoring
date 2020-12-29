@@ -33,7 +33,7 @@ namespace CurrentSensorSeeder
                 var name = listOfNames[rnd.Next(0, listOfNames.Count())];
                 var description = $"{name} on {sensor.Name}";
                 var time = DateTime.UtcNow;
-
+                
 
                 var realTimeEvents = new Event
                 {

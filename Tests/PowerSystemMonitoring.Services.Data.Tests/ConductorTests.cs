@@ -36,13 +36,12 @@
 
                 var inputModel = new ConductorInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
 
                 await service.CreateAsync(inputModel, "23");
-                
+
                 Assert.Equal(1, list.Count);
             }
         }

@@ -1,0 +1,56 @@
+﻿<table id="table" border="1">
+
+    <tr>
+        <th>Current</th>
+        <th>Temperature</th>
+    </tr>
+
+    <tr>
+        <td>-</td>
+        <td>-</td>
+
+    </tr>
+
+</table>
+
+@section Scripts{
+    <script>
+        var connection =
+            new signalR.HubConnectionBuilder()
+                .withUrl("/sensors")
+                .build();
+
+        //connection.on("NewMessage", // ot huba
+        //    function (model) {
+        //        var chatInfo = `<div>Current : [${model.current}]  Temperature : [${model.temperature}] ${escapeHtml(model.temperature)}</div>`;
+        //        $("#messagesList").append(model.current);
+        //    });
+
+
+
+        $("#sendButton").click(function () { // natisnat buton
+            var message = $("#messageInput").val();
+            connection.invoke("Send", message);
+            $("#messageInput").val("");
+        });
+
+        connection.start().catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+            connection.on("NewMessage", // ot huba
+                function (model) {
+
+                table.rows[1].cells[0].innerHTML = model.current;
+                table.rows[1].cells[1].innerHTML = model.temperature;
+            });
+    </script>
+}

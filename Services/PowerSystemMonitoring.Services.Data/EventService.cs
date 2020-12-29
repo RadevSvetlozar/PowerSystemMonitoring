@@ -65,7 +65,6 @@
 
         public IEnumerable<T> GetAllSorted<T>(string sortOrder)
         {
-
             var events = this.eventRepository.All();
             switch (sortOrder)
             {

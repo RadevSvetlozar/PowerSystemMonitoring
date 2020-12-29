@@ -30,7 +30,6 @@
         [Required]
         public string ConnectionPassword { get; set; }
 
-
         public string IPAddress { get; set; }
 
         [Required]

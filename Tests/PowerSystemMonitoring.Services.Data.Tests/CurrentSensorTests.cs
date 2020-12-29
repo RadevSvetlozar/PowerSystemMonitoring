@@ -22,7 +22,8 @@
         public async Task CreateCorrectllyCurrentSensorModel()
         {
             var list = new List<CurrentSensor>();
-            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>(); var mockRepoCoordinates = new Mock<IDeletableEntityRepository<GeographicalCoordinates>>();
+            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
+            Mock<IDeletableEntityRepository<GeographicalCoordinates>> mockRepoCoordinates = new Mock<IDeletableEntityRepository<GeographicalCoordinates>>();
             var mockRepoImage = new Mock<IDeletableEntityRepository<Image>>();
 
             mockRepoCurrentSensor.Setup(x => x.All()).Returns(list.AsQueryable());
@@ -38,7 +39,6 @@
 
                 var inputModel = new CurrentSensorInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
@@ -54,7 +54,8 @@
         public async Task DeleteCorrectllyCurrentSensorModel()
         {
             var list = new List<CurrentSensor>();
-            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>(); var mockRepoCoordinates = new Mock<IDeletableEntityRepository<GeographicalCoordinates>>();
+            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
+            var mockRepoCoordinates = new Mock<IDeletableEntityRepository<GeographicalCoordinates>>();
             var mockRepoImage = new Mock<IDeletableEntityRepository<Image>>();
 
             mockRepoCurrentSensor.Setup(x => x.All()).Returns(list.AsQueryable());
@@ -70,7 +71,6 @@
 
                 var inputModel = new CurrentSensorInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
@@ -93,7 +93,8 @@
         public async Task TestGetAllWorkCorrectllyCurrentSensorModel<T>()
         {
             var list = new List<CurrentSensor>();
-            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>(); var mockRepoCoordinates = new Mock<IDeletableEntityRepository<GeographicalCoordinates>>();
+            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
+            var mockRepoCoordinates = new Mock<IDeletableEntityRepository<GeographicalCoordinates>>();
             var mockRepoImage = new Mock<IDeletableEntityRepository<Image>>();
 
             mockRepoCurrentSensor.Setup(x => x.All()).Returns(list.AsQueryable());
@@ -109,14 +110,13 @@
 
                 var inputModel = new CurrentSensorInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
 
                 await service.CreateAsync(inputModel, 2, "23");
                 await service.CreateAsync(inputModel, 3, "213");
-                
+
                 var count = service.GetAll<T>().Count();
 
                 Assert.Equal(2, count);
@@ -133,7 +133,8 @@
         public async Task<T> TestGetByIdWorkCorrectllyCurrentSensorModel<T>()
         {
             var list = new List<CurrentSensor>();
-            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>(); var mockRepoCoordinates = new Mock<IDeletableEntityRepository<GeographicalCoordinates>>();
+            var mockRepoCurrentSensor = new Mock<IDeletableEntityRepository<CurrentSensor>>();
+            var mockRepoCoordinates = new Mock<IDeletableEntityRepository<GeographicalCoordinates>>();
             var mockRepoImage = new Mock<IDeletableEntityRepository<Image>>();
 
             mockRepoCurrentSensor.Setup(x => x.All()).Returns(list.AsQueryable());
@@ -149,7 +150,6 @@
 
                 var inputModel = new CurrentSensorInputModel
                 {
-
                     Name = "test",
                     Image = file,
                 };
